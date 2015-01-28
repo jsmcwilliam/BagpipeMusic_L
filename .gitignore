@@ -3,6 +3,7 @@
 *.midi
 *.mid
 *.log
-*~
-# piobaireachd/literature/**
+*.ly~
+
+
 
