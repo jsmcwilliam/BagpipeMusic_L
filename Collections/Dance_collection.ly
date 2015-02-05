@@ -65,6 +65,44 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 
 	\bookpart {
 		\header {
+			title = "Hornpipes"
+			subtitle = ##f}
+		\tocSection \markup { Hornpipes } 
+		\tocItem \markup {1. Crossing the Minch }
+		\include "../Hornpipes/Crossing_the_minch.ly"
+		\pageBreak
+		\tocItem \markup {2. The Man from Skye }
+		\include "../Hornpipes/Man_from_skye.ly"
+		\pageBreak
+		\tocItem \markup { Ballachulish Walkabout }
+		\include "../Hornpipes/Ballachulish_walkabout.ly"
+		\pageBreak
+		}
+	
+	\bookpart {
+		\header {
+			title = "Jigs"
+			subtitle = ##f}
+		\tocSection \markup { Jigs }
+		\tocItem \markup {1. The Irish Washerwoman }
+		\include "../Jigs/Irish_washer_woman.ly"
+%		\pageBreak
+		\tocItem \markup {2. Paddy's Leather Breeches }
+		\include "../Jigs/Paddys_leather_breeches.ly"
+		\pageBreak
+		\tocItem \markup {1. Barbara's Jig }
+		\include "../Jigs/Barbaras_jig.ly"
+%		\pageBreak
+		\tocItem \markup {2. The Seagull }
+		\include "../Jigs/Seagull.ly"
+		\pageBreak
+		\tocItem \markup {Braes of Mellanish }
+		\include "../Jigs/Braes_of_mellinish.ly"
+%		\pageBreak
+		}		
+		
+	\bookpart {
+		\header {
 			title = "Strathspeys"
 			subtitle = ##f}
 		\tocSection \markup { Strathspeys }
@@ -109,45 +147,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 		\include "../Reels/Twisted_fingers.ly"
 %		\pageBreak
 		}
-		
-	\bookpart {
-		\header {
-			title = "Hornpipes"
-			subtitle = ##f}
-		\tocSection \markup { Hornpipes } 
-		\tocItem \markup { Ballachulish Walkabout }
-		\include "../Hornpipes/Ballachulish_walkabout.ly"
-		\pageBreak
-		\tocItem \markup {1. Crossing the Minch }
-		\include "../Hornpipes/Crossing_the_minch.ly"
-		\pageBreak
-		\tocItem \markup {2. The Man from Skye }
-		\include "../Hornpipes/Man_from_skye.ly"
-%		\pageBreak
-		}
-
-	\bookpart {
-		\header {
-			title = "Jigs"
-			subtitle = ##f}
-		\tocSection \markup { Jigs }
-		\tocItem \markup {1. The Irish Washerwoman }
-		\include "../Jigs/Irish_washer_woman.ly"
-%		\pageBreak
-		\tocItem \markup {2. Paddy's Leather Breeches }
-		\include "../Jigs/Paddys_leather_breeches.ly"
-		\pageBreak
-		\tocItem \markup {1. Barbara's Jig }
-		\include "../Jigs/Barbaras_jig.ly"
-		\pageBreak
-		\tocItem \markup {2. The Seagull }
-		\include "../Jigs/Seagull.ly"
-%		\pageBreak
-		\tocItem \markup {3. Braes of Mellanish }
-		\include "../Jigs/Braes_of_mellinish.ly"
-%		\pageBreak
-		}		
-		
+				
 	\bookpart {
 		\header {
 			title = "Other"

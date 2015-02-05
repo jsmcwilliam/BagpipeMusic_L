@@ -84,7 +84,7 @@
     } %end staff
     
   \header {
-%    meter = "Hornpipe"
+    meter = "Hornpipe"
     piece = "Ballachulish Walkabout"
     composer = "John D. Burgess"
     parttagline = "Copied by John S. McWilliam"

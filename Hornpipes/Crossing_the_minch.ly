@@ -123,7 +123,7 @@
     } %end staff
     
   \header {
-    meter = "Hornpipe"
+%    meter = "Hornpipe"
     piece = "Crossing the Minch"
     composer = "P/M Donald MacLeod, M.B.E."
     parttagline = "Copied by John S. McWilliam"

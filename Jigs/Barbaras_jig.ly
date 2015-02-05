@@ -52,7 +52,7 @@
  \thrwd d4. A4. 
  \hdblf f4 e8 \grg f8 [ e8 d8 ] 
  b4 e8 \grg e8 [ d8 e8 ] 
- \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ]  \break
+ \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ] % \break
 
  \thrwd d4. A4. 
  \hdblf f4 e8 \grg f8 [ e8 d8 ] 
@@ -67,8 +67,7 @@
  \thrwd d4. \grg d8 [ \gre a8 d8 ] 
  \grg d8 [ \gre a8 d8 ] \grg f8 [ e8 d8 ] 
  b4 e8 \grg e8 [ d8 e8 ] 
- \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ]  
- \break
+ \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ]  % \break
  
  \thrwd d4. \grg d8 [ \gre a8 d8 ] 
  \grg d8 [ \gre a8 d8 ] \grg f8 [ e8 d8 ] 
@@ -83,7 +82,7 @@
  \thrwd d4. A4. 
  d8 [ f8 \grg d8 ] e8 [ \grg d8 \grG d8 ] 
  b4 e8 \grg e8 [ d8 e8 ] 
- \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ]  \break
+ \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ] % \break
 
  
  \thrwd d4. A4. 
@@ -99,7 +98,7 @@
  \thrwd d4. \grg a8 [ d8 \gre a8 ] 
  d8 [ \gre a8 d8 ] \grg f8 [ e8 d8 ] 
  b4 e8 \grg e8 [ d8 e8 ] 
- \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ]  \break
+ \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ]  %\break
 
  
  \thrwd d4. \grg a8 [ d8 \gre a8 ] 

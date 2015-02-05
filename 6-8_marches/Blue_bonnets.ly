@@ -61,7 +61,7 @@
  \grg a8. [ \grd c16 e8 ] \dble e8. [ c16 e8 ] 
  \dblf f8. [ e16 d8 ] \dblc c8. [ b16 \grG a8 ] 
  \grg a8. [ \grd c16 e8 ] \grg f8. [ g16 A8 ] 
- a8. [ b16 \grip c8 ] \dblb b4 \grG a8  
+ a8. [ b16 \grip c8 ] \dblb b4 \grG a8  \break
 
  \grg a8. [ \grd c16 e8 ] \dble e8. [ c16 e8 ] 
  \dblf f8. [ e16 d8 ] \dblc c8. [ b16 \grG a8 ] 
@@ -107,7 +107,7 @@
 %  	  ragged-last = ##t
   	}
 
- \midi {} %Generation of midi files option.
+% \midi {} %Generation of midi files option.
 
 }%end score
 

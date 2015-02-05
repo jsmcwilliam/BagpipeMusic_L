@@ -68,24 +68,6 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 			title = "2/4 Marches"
 			subtitle = ##f}
 		\tocSection \markup { 2/4 Marches }		
-		\tocItem \markup {Arthur Bignold}
-		\include "../2-4_marches/Arthur_bignold.ly"
-		\pageBreak
-		\tocItem \markup {Balmoral Highlanders}
-		\include "../2-4_marches/Balmoral_highlanders.ly"
-		\pageBreak
-		\tocItem \markup {Donald MacLean's Farewell to Oban}
-		\include "../2-4_marches/Donald_macleans_farewell_to_oban.ly"
-		\pageBreak
-		\tocItem \markup {Dugald MacColl}
-		\include "../2-4_marches/Dugald_maccoll.ly"
-		\pageBreak
-		\tocItem \markup {Duncan McInnes}
-		\include "../2-4_marches/Duncan_mcinnes.ly"
-		\pageBreak
-		\tocItem \markup {Leaving Glen Urquhuart}
-		\include "../2-4_marches/Leaving_glen_urquhart.ly"
-		\pageBreak
 		\tocItem \markup {1. Highland Laddie}
 		\include "../2-4_marches/Highland_laddie.ly"
 %		\pageBreak
@@ -109,7 +91,28 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 %		\pageBreak
 		\tocItem \markup {4. Men of Argyll}
 		\include "../2-4_marches/Men_of_argyll.ly"
-%}
+		\pageBreak
+		\tocItem \markup {Arthur Bignold}
+		\include "../2-4_marches/Arthur_bignold.ly"
+		\pageBreak
+		\tocItem \markup {Balmoral Highlanders}
+		\include "../2-4_marches/Balmoral_highlanders.ly"
+		\pageBreak
+		\tocItem \markup {Donald MacLean's Farewell to Oban}
+		\include "../2-4_marches/Donald_macleans_farewell_to_oban.ly"
+		\pageBreak
+		\tocItem \markup {Dugald MacColl}
+		\include "../2-4_marches/Dugald_maccoll.ly"
+		\pageBreak
+		\tocItem \markup {Duncan McInnes}
+		\include "../2-4_marches/Duncan_mcinnes.ly"
+		\pageBreak
+		\tocItem \markup {Leaving Glen Urquhuart}
+		\include "../2-4_marches/Leaving_glen_urquhart.ly"
+		\pageBreak
+		\tocItem \markup {Road to the Isles}
+		\include "../2-4_marches/Road_to_the_isles_2.ly"
+		\pageBreak
 		}
 
 	\bookpart {
@@ -199,7 +202,13 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 %		\pageBreak
 		\tocItem \markup {4. Dovecote Park}
 		\include "../6-8_marches/Dovecote_park.ly" 
-%}
+		\pageBreak
+		\tocItem \markup {Blue Bonnets oer the Border}
+		\include "../6-8_marches/Blue_bonnets.ly" 
+		\pageBreak
+		\tocItem \markup {Glendaruel Highlanders}
+		\include "../6-8_marches/Glendaruel_highlanders.ly" 
+		\pageBreak
 		}
 
 			\bookpart {
@@ -210,6 +219,9 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {Heights of Dargai}
 		\include "../9-8_marches/Heights_of_dargai.ly"
 %		\pageBreak
+		\tocItem \markup {Battle of the Somme}
+		\include "../9-8_marches/Battle_of_the_somme.ly"
+%		\pageBreak
 		}	
 
 	\bookpart {
@@ -217,28 +229,35 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 			title = "Airs"
 			subtitle = ##f}
 		\tocSection \markup { Airs }
-		\tocItem \markup {1. Auld Lang Syne }
+		\tocItem \markup {Auld Lang Syne }
 		\include "../Airs/Auld_lang_syne.ly"
 %		\pageBreak
-		\tocItem \markup {2. Dark Isle }
+		\tocItem \markup {Dark Isle }
 		\include "../Airs/Dark_isle.ly"
 %		\pageBreak
-		\tocItem \markup {3. Flower of Scotland }
+		\tocItem \markup {Flower of Scotland }
 		\include "../Airs/Flower_of_scotland.ly"
 		\pageBreak
-		\tocItem \markup {4. Flowers of the Forest }
+		\tocItem \markup {Flowers of the Forest }
 		\include "../Airs/Flowers.ly"
 %		\pageBreak
-		\tocItem \markup {5. Going Home  }
+		\tocItem \markup {Going Home  }
 		\include "../Airs/Going_home.ly"
 %		\pageBreak
-		\tocItem \markup {6. Skye Boat Song }
-		\include "../Airs/Skye_boat_song.ly"
+		\tocItem \markup {Leaving Lismore }
+		\include "../Airs/Leaving_lismore.ly"
 		\pageBreak
-		\tocItem \markup {7. Waters of Kylesku }
-		\include "../Airs/Waters_of_kylesku.ly"
+		\tocItem \markup {Loch Etive Side }
+		\include "../Airs/Loch_etive_side.ly"
 %		\pageBreak
-
-		}
-		
+		\tocItem \markup {Skye Boat Song }
+		\include "../Airs/Skye_boat_song.ly"
+%		\pageBreak
+		\tocItem \markup {Waters of Kylesku }
+		\include "../Airs/Waters_of_kylesku.ly"
+		\pageBreak
+		\tocItem \markup {Westering Home }
+		\include "../Airs/Westering_home.ly"
+		\pageBreak
+		}		
 }%end book
