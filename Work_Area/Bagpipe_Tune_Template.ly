@@ -7,7 +7,7 @@
   but does not have any adverse effects
 %}
 %   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book.........................
+%  	2. Comment out top section when compiling book
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
 %

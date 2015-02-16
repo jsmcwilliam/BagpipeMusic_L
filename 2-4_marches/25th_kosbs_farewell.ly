@@ -7,11 +7,13 @@
   but does not have any adverse effects
 %}
 %   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book.........................
+%  	2. Comment out top section when compiling book
+%	3. Option to comment out "meter" from title e.g. if first tune following
+%	   section title.
 %
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -27,10 +29,10 @@
 \score {
 
     \new Staff  {
-    \time 6/8	    %adjust time to suit specific tunes
-    \tempo 4 = 50   % adjust speed accordingly for playback
+    \time 2/4	    %adjust time to suit specific tunes
+    \tempo 4 = 80   % adjust speed accordingly for playback
     \bagpipeKey
-   \set Staff.midiInstrument = #"bagpipe"  %is set in bagpipe_new.ly (\layout)
+%   \set Staff.midiInstrument = #"bagpipe"  is set in bagpipe_new.ly (\layout)
 %   \showKeySignature (for BMW compatibility)
 %   \quarterBeaming % Sets the autobeamer to span quarter notes only. 
     		    % Use for fast music.
@@ -45,43 +47,72 @@
     \bar ".|:"
     		
     % Part 1
-
     \repeat volta 2 {
-       \partial 8 \grg a16. \grd b32
-      \dble e4 \grg a16. e32 \thrwd d4 \grg e16. d32
-      \dblb b4 \grg a32 \grd G16. \grg a4 \thrwd d16. e32
-      \grg f4 e32 \grg d16. \grg f16[ A8. \birl a8]
-      \dblf f4 A16. f32 \dble e4 \grg a16.\grd b32
-      \break
-      \dble e4 \grg a16. e32 \thrwd d4 \grg e16. d32
-      \dblb b4 \grg a32 \grd G16. \grg a4 \thrwd d16. e32
-      \dblf f8 \times 2/3 { a A f } \dble e \times 2/3 { a \grg f e }
-      \thrwd d4. \slurd d4
-    }
-    \break
+    \partial 8 {\grg a16. [ d32 ]}
+     \grg f4 \grg e16. [ g32 \grA f32 A16. ]  
+     \hdblf f8 [ d8 ] \slurd d8 [ \dblg g8 ]  
+     b4 g16. [ f32 \grg e16. d32 ]  
+     \dblc c8 [ e8 ] \gra e8 [ \grg a16. d32 ]   
+     \break
 
+     \grg f4 \grg e16. [ g32 \grA f32 A16. ]  
+     \hdblf f8 [ d8 ] \slurd d8 [ \dblg g8 ]  
+     b8. [ d16 ] \grg c32 [ e16. \grg a16. A32 ]  
+     \hdblf f8 [ d8 ] \slurd d8 %\bar ":|:" 
+     \break
+    } %end repeat
+    
     % Part 2
-
     \repeat volta 2 {
-      \grg f16. g32
-      \dblA A4 \birl a8 \dblf f4 e32 \grg d16.
-      \grg b16 \grd G8. \grd b8 \grG a4 \thrwd d16. e32
-      \grg f4 e32 \grg d16. \grg f16[ A8. \birl a8]
-      \grg f4 A16. f32 \dble e8. \grg f8 g16
-      \break
+     \grg f16. [ g32 ]  
+     \dblA A8 [ \birl a8 ] g16. [ f32 \grg e16. d32 ]  
+     \dblc c8 [ \grg b8 ] \taor b8 [ \grg e16. f32 ]  
+     \dblg g8. [ e16 ] \grg G16. [ \grd b32 \grg e16. d32 ]  
+     \dblc c8 [ e8 ] \gra e8 [ \grg f16. g32 ]   
+     \break
 
-      \dblA A4 \birl a8 \dblf f4 e32 \grg d16.
-      \grg b16 \grd G8. \grd b8 \grG a4 \thrwd d16. e32
-      \dblf f8 \times 2/3 { a A f } \dble e \times 2/3 { a \grg f e }
-      \thrwd d4. \slurd d4
-    }
+     \dblA A8 [ \birl a8 ] g16. [ f32 \grg e16. d32 ]  
+     \dblc c8 [ \grg b8 ] \taor b8 [ \dblg g8 ]  
+     a16. [ \grd c32 \grg e32 A16. ] g16. [ e32 \grg c32 \grd a16. ]  
+     \thrwd d4 \slurd d8 %\bar ":|:" 
+    \break } %end repeat
+
+    % Part 3
+    \repeat volta 2 {
+     \grg a16. [ d32 ]  
+     \grg f16. [ e32 \grg f32 A16. ] a16. [ d32 \grg f32 A16. ]  
+     \hdblf f8 [ d8 ] \slurd d8 [ \dblg g8 ]  
+     b32 [ \grd G16. \grg b32 d16. ] \grA g16. [ f32 \grg e16. d32 ]  
+     \dblc c8 [ e8 ] \gra e8 [ \grg a16. d32 ]   
+     \break
+
+     \grg f16. [ e32 \grg f32 A16. ] a16. [ d32 \grg f32 A16. ]  
+     \hdblf f8 [ d8 ] \slurd d8 [ \dblg g8 ]  
+     b32 [ \grd G16. \grg b32 d16. ] \grg c32 [ e16. \grg a16. A32 ]  
+     \hdblf f8 [ d8 ] \slurd d8 %\bar ":|:" 
+    \break } %end repeat
+
+    % Part 4
+    \repeat volta 2 {
+     \grg f16. [ g32 ]  
+     A16. [ g32 A16. d32 ] \grg f16. [ d32 A16. d32 ]  
+     \dblc c8 [ \grg b8 ] \taor b8 [ \grg e16. f32 ]  
+     \grA g16. [ f32 g16. b32 ] \grg G16. [ \grd b32 \grg e16. d32 ]  
+     \dblc c8 [ e8 ] \gra e8 [ \grg f16. g32 ]   
+     \break
+
+     A16. [ g32 A16. d32 ] \grg f16. [ d32 A16. d32 ]  
+     \dblc c8 [ \grg b8 ] \taor b8 [ \dblg g8 ]  
+     a16. [ \grd c32 \grg e32 A16. ] g16. [ e32 \grg c32 \grd a16. ]  
+     \thrwd d4 \slurd d8 %\bar ":|" 
+    \break } %end repeat
 
     } %end staff
     
   \header {
-    meter = "Air"
-    piece = "Dark Isle"
-    composer = "Ian McLaughlan"
+    meter = "March"
+    piece = "25th K.O.S.Bs Farewell to Meerut"
+    composer = "P/M J. Balloch (1860 - 1947)"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

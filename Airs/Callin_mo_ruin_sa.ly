@@ -7,11 +7,13 @@
   but does not have any adverse effects
 %}
 %   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book.........................
+%  	2. Comment out top section when compiling book
+%	3. Option to comment out "meter" from title e.g. if more than one tune
+%	   per page.
 %
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -27,10 +29,10 @@
 \score {
 
     \new Staff  {
-    \time 6/8	    %adjust time to suit specific tunes
-    \tempo 4 = 50   % adjust speed accordingly for playback
+    \time 9/8	    %adjust time to suit specific tunes
+    \tempo 4 = 80   % adjust speed accordingly for playback
     \bagpipeKey
-   \set Staff.midiInstrument = #"bagpipe"  %is set in bagpipe_new.ly (\layout)
+%   \set Staff.midiInstrument = #"bagpipe"  is set in bagpipe_new.ly (\layout)
 %   \showKeySignature (for BMW compatibility)
 %   \quarterBeaming % Sets the autobeamer to span quarter notes only. 
     		    % Use for fast music.
@@ -42,46 +44,45 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-    \bar ".|:"
+%    \bar ".|:"
     		
     % Part 1
+    \grg a8 [ b8 d8 ] \dblf f4. \grg e4 f8 
+    \dble e8 [ \grg d8 b8 ] \grG a4.~ a4 f8 
+    \dblg g8 [ \grA f8 g8 ] \dblA A4. \hdblf f4 e8 
+    d8 [ \gre b8 d8 ] \dble e4.~ e4 A8  
+    %\break
 
-    \repeat volta 2 {
-       \partial 8 \grg a16. \grd b32
-      \dble e4 \grg a16. e32 \thrwd d4 \grg e16. d32
-      \dblb b4 \grg a32 \grd G16. \grg a4 \thrwd d16. e32
-      \grg f4 e32 \grg d16. \grg f16[ A8. \birl a8]
-      \dblf f4 A16. f32 \dble e4 \grg a16.\grd b32
-      \break
-      \dble e4 \grg a16. e32 \thrwd d4 \grg e16. d32
-      \dblb b4 \grg a32 \grd G16. \grg a4 \thrwd d16. e32
-      \dblf f8 \times 2/3 { a A f } \dble e \times 2/3 { a \grg f e }
-      \thrwd d4. \slurd d4
-    }
-    \break
+    \grg A4 \grip A8 \hdblf f4. \grg e4 f8 
+    \dble e8 [ d8 b8 ] \grG a4. a4 f8 
+    \dblg g8 [ \grA f8 g8 ] \dblA A4. \hdblf f4 d8 
+    \dble e8 [ d8 \gre b8 ] \thrwd d2 \bar "|." 
+    \break 
 
     % Part 2
+%     \set Score.measureLength = #(ly:make-moment 2/8)
+     e4 
+%     \set Score.measureLength = #(ly:make-moment 9/8)
+     \grg a8 [ \grd b8 \gre a8 ] \thrwd d4. \dble e4 f8 
+     \dble e8 [ d8 b8 ] \grG a4.~ a4 b8 
+     \grg a4 \wbirl a8 \dblA A4. \hdblf f4 e8 
+     d8 [ \gre b8 d8 ] \dble e4.~ e4 A8  
+     %\break
 
-    \repeat volta 2 {
-      \grg f16. g32
-      \dblA A4 \birl a8 \dblf f4 e32 \grg d16.
-      \grg b16 \grd G8. \grd b8 \grG a4 \thrwd d16. e32
-      \grg f4 e32 \grg d16. \grg f16[ A8. \birl a8]
-      \grg f4 A16. f32 \dble e8. \grg f8 g16
-      \break
+     \grg A4 \grip A8 \hdblf f4. \grg e4 f8 
+     \dble e8 [ d8 b8 ] \grG a4. a4 f8 
+     \dblg g8 [ \grA f8 g8 ] \dblA A4. \hdblf f4 d8 
+     \dble e8 [ d8 \gre b8 ] \thrwd d2 \bar "|." \break 
 
-      \dblA A4 \birl a8 \dblf f4 e32 \grg d16.
-      \grg b16 \grd G8. \grd b8 \grG a4 \thrwd d16. e32
-      \dblf f8 \times 2/3 { a A f } \dble e \times 2/3 { a \grg f e }
-      \thrwd d4. \slurd d4
-    }
+    % Part 3
+    % Part 4
 
     } %end staff
     
   \header {
-    meter = "Air"
-    piece = "Dark Isle"
-    composer = "Ian McLaughlan"
+    meter = "Gaelic Air"
+    piece = "Callin Mo Ruin Sa"
+    composer = "Trad."
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

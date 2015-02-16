@@ -155,7 +155,7 @@ grg = { \pgrace { g32 } }
 grA = { \pgrace { A32 } }
 
 % Double grace notes
-gd = { \pgrace { g32[ c]}}
+gd = { \pgrace { g32[ c] } }
 
 % Doublings
 dblG = { \pgrace { g32[ G d] } }

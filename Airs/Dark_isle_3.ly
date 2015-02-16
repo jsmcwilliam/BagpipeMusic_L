@@ -11,7 +11,7 @@
 %
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -47,15 +47,17 @@
     % Part 1
 
     \repeat volta 2 {
-       \partial 8 \grg a16. \grd b32
-      \dble e4 \grg a16. e32 \thrwd d4 \grg e16. d32
-      \dblb b4 \grg a32 \grd G16. \grg a4 \thrwd d16. e32
-      \grg f4 e32 \grg d16. \grg f16[ A8. \birl a8]
-      \dblf f4 A16. f32 \dble e4 \grg a16.\grd b32
+       \partial 8 \grg a16. \grd b32 
+      \dble e8. \grg b16 e8 \thrwd d8. \grg e8 d16 
+      \dblb b8. [ \grg a16 \grd G8 ] \grg a8. [ \thrwd d8 e16 ] 
+      \grg f8. [ e16 \grg d8 ] \grg f16 [ A8. \wbirl a8 ] 
+      \grg f8. A8 f16 \dble e8. \grg a8 \grd b16 
       \break
-      \dble e4 \grg a16. e32 \thrwd d4 \grg e16. d32
-      \dblb b4 \grg a32 \grd G16. \grg a4 \thrwd d16. e32
-      \dblf f8 \times 2/3 { a A f } \dble e \times 2/3 { a \grg f e }
+      
+      \dble e8. [ \grg b16 e8 ] \thrwd d8. [ \grg e8 d16 ] 
+      \dblb b8. [ \grg a16 \grd G8 ] \grg a8. [ \thrwd d16 e8 ] 
+      \grg f4 a32 (A16 f32) \dble e4 a32 (\grg f16 e32) 
+      
       \thrwd d4. \slurd d4
     }
     \break
@@ -63,16 +65,16 @@
     % Part 2
 
     \repeat volta 2 {
-      \grg f16. g32
-      \dblA A4 \birl a8 \dblf f4 e32 \grg d16.
-      \grg b16 \grd G8. \grd b8 \grG a4 \thrwd d16. e32
-      \grg f4 e32 \grg d16. \grg f16[ A8. \birl a8]
-      \grg f4 A16. f32 \dble e8. \grg f8 g16
+      \grg f16. g32 
+      \dblA A4 \birl a8 \dblf f8. e16 \grg d8 
+      \grg b16 [ \grd G8. \grd b8 ] \grG a8. [ \thrwd d8 e16 ] 
+      \grg f8. e16 \grg d8 \grg f16 [ A8. \wbirl a8] 
+      \grg f8. A8 f16 \dble e8. \grg f8 g16 
       \break
 
-      \dblA A4 \birl a8 \dblf f4 e32 \grg d16.
-      \grg b16 \grd G8. \grd b8 \grG a4 \thrwd d16. e32
-      \dblf f8 \times 2/3 { a A f } \dble e \times 2/3 { a \grg f e }
+      \dblA A4 \birl a8 \dblf f8. [ e16 \grg d8 ] 
+      \grg b16 [ \grd G8. \grd b8 ] \grG a8. [ \thrwd d8 e16 ] 
+      \grg f4 a32 (A16 f32) \dble e4 a32 (\grg f16 e32) 
       \thrwd d4. \slurd d4
     }
 
