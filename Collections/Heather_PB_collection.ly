@@ -68,11 +68,11 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 			title = "2/4 Marches"
 			subtitle = ##f}
 		\tocSection \markup { 2/4 Marches }		
-		\tocItem \markup {1. Donald MacLean's Farewell to Oban}
-		\include "../2-4_marches/Donald_macleans_farewell_to_oban.ly"
-		\pageBreak
-		\tocItem \markup {2. Campbell's Fairwell to Redcastle}
+		\tocItem \markup { Campbell's Fairwell to Redcastle}
 		\include "../2-4_marches/Campbells_fairwell.ly"
+%		\pageBreak
+		\tocItem \markup { Corriechoillies Welcome to the Northern Meeting}
+		\include "../2-4_marches/Corriechoillies_welcome.ly"
 %		\pageBreak
 		}
 
@@ -135,6 +135,9 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {Dark Isle }
 		\include "../Airs/Dark_isle_3.ly"
 %		\pageBreak
+		\tocItem \markup { Amazing Grace }
+		\include "../Airs/Amazing_grace_2.ly"
+%		\pageBreak
 		}
 				
 		\bookpart {
@@ -143,10 +146,13 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 			subtitle = ##f
 			picture = ##f}
 		\tocSection \markup { March, Strathspey & Reel } 
-		\tocItem \markup {3. Molly Connel }
+		\tocItem \markup { Donald MacLean's Farewell to Oban}
+		\include "../2-4_marches/Donald_macleans_farewell_to_oban.ly"
+		\pageBreak
+		\tocItem \markup { Molly Connel }
 		\include "../Strathspeys/Molly_connel.ly" 
 		\pageBreak
-		\tocItem \markup {5. The Ale is Dear }
+		\tocItem \markup { The Ale is Dear }
 		\include "../Reels/Ale_is_dear.ly" 
 		\pageBreak 		
 		}

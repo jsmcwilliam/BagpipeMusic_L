@@ -155,7 +155,7 @@ grg = { \pgrace { g32 } }
 grA = { \pgrace { A32 } }
 
 % Double grace notes
-gd = { \pgrace { g32[ c] } }
+gd = { \pgrace { g32[ c]}}
 
 % Doublings
 dblG = { \pgrace { g32[ G d] } }
@@ -196,6 +196,7 @@ shakea = { \pgrace { g32[ a e a G] } }
 shakeb = { \pgrace { g32[ b e b G] } }
 shakec = { \pgrace { g32[ c e c G] } }
 shaked = { \pgrace { g32[ d e d G] } }
+cshaked = { \pgrace { g32[ d e d c] } }
 shakee = { \pgrace { g32[ e f e a] } }
 shakef = { \pgrace { g32[ f g f a] } }
 shakeg = { \pgrace { A32[ f g a] } }
