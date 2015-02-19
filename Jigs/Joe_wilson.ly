@@ -13,7 +13,7 @@
 %
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -48,75 +48,68 @@
     		
     % Part 1
     \repeat volta 2 {
-	\partial 8 e8
- \grg a8. [ e16 \gra e8 ] \dble e4.  
- \grg a8. [ e16 \gra e8 ] \dbld d8. [ b16 g8 ]  
- \grA G8. [ b16 d8 ] \dbld d8. [ b16 d8 ]  
- \grg e16 [ g8. \grA G8 ] \dblb b8. [ \grg a16 \grd G8 ]   \break
-
- 
- \grg a8. [ e16 \gra e8 ] \dble e4. 
- \grg a8. [ e16 \gra e8 ] \dbld d8. [ b16 A8 ] 
- g8. [ f16 e8 ] \thrwd d8. [ \grg e16 g8 ] 
- \grA e8. [ d16 b8 ] \grG a4 \bar ":|:" \break	
-    } % end repeat
-    
-    \repeat volta 2 {
+    	\partial 8 f8
+    	\grg a \grd a \gre a d \gre a d
+    	f \grg d A f e d
+    	\dblg g4 b8 \grg b \grd b \gre b
+    	\dble e4 d8 \grg c e A
+    	%\break 
+    	
+    	\grg a \grd a \gre a d \gre a d
+    	f \grg d A f e d
+    	\dblg g4 e8 \grg f e d
+    	\dble e4. \gra e4
     } %end repeat
     
     % Part 2
     \repeat volta 2 {
-    	     \grd b8 
- \grg a8. [ A16 \grg A8 ] \grg A4. 
- a8. [ A16 \grg A8 ] g8. [ e16 A8 ] 
- g8. [ f16 e8 ] \thrwd d8. [ \grg e16 f8 ] 
- \grg g8. [ G16 d8 ] \dblb b8. [ \grg a16 \grd G8 ]  \break
-
- \grg a8. [ A16 \grg A8 ] \grg A4. 
- a8. [ A16 \grg A8 ] g8. [ e16 A8 ] 
- g8. [ f16 e8 ] \thrwd d8. [ \grg e16 g8 ] 
- \grA e8. [ d16 b8 ] \grG a4 \bar ":|:" \break    	    
-
+    	A8
+    	f4. \dblf f8 d f
+    	\dblA A4 d8 \grg f e d
+     	\dblg g4 b8 \grg b \grd b \gre b
+    	\dble e4 d8 \grg c e A
+    	
+    	f4. \dblf f8 d f
+    	\dblA A4 d8 \grg f e d
+    	\dblg g4 \grg e8 \grg f e d
+    	\dble e4. \gra e4
     } %end repeat
     
     % Part 3
     \repeat volta 2 {
- e8 
- \gbirl a4. \dble e4. 
- \grg a4 e8 \dbld d8. [ b16 g8 ] 
- b4. \gre G4. 
- \grg e16 [ g8. \grA G8 ] \dblb b8. [ \grg a16 \grG G8 ]  \break
+    	f8
+    	\grg a4 f8 \grg a \grd a \gre a
+    	d \gre a d \grg f e d
+    	\dblg g4 b8 \grg b \grd b \gre b
+    	\dble e4 d8 \grg c e A
 
- 
- \gbirl a4. \dble e4. 
- \grg a4 e8 \dbld d8. [ b16 A8 ] 
- g8. [ f16 e8 ] \thrwd d8. [ \grg e16 g8 ] 
- \grA e8. [ d16 b8 ] \grG a4 \bar ":|:" \break    	    
-    	    
+    	\grg a4 f8 \grg a \grd a \gre a
+    	d \gre a d \grg f e d
+    	\dblg g4 e8 \grg f e d
+    	\dble e4. \gra e4
     } %end repeat
-    
+	    
     % Part 4
     \repeat volta 2 {
-  e8 
- \gbirl a4. \dble e4. 
- \grg a4 e8 \dbld d8. [ b16 g8 ] 
- b4. \gre G4. 
- \grg e16 [ g8. \grA G8 ] \dblb b8. [ \grg a16 \grG G8 ]  \break
+	A8
+	\hdblf f4 A8 \thrwd d4 A8 
+	f A \grg A f e d
+    	\dblg g4 b8 \grg b \grd b \gre b
+    	\dble e4 d8 \grg c e A
 
- 
- \gbirl a4. \dble e4. 
- \grg a4 e8 \dbld d8. [ b16 A8 ] 
- g8. [ f16 e8 ] \thrwd d8. [ \grg e16 g8 ] 
- \grA e8. [ d16 b8 ] \grG a4 \bar ":|:" \break
-   	    
+	\hdblf f4 A8 \thrwd d4 A8 
+	f A \grg A f e d
+    	\dblg g4 e8 \grg f e d
+    	\dble e4. \gra e4	
     } %end repeat
+    
 
     } %end staff
     
   \header {
-    meter = "March"
-    piece = "Murdo MacKenzie of Torridon"
-    composer = "Composer"
+    meter = "Jig"
+    piece = "P/M Joe Wilson"
+    composer = "P/M Angus MacDonald"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

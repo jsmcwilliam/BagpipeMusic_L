@@ -76,7 +76,7 @@
     } %end staff
     
   \header {
-%    meter = "3/4 Retreat March"
+    meter = "March"
     piece = "When the Battle's O'er"
     composer = "PM William Robb"
     parttagline = "Copied by John S. McWilliam"

@@ -76,7 +76,7 @@
     } %end staff
     
   \header {
-    meter = "4/4 March"
+    meter = "March"
     piece = "Scotland the Brave"
     composer = "Traditional"
     parttagline = "Copied by John S. McWilliam"

@@ -118,7 +118,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocSection \markup { 6/8 Marches } 
 		\tocItem \markup {1. Murdo MacKenzie of Torridon }
 		\include "../6-8_marches/Murdo_mackenzie_of_torridon.ly"
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {2. Mrs Lily Christie}
 		\include "../6-8_marches/Mrs_lily_christie.ly"
 		\pageBreak
@@ -193,16 +193,22 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {1. Royal Scots Polka }
 		\include "../Polka/Royal_scots_polka.ly" 
 		\pageBreak
-		\tocItem \markup {3. Callin Mo Ruin-Sa }
+		\tocItem \markup {2. Airlies Big Day }
+		\include "../Reels/Airlies_big_day.ly" 
+%		\pageBreak
+		\tocItem \markup {4. P/M Joe Wilson }
+		\include "../Jigs/Joe_wilson.ly" 
+		\pageBreak
+		\tocItem \markup {5. Callin Mo Ruin-Sa }
 		\include "../Airs/Callin_mo_ruin_sa.ly" 
 %		\pageBreak
-		\tocItem \markup {4. Molly Connel }
+		\tocItem \markup {6. Molly Connel }
 		\include "../Strathspeys/Molly_connel.ly" 
 %		\pageBreak
-		\tocItem \markup {5. Dalnahasaig }
+		\tocItem \markup {7. Dalnahasaig }
 		\include "../Strathspeys/Dalnahasaig.ly" 
 		\pageBreak
-		\tocItem \markup {6. Itchy Fingers }
+		\tocItem \markup {8. Itchy Fingers }
 		\include "../Hornpipes/Itchy_fingers.ly" 
 		\pageBreak
 		}
@@ -222,10 +228,12 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {3. Barbara's Jig }
 		\include "../Jigs/Barbaras_jig.ly"
 		\pageBreak
-		\tocItem \markup {4. Dark Isle }
+		\tocItem \markup {4. Mr. & Mrs. J. Duncans Golden Wedding 2000 }
+		\include "../Hornpipes/Mr_&_mrs_Duncan.ly" 		\pageBreak
+		\tocItem \markup {5. Dark Isle }
 		\include "../Airs/Dark_isle_3.ly" 
 %		\pageBreak
-		\tocItem \markup {5. Electric Chopsticks }
+		\tocItem \markup {6. Electric Chopsticks }
 		\include "../Hornpipes/Electric_chopsticks.ly"
 		\pageBreak
 		}

@@ -79,7 +79,7 @@
     } %end staff
     
   \header {
-%    meter = "4/4 March"
+    meter = "March"
     piece = "Flett from Flotta"
     composer = "P/M Donald MacCleod"
     parttagline = "Copied by John S. McWilliam"

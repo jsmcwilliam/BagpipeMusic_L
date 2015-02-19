@@ -84,7 +84,7 @@
     } %end staff
     
   \header {
-%    meter = "5/4 March"
+    meter = "March"
     piece = "Cullen Bay"
     composer = "Ian Duncan"
     parttagline = "Copied by John S. McWilliam"

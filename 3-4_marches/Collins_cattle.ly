@@ -76,7 +76,7 @@
     } %end staff
     
   \header {
-%    meter = "3/4 Retreat March"
+    meter = "March"
     piece = "Collin's Cattle"
     composer = "W. MacLean"
     parttagline = "Copied by John S. McWilliam"

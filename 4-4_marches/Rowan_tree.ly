@@ -74,7 +74,7 @@
     } %end staff
     
   \header {
-%    meter = "4/4 March"
+    meter = "March"
     piece = "Rowan Tree"
     composer = "Traditional"
     parttagline = "Copied by John S. McWilliam"
