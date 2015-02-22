@@ -64,7 +64,7 @@
     % Part 2
     \repeat volta 2 {
     	\grg c16 [ e16 ] 
-    	\dblA A8 [ a16 A16 ] c16 [ A16 c A] 
+    	\dblA A8 [ a16 A16 ] c16 [ A16 a A] 
     	f16 [ A16 d A16 ] \hdble e8 [ \grg c16 e16 ] 
     	\dblA A8 [ a16 A16 ] c16 [ A16 a A16 ] 
     	c16 [ \grd a16 \grg d c16 ] \grg b16 [ \grG b16 ] 

@@ -44,33 +44,25 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-%    \bar ".|:"
+    \bar ".|:"
     		
     % Part 1
-    f4 e8. [ d16 ] d16 [ f8. ] a4 
-    f4 e8. [ f16 ] d8. [ f16 ] A8. [ g16 ] 
-    f4 e8. [ d16 ] d16 [ f8. ] a8. [ f16 ] 
-    g4 e8. [ f16 ] a8. [ f16 ] \times 2/3 {e8 [ ( f8 g8 ] )}  
+    \repeat volta 2 {
+    \dblf f4 \grg e8. [ d16 ] \grg d16 [ f8. ] \birl a4 
+    \dblf f4 \grg e8. [ f16 ] \thrwd d8. [ f16 ] \dblA A8. [ g16 ] 
+    \hdblf f4 \grg e8. [ d16 ] \grg d16 [ f8. ] \birl a8. [ f16 ] 
+    \hdblf g4 \hdble e8. [ g16 ] \hdblb c8. g16 \grg e16 [ f g8 ]   
     \break
-
-    f4 e8. [ d16 ] d16 [ f8. ] a4 
-    f4 e8. [ f16 ] d8. [ f16 ] A8. [ g16 ] 
-    f4 e8. [ d16 ] d16 [ f8. ] a8. [ f16 ] 
-    g4 e8. [ f16 ] a8. [ f16 ] \times 2/3 {e8 [ ( f8 g8 ] )} \bar "|." 
-    \break 
-
+    } %end repeat
+    
     % Part 2
-     A4 f8. [ A16 ] d8. [ f16 ] a8. [ f16 ] 
-     A4 f8. [ A16 ] d8. [ A16 ] \times 2/3 {e8 [ ( f8 g8 ] )}
-     A4 f8. [ A16 ] d8. [ f16 ] a8. [ f16 ] 
-     g4 e8. [ f16 ] a8. [ f16 ] \times 2/3 {e8 [ ( f8 g8 ] )}  
+    \repeat volta 2 {
+     \dblA A4 \hdblf f8. [ A16 ] \hslurd d8. [ f16 ] \birl a8. [ f16 ] 
+     \dblA A4 \hdblf f8. [ A16 ] \hslurd d8. f16 \grg e16 f g8
+     \dblA A4 \hdblf f8. [ A16 ] \hslurd d8. [ f16 ] \birl a8. [ f16 ] 
+     \dblg g4 \hdble e8. [ g16 ] \hdblb c8. g16 \grg e16 [ f g8 ]  
      \break
-
-     A4 f8. [ A16 ] d8. [ f16 ] a8. [ f16 ] 
-     A4 f8. [ A16 ] d8. [ A16 ] \times 2/3 {e8 [ ( f8 g8 ] )} 
-     A4 f8. [ A16 ] d8. [ f16 ] a8. [ f16 ] 
-     g4 e8. [ f16 ] a8. [ f16 ] \times 2/3 {e8 [ ( f8 g8 ] )} \bar "|." 
-     \break 
+    } %end repeat
 
     % Part 3
     % Part 4
@@ -80,7 +72,7 @@
   \header {
     meter = "Strathspey"
     piece = "Dalnahasaig"
-    composer = "Trad. Arr. Hamish Moore"
+    composer = "P/M G.S. McLennan"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

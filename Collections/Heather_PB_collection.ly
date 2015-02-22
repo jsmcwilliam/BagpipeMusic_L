@@ -148,7 +148,27 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../Airs/Our_ain_fireside.ly"
 %		\pageBreak
 		}
-				
+
+		\bookpart {
+		\header {
+			title = "Competition Marches"
+			subtitle = ##f
+			picture = ##f}
+		\tocSection \markup { Competition Marches } 
+		\tocItem \markup {1. Barnyards of Delgaty}
+		\include "../2-4_marches/Barnyards_o_delgaty.ly"
+%		\pageBreak
+%{		\tocItem \markup {2. Fare Thee Weel Ye Allourman Braes }
+		\include ""
+		\pageBreak %}
+		\tocItem \markup {3. Campbells Farewell to Redcastle }
+		\include "../2-4_marches/Campbells_fairwell.ly"
+		\pageBreak
+		\tocItem \markup {4. 25th. K.O.S.B.s Farewell to Meerut }
+		\include "../2-4_marches/25th_kosbs_farewell.ly"
+		\pageBreak
+		}
+		
 		\bookpart {
 		\header {
 			title = "March, Strathspey & Reel"
@@ -229,7 +249,8 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../Jigs/Barbaras_jig.ly"
 		\pageBreak
 		\tocItem \markup {4. Mr. & Mrs. J. Duncans Golden Wedding 2000 }
-		\include "../Hornpipes/Mr_&_mrs_Duncan.ly" 		\pageBreak
+		\include "../Hornpipes/Mr_&_mrs_Duncan.ly" 		
+		\pageBreak
 		\tocItem \markup {5. Dark Isle }
 		\include "../Airs/Dark_isle_3.ly" 
 %		\pageBreak

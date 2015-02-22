@@ -59,6 +59,7 @@
     	f \grg d A f e d
     	\dblg g4 e8 \grg f e d
     	\dble e4. \gra e4
+    	\break
     } %end repeat
     
     % Part 2
@@ -73,6 +74,7 @@
     	\dblA A4 d8 \grg f e d
     	\dblg g4 \grg e8 \grg f e d
     	\dble e4. \gra e4
+    	\break
     } %end repeat
     
     % Part 3
@@ -87,6 +89,7 @@
     	d \gre a d \grg f e d
     	\dblg g4 e8 \grg f e d
     	\dble e4. \gra e4
+    	\break
     } %end repeat
 	    
     % Part 4
