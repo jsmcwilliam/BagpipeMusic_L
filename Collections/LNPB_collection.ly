@@ -299,4 +299,5 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\include "../Medley/Bumpy_old_road_2.ly" 
 %		\pageBreak
 		}
+%}
 }%end book

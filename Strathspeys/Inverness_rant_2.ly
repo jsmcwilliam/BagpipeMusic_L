@@ -62,13 +62,13 @@
  a8 
     \set Score.measureLength = #(ly:make-moment 4/4)
  \thrwd d4 \grg f8. [ d16 ] A8. [ d16 ] \grg f8. [ d16 ] |
- \grg c16 [ \grd a8. ] \dble e8. [ a16 ] \grg f8. [ a16 ] \dble e8. [ c16 ] |
+ \grg c16 [ \grd a8. ] \grg e8. [ a16 ] \grg f8. [ a16 ] \grg e8. [ c16 ] |
  \thrwd d4 \grg f8. [ d16 ] A8. [ d16 ] \grg f8. [ d16 ] |
  \dble e4 \grip e8. [ g16 ] \hdblf f8 [ e8 ] \thrwd d8 [ a8 ]  
  \break
 
  \thrwd d4 \grg f8. [ d16 ] A8. [ d16 ] \grg f8. [ d16 ] |
- \grg c16 [ \grd a8. ] \dble e8. [ a16 ] \grg f8. [ a16 ] \dble e8. [ c16 ] |
+ \grg c16 [ \grd a8. ] \grg e8. [ a16 ] \grg f8. [ a16 ] \grg e8. [ c16 ] |
  \thrwd d4 {e16 [ ( f16^\markup {3} g8 ] )} A8. [ e16 ] \grg f8. [ d16 ] |
  \dble e4 \grip e8. [ g16 ] \hdblf f8 [ e8 ] \thrwd d8 
  \bar "|." \break 

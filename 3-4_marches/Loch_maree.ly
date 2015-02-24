@@ -78,14 +78,14 @@
     % Part 2
     	\set Score.repeatCommands = #'(start-repeat) 
  \dblc c8 [ e8 ] \dblA A4 \grg A8 [ f8 ] 
- \dblA A8. [ f16 ] \hdble e4 \gra e4 
+ \dblA A8. [ f16 ] \grg e4 \gra e4 
  \dblc c8 [ e8 ] \dblf f4 \dble e8 [ c8 ] 
  \dblA A8 [ f8 ] \dblf f4 \grg e4 
  	\revert Score.BarLine.break-visibility
  
  	\set Score.repeatCommands = #'((volta "1"))  
  \dblc c8 [ e8 ] \dblA A4 \grg A8 [ f8 ] 
- \dblA A8. [ f16 ] \hdble e4 \gra e4 
+ \dblA A8. [ f16 ] \grg e4 \gra e4 
  \dblc c8 [ e8 ] \dblf f4 \grg a8. [ c16 ] 
  \dble e8. [ c16 ] \dblc c4 \gre b4
  	\set Score.repeatCommands = #'((volta #f) end-repeat)

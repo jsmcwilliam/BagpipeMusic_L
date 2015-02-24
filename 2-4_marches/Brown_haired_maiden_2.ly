@@ -26,6 +26,8 @@
 %to here..........................................................
 %}
 
+\defineBarLine ".|:-|." #'("|." ".|:" "|.")
+
 \score {
 
     \new Staff  {
@@ -80,11 +82,10 @@
  a4 \thrwd d8. [ e16 ] 
  \grg f4 \dblg g8 [ e8 ] 
  \set Score.measureLength = #(ly:make-moment 3/8) 
- \thrwd d4 \wslurd d8 \bar "||" \break
+ \thrwd d4 \wslurd d8 \bar ".|:-|." \break
 
     % Part 3
-    \repeat volta 2 {
- \bar ".|:"
+ \set Score.repeatCommands = #'(start-repeat)
  \set Score.measureLength = #(ly:make-moment 1/8) 
  a8 
  \set Score.measureLength = #(ly:make-moment 2/4)
@@ -96,8 +97,8 @@
  a4 \thrwd d8. [ e16 ] 
  \grg f4 \dblg g8 [ e8 ] 
  \thrwd d4 \wslurd d8 
+ \set Score.repeatCommands = #'(end-repeat)
  \break
-    } %end repeat
 
     % Part 4
     \repeat volta 2 {

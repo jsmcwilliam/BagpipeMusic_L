@@ -51,7 +51,7 @@
 \grg a8. [ b16 ] \grg a8 [ G8 ] \grg a8 [ b8 ] \thrwd d4 
  \grg b8. [ c16 ] \grg b8 [ a8 ] \grg b8 [ c8 ] \thrwd d8. [ e16 ] 
  \grg f8 [ A8 ] e8. [ f16 ] \thrwd d8 [ e8 ] \grg f8. [ e16 ] 
- \grg d8 [ b8 ] \grg b8 [ \grG a8 ] \grg a2 
+ \grg d8 [ b8 ] \grg b8 [ \grG a8 ] \grg a4. e8 
  \break
     } %end repeat
 

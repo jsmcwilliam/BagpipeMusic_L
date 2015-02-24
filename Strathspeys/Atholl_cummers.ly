@@ -17,20 +17,21 @@
 % #(allow-volta-hook "|") 
 %
 % from here
-%{
+%
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 %
-\defineBarLine ".|:-|." #'("|." ".|:" "|.")
-
 \include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
 %\include "bagpipe_extra.ly"	%(Extras)
-\include "BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
+\include "BP_format.ly" %(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Landscape)
 				%(Header: piece, meter and composer)
 				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
+
+\defineBarLine ".|:-|." #'("|." ".|:" "|.")
+
 
 \score {
 
@@ -80,8 +81,8 @@
  
     % Part 3
  \bar "|." \grg b4 \taor b8. [ \grd c16 ] \grg b8. [ \grd c16 ] \dblf f8. [ e16 ] 
- \darodo b4 \taor b8. [ \grd c16 ] \grg a8. [ \grd c16 ] \dble e8. [ c16 ] 
- \darodo b4 \taor b8. [ \grd c16 ] \grg b8. [ \grd c16 ] \dblf f8. [ e16 ] 
+ \grg b4 \taor b8. [ \grd c16 ] \grg a8. [ \grd c16 ] \dble e8. [ c16 ] 
+ \grg b4 \taor b8. [ \grd c16 ] \grg b8. [ \grd c16 ] \dblf f8. [ e16 ] 
  \grg f16 [ g16 A8 ] \hdble e8. [ A16 ] \hdblc c16 [ \gre a8. ] \dble e8. [ c16 ]  
  \break
 
@@ -99,7 +100,7 @@
  \break
 
  \dblf f8. [ b16 ] \dblf f8. [ e16 ] \dblf f8. [ b16 ] \grg f16 [ A8. ] 
- \darodo b4 \dblf f8. [ e16 ] \dblc c16 [ \gre a8. ] \dble e8. [ c16 ] 
+ \catchb b4 \dblf f8. [ e16 ] \dblc c16 [ \gre a8. ] \dble e8. [ c16 ] 
  \dblf f8. [ b16 ] \dblf f8. [ e16 ] \thrwd d8. [ e16 ] \grg f16 [ g16 A8 ] 
  g16 [ f16 e8 ] \grg f16 [ g16 A8 ] \hdblb b16 [ \gre G8. ] \dblb b16 [ A8. ] 
  \bar ".|:-|." \break

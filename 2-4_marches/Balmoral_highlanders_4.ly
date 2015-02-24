@@ -12,7 +12,7 @@
 %	   per page.
 %
 % from here
-%
+%{
 \include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
 %\include "bagpipe_extra.ly"	%(Extras)
 \include "BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
@@ -52,7 +52,7 @@
     \grg a16. [ e32 \grg c32 e16. ] \grg a16. [ e32 \grg c32 e16. ]  
     \dble e16. [ a32 f16. a32 ] \dble e8 [ \dbld d16. b32 ]  
     \grg G16. [ d32 \grg b32 d16. ] \grg G16. [ d32 \grg b32 d16. ]  
-    \grg G16. [ a32 b16. c32 ] \dbld d16. [ b32 e16. c32 ]   
+    \grg G16. [ a32 \grg b16. c32 ] \dbld d16. [ b32 \dble e16. c32 ]   
     \break
 
     \set Score.measureLength = #(ly:make-moment 3/4)
@@ -79,7 +79,7 @@
     	\set Score.measureLength = #(ly:make-moment 2/4)
     	\grg c32 [ e16. \dblA A8 ] c32 [ e16. \dblA A8 ]  
     	c32 [ e16. A16. f32 ] \dble e8 [ \dbld d16. c32 ]  
-    	\gcatchb b8 [ \dblg g8 ] \grA b8 [ \dblg g8 ]  
+    	\gcatchb b8 [ \dblg g8 ] \tcatchb b8 [ \dblg g8 ]  
     	\tcatchb b8 [ \dblg g8 ] A16. [ g32 \grA f16. d32 ]   
     	\break
 
@@ -123,7 +123,7 @@
     	\break
 	
     } %end repeat
-
+%\pageBreak
     % Part 5
     \repeat volta 2 {
  e8  
@@ -153,12 +153,12 @@
  A16. [ e32 \grg c32 e16. ] \dble e16. [ a32 \grg c32 \grd a16. ]  
  \once \override Score.VoltaBracket.shorten-pair = #'(0 . 0.3)
  \set Score.repeatCommands = #'((volta "1."))  
- A16. [ e32 \grg c32 e16. ] \grg f16. [ e32 d16. c32 ] 
+ A16. [ e32 \grg c32 e16. ] \grg f16. [ e32 \grg d16. c32 ] 
  \once \override Score.VoltaBracket.shorten-pair = #'(0.5 . 0)
  \set Score.repeatCommands = #'((volta #f) (volta "2."))  
- A8 [ \grip A16. g32 ] \grA f16. [ e32 d16. c32 ] 
+ A8 [ \grip A16. g32 ] \grA f16. [ e32 \grg d16. c32 ] 
  \set Score.repeatCommands = #'((volta #f))    
- \grg b32 [ d16. G16. \grd b32 ] \grA g16. [ f32 e16. d32 ]  
+ \grg b32 [ d16. G16. \grd b32 ] \grA g16. [ f32 \grg e16. d32 ]  
  \dblc c8 [ \gre a8 ] \wbirl a8 
  \break	
     } %end repeat

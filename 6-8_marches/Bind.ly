@@ -11,7 +11,6 @@
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
 %
-% #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
 %{
 #(ly:set-option 'point-and-click #t)
@@ -25,6 +24,8 @@
 				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
+
+#(allow-volta-hook "|") % enables volta hook outside repeat context
 
 \score {
 
@@ -48,7 +49,11 @@
     		
     % Part 1
     \repeat volta 2 {
-    \partial 8 {e8} 
+    \partial 8 {
+    	    \set Score.repeatCommands = #'((volta "2."))
+    	    e8
+    	    \set Score.repeatCommands = #'((volta #f))
+    } 
     \grg a4.~ a8. [ \grd b16 \gre a8 ] 
     \thrwd d4 f8 \dblA A4. 
     e8. [ f16 \grg d8 ] \dblc c4 \gre a8 

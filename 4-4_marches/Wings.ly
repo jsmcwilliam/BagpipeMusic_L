@@ -62,7 +62,7 @@
     % Part 2
  e8 
  \dblA A4 \grg A4 \grip A8 [ g8 ] \hdblf f8 [ e8 ] 
- \grg f4 \grip f8 [ A8 ] \hdble e4 \dblc c8 [ e8 ] 
+ \grg f4 \grip f8 [ A8 ] \hdblf f e \dblc c8 [ e8 ] 
  \grg f8. [ g16 ] A8 [ f8 ] \grg e16 [ c8. ] \dblb b8 [ \grG a8 ] 
  \grg b8. [ c16 ] \thrwd d8. [ c16 ] \dblb b8 [ e8 ] \thrwd d8 [ b8 ]  
  \break
