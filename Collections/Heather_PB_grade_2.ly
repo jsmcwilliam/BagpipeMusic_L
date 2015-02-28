@@ -145,7 +145,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\tocItem \markup {2. Atholl Cummers }
 		\include "../Strathspeys/Atholl_cummers.ly"
 		\pageBreak
-%{		\tocItem \markup {3. Charlies Welcome }
+		\tocItem \markup {3. Charlies Welcome }
 		\include "../Reels/Charlies_welcome.ly"
 		\pageBreak
 		\tocItem \markup {1. Highland Wedding }
@@ -157,7 +157,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\tocItem \markup {3. Pretty Marion }
 		\include "../Reels/Pretty_marion.ly" 
 		\pageBreak 		
-%}		
+		
 		}
 %{
 		\bookpart {
