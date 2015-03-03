@@ -50,7 +50,7 @@
  \thrwd d8 [ e8 ] \dblf f4 
  \dble e8 [ d8 ] \dblb b8 [ d8 ] 
  \dblf f8 [ e8 ] \dblf f4 
- \set Score.repeatCommands = #'((volta "22"))  G8 [ \grd a8 ] \wbirl a8. [ b16 ] 
+ \set Score.repeatCommands = #'((volta "2. --2")) \grg G8 [ \grd a8 ] \wbirl a8. [ b16 ] 
  \thrwd d8 [ e8 ] \dblf f4 
  \dble e8 [ d8 ] \dblb b8 [ \gre G8 ] 
  \grg a4 \wbirl a4 \set Score.repeatCommands = #'((volta #f)) 

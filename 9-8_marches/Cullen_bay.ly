@@ -77,7 +77,7 @@
     \repeat volta 2 {
  \dble e8 [ c32 e16. ] \dblA A8 [ e8 ] \dblf f8 [ e32 c16. ] \dble e2 |
  \dblc c8 [ \gre a8 ] \wbirl a8 [ b32 c16. ] \dble e8 [ d32 c16. ] \dblb b2 |
- \dble e8 [ c16 e16. ] \grg f8 [ A8 ] f16. [ e32 \grg d32 f16. ] \dble e2 |
+ \dble e8 [ c32 e16. ] \grg f8 [ A8 ] f16. [ e32 \grg d32 f16. ] \dble e2 |
  \grg a8. [ b16 ] \dblc c8 [ \gre a8 ] \grg b8 [ \grd c16. b32 ] \grG a2 |\break
     } %end repeat
 %}
