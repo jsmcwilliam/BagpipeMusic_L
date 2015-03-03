@@ -85,7 +85,7 @@
   \header {
     meter = "Mazurka"
     piece = "Sonny Brogans Mazurka"
-    composer = "Composer"
+    composer = "Trad."
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

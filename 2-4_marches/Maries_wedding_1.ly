@@ -33,7 +33,7 @@
  \dblf f8 [ e8 ] \dblf f8 [ A8 ]  
 % \break
 
- \set Score.repeatCommands = #'((volta "2. --2"))  G8 [ \grd a8 ] 
+ \set Score.repeatCommands = #'((volta "2. --2"))  \grg G8 [ \grd a8 ] 
  \wbirl a8. [ b16 ] 
  \thrwd d8 [ e8 ] \grg f4 
  \dble e8 [ d8 ] \dblb b8 [ \gre G8 ] 

@@ -13,7 +13,7 @@
 %
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%{
+%
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 

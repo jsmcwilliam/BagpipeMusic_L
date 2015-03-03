@@ -7,7 +7,7 @@
   but does not have any adverse effects
 %}
 %   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book
+%  	2. Comment out top section when compiling book.........................
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
 %
@@ -29,7 +29,7 @@
 \score {
 
     \new Staff  {
-%    \time 2/4	    %adjust time to suit specific tunes
+    \time 6/8	    %adjust time to suit specific tunes
     \tempo 4 = 80   % adjust speed accordingly for playback
     \bagpipeKey
 %   \set Staff.midiInstrument = #"bagpipe"  is set in bagpipe_new.ly (\layout)
@@ -38,7 +38,7 @@
     		    % Use for fast music.
 %   \halfBeaming    % Sets the autobeamer to span half notes. 
                     % Mostly used in reels.
-   \reelTime       % Reels are in allabreve time with half note beaming.
+%   \reelTime       % Reels are in allabreve time with half note beaming.
 %   \marchTime      % 4/4 marches are written with numerical time signature and 
                     % with quarter beaming.
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
@@ -47,38 +47,73 @@
     \bar ".|:"
     		
     % Part 1
-    \grg f8 d \grg a f \grg d a \grg f a
-    \grg b d \grG d a \grg b d \grg e g
-    \grg f8 d \grg a f \grg d a \grg f a
-    \grg b d \grg e f \dblg g4 A
-    \break
-    f8 d \grg a f \grg d a \grg f a
-    \grg b d \grG d a \grg b d \grg e g
-    A f \grg a A g e \grg c d
-    \grg e a \grd c e \thrwd d2
-    \bar "||" \break
+    \repeat volta 2 {
+ \partial 8 b8 
+ \thrwd d4. \dblA A4. 
+ \hdblf f4 e8 \grg f8 [ e8 d8 ] 
+ \grg b8 [ \grG b e ] \grg e8 [ d8 e8 ] 
+ \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ] % \break
 
+ \thrwd d4. \dblA A4. 
+ \hdblf f4 e8 \grg f8 [ e8 d8 ] 
+ \grg b8 [ \grG b e ] \grg e8 [ d8 \gre b8 ] 
+ \thrwd d4. \grg a4 
+ \break
+    } %end repeat
+    
     % Part 2
-    \dblA A2 \grg A8 d \grg f A
-    g e \grg c d \grg e a \grd c e
-    \grg f A d f A d \grg f d
-    \grg f a \grg c d \dble e4 \dblg g4
-    \break
-    \dblA A2 \grg A8 d \grg f A
-    g e \grg c d \grg e a \grd c e
-    A f \grg a A g e \grg c d
-    \grg e a \grd c e \thrwd d2
-    \bar "|."
-
+    \repeat volta 2 {
+ b8 
+ \thrwd d4. \grg d8 [ \gre a8 d8 ] 
+ \grg d8 [ \gre a8 d8 ] \grg f8 [ e8 d8 ] 
+ \grg b8 [ \grG b e ] \grg e8 [ d8 e8 ] 
+ \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ]  % \break
+ 
+ \thrwd d4. \grg d8 [ \gre a8 d8 ] 
+ \grg d8 [ \gre a8 d8 ] \grg f8 [ e8 d8 ] 
+ \grg b8 [ \grG b e ] \grg e8 [ d8 \gre b8 ] 
+ \thrwd d4. \grg a4 
+ \break
+    } %end repeat
+%{
     % Part 3
-    % Part 4
+    \repeat volta 2 {
+ b8 
+ \thrwd d4. A4. 
+ d8 [ f8 \grg d8 ] e8 [ \grg d8 \grG d8 ] 
+ b4 e8 \grg e8 [ d8 e8 ] 
+ \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ] % \break
 
+ 
+ \thrwd d4. A4. 
+ d8 [ f8 \grg d8 ] e8 [ \grg d8 \grG d8 ] 
+ b4 e8 \grg e8 [ d8 \gre b8 ] 
+ \thrwd d4. \grg a4 
+ \break
+    } %end repeat
+
+    % Part 4
+    \repeat volta 2 {
+ b8 
+ \thrwd d4. \grg a8 [ d8 \gre a8 ] 
+ d8 [ \gre a8 d8 ] \grg f8 [ e8 d8 ] 
+ b4 e8 \grg e8 [ d8 e8 ] 
+ \grg b8 [ \grd b8 \gre b8 ] \dblc c8 [ b8 \grG a8 ]  %\break
+
+ 
+ \thrwd d4. \grg a8 [ d8 \gre a8 ] 
+ d8 [ \gre a8 d8 ] \grg f8 [ e8 d8 ] 
+ b4 e8 \grg e8 [ d8 \gre b8 ] 
+ \thrwd d4. \grg a4 
+ \break
+    } %end repeat
+%}
     } %end staff
     
   \header {
-    meter = "Reel"
-    piece = "Airlies Big Day"
-    composer = "Murray Blair"
+    meter = "Jig"
+    piece = "Barbara's Jig"
+    composer = "Traditional"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

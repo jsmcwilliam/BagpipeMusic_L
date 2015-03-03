@@ -13,7 +13,7 @@
 %
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -50,38 +50,38 @@
     \repeat volta 2 {
     \partial 8 {\grg d16 b}
     \grg a d \grG d e \grg e d \grG d f
-    \grA g a \grg f a \grg e d \grG d b
+    g a \grg f a \grg e d \grG d b
     \grg G b \grg d b \grg a d \grG d a~
     a \grg c \grG c d \dble e8
-    \set Score.repeatCommands = #'((volta "2.--2.")) 
+    \set Score.repeatCommands = #'((volta "2. --2"))
     \grg d16 b \break
 
     \grg a d \grG d e \grg e d \grG d f
-    \grA g a \grg f a \grg e d \grG d b
+    g a \grg f a \grg e d \grG d b
     \grg G b \grg d b \grg a d \grG d a
     \grg c d \grG d c \thrwd d8
-    \set Score.repeatCommands = #'((volta #f))
+    \set Score.repeatCommands = #'((volta #f)) 
     \break
     } %end repeat
 
     % Part 2
     \repeat volta 2 {
     \grg f16 g
-    A a \grA g a \grg f d d f
+    A a \grA g a \grg f d \grG d f
     \dblg g8 \grA f16 d \grg e d \grG d b
     \grg G b \grg d b \grg a d \grG d a~
     a \grg c \grG c d \dble e8
     \set Score.repeatCommands = #'((volta "1."))
     \grg f16 g \break
 
-    A a \grA g a \grg f d d f
-    \dblg g8 \grA f16 d \grg e d \grG d b
+    A a \grA g a \grg f d \grG d f
+    \dblg g8 f16 d \grg e d \grG d b
     \grg G b \grg d b \grg a d \grG d a
     \grg c d \grG d c \thrwd d8
     \set Score.repeatCommands = #'((volta #f)) 
     \break
     } %end repeat
-    
+%{    
     % Part 3
     \repeat volta 2 {
     \grg d16 e
@@ -123,6 +123,7 @@
     \grg G b d b \grg a d \grc d a
     \grg c d \grc d c \thrwd d8
     \bar "|."
+%}    
     } %end staff
     
   \header {

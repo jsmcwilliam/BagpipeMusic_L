@@ -211,23 +211,23 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 			picture = ##f}
 		\tocSection \markup { Medley-1 } 
 		\tocItem \markup {1. Royal Scots Polka }
-		\include "../Polka/Royal_scots_polka.ly" 
-		\pageBreak
-		\tocItem \markup {2. Airlies Big Day }
-		\include "../Reels/Airlies_big_day.ly" 
+		\include "../Polka/Royal_scots_polka_3.ly" 
 %		\pageBreak
+		\tocItem \markup {2. Airlies Big Day }
+		\include "../Hornpipes/Airlies_big_day.ly" 
+		\pageBreak
 		\tocItem \markup {4. P/M Joe Wilson }
 		\include "../Jigs/Joe_wilson.ly" 
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {5. Callin Mo Ruin-Sa }
 		\include "../Airs/Callin_mo_ruin_sa.ly" 
 %		\pageBreak
 		\tocItem \markup {6. Molly Connel }
 		\include "../Strathspeys/Molly_connel.ly" 
-%		\pageBreak
+		\pageBreak
 		\tocItem \markup {7. Dalnahasaig }
 		\include "../Strathspeys/Dalnahasaig.ly" 
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {8. Itchy Fingers }
 		\include "../Hornpipes/Itchy_fingers.ly" 
 		\pageBreak
@@ -246,10 +246,10 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../Mazurka/Sonny_brogans_mazurka.ly" 
 %		\pageBreak
 		\tocItem \markup {3. Barbara's Jig }
-		\include "../Jigs/Barbaras_jig.ly"
+		\include "../Jigs/Barbaras_jig_3.ly"
 		\pageBreak
 		\tocItem \markup {4. Mr. & Mrs. J. Duncans Golden Wedding 2000 }
-		\include "../Hornpipes/Mr_&_mrs_Duncan.ly" 		
+		\include "../Hornpipes/Mr_&_mrs_Duncan_3.ly" 		
 		\pageBreak
 		\tocItem \markup {5. Dark Isle }
 		\include "../Airs/Dark_isle_3.ly" 

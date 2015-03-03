@@ -52,47 +52,48 @@
     \repeat volta 2 {
     	\partial 8 {\grg f16. [ e32 ]  }
     	\thrwd d8 [ \gre a8 ] \dblb b8 [ \gre a8 ]  
-    	\thrwd d8 [ \gre a16. d32 ] \dblf f4  
-    	\dble e8 [ g16. e32 ] \dblc c8 [ \dble e16. c32 ]  
+    	\thrwd d8 [ \gre a16. d32 ] \grg f4  
+    	\dble e8 [\grA g16. e32 ] \dblc c8 [ \grg e16. c32 ]  
     	\grg a16. [ \grd c32 \grg e16. f32 ] \dblg g8 [ \grA f16. e32 ]  
     	\break
   
     	\thrwd d8 [ \gre a8 ] \dblb b8 [ \gre a8 ]  
-    	\thrwd d8 [ \gre a16. d32 ] \dblf f8 [ \grg e16. f32 ]  
+    	\thrwd d8 [ \gre a16. d32 ] \grg f8 [ \grg e16. f32 ]  
     	\dblg g8 [ \grA e16. c32 ] \grg a16. [ \grd c32 \grg e16. g32 ]  
-    	\hdblf f8 [ d8 ] \wslurd d8 
+    	\tdblf f8 [ d8 ] \slurd d8 
         \bar ".|:-|."
      	\break	
     } %end repeat
     
     % Part 2
-    \repeat volta 2 {
+    \set Score.repeatCommands = #'(start-repeat)
     	\grg f16 [ g16 ]  
-    	\dblA A8. [ g16 ] \hdblf f8 [ d ]  
+    	\dblA A8. [ g16 ] \grA f8 [ \thrwd d ]  
     	\gre a8 [ \thrwd d16. f32 ] \dblA A8 [ e16. f32 ]  
-    	\dblg g8. [ e16 ] \dblc c8 [ \dble e16. c32 ]  
-    	\grg a16. [ \grd c32 \grg e16. f32 ] \dblg g8    
-%    	\break
-    } %end repeat
-    
-    \alternative { {
-    	\grA f16. g32
+    	\dblg g8. [ e16 ] \dblc c8 [ \grg e16. c32 ]  
+    	\grg a16. [ \grd c32 \grg e16. f32 ] \dblg g8 [ \grA f16. g32 ]   
     	\break
-   	\dblA A8. [ g16 ] \hdblf f8 [ d ]  
+
+        \set Score.repeatCommands = #'((volta "1."))
+   	\dblA A8. [ g16 ] \grA f8 [ \thrwd d ]  
     	\gre a8 [ \thrwd d16. f32 ] \dblA A8 [ e16. f32 ]  
     	\dblg g8 [ \grA e16. c32 ] \grg a16. [ \grd c32 \grg e16. g32 ]  
-    	\hdblf f8 [ d8 ] \wslurd d8  
-    	\break }
-
-    	{ \grA f16. g32
+    	\set Score.measureLength = #(ly:make-moment 3/8)
+    	\tdblf f8 [ d8 ] \slurd d8  
+        \set Score.repeatCommands = #'((volta #f) (volta "2.") end-repeat)
+    	\break
+  
+    	\set Score.measureLength = #(ly:make-moment 2/4)
     	A16. [ g32 \grA g16. f32 ] \grg f16. [ e32 \grg e16. d32 ]  
     	\grg d16. [ c32 \grg c32 \grd b16. ] \dblA A8 [ e16. f32 ]  
     	\dblg g8 [ \grA e16. c32 ] \grg a16. [ \grd c32 \grg e16. g32 ]  
-    	\tdblf f8 [ d ] \wslurd d8 
-        \bar ".|:-|."
-    	\break	}
-    } % end alternative
-    
+    	\set Score.measureLength = #(ly:make-moment 3/8)
+    	\tdblf f8 [ d ] \slurd d8 
+    	\set Score.repeatCommands = #'((volta #f))
+    	\bar "|." 
+    	\break	
+
+%{    
     % Part 3
     \repeat volta 2 {
     	\grg a8  
@@ -105,7 +106,7 @@
     	\thrwd d8 [ \grg c16. d32 ] \dblb b8 [ \gre a8 ]  
     	\thrwd d8 [ \gre a16. d32 ] \dblf f8 [ \grg e16. f32 ]  
     	\dblg g8 [ \grA e16. c32 ] \grg a16. [ \grd c32 \grg e16. g32 ]  
-    	\hdblf f8 [ d8 ] \wslurd d8 \bar "|." 
+    	\hdblf f8 [ d8 ] \slurd d8 %\bar ":|" 
     	\break	
     } %end repeat
     
@@ -115,24 +116,23 @@
     	\dblA A8 [ \grg A16. g32 ] \hdblf f8 [ \thrwd d8 ]  
     	\grg f16. [ g32 A16. g32 ] \hdblf f8 [ \grg e16. f32 ]  
     	\dblg g8 [ \grA g16. e32 ] \dblc c8 [ \dble e16. c32 ]  
-    	\grg a16. [ \grd c32 \grg e16. f32 ] \dblg g8
-    } %end repeat
-    
-    \alternative {
-      { \grA f16. g32 
+    	\grg a16. [ \grd c32 \grg e16. f32 ] \dblg g8 [ \grA f16. g32 ] \bar "|"   
     	\break
+	    } %end repeat
+    \alternative {
+    	    {
     	\dblA A8 [ \grg A16. g32 ] \hdblf f8 [ \thrwd d8 ]  
     	\grg f16. [ g32 A16. g32 ] \hdblf f8 [ \grg e16. f32 ]  
     	\dblg g8 [ \grg e16. c32 ] \grg a16. [ \grd c32 \grg e16. g32 ]  
-    	\hdblf f8 [ d8 ] \wslurd d8    
+    	\hdblf f8 [ d8 ] \slurd d8    
     	\break
     	    }
     	{
-    	\grA f16. e32
+    	\grg f16. g32
     	\grg d16. [ c32 \grg c16. b32 ] \grg b16. [ a32 \grg a32 \grd G16. ]  
     	\Gthrwd d8 [ \gre a16. d32 ] \dblf f8 [ \grg e16. f32 ]  
     	\dblg g8 [ \grA e16. c32 ] \grg a16. [ \grd c32 \grg e16. g32 ]  
-    	\hdblf f8 [ d8 ] \wslurd d8 \bar "|."
+    	\hdblf f8 [ d8 ] \slurd d8 \bar "|."
     	\break
         } }
 %}        

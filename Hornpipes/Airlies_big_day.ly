@@ -13,7 +13,7 @@
 %
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -47,88 +47,38 @@
     \bar ".|:"
     		
     % Part 1
-    \repeat volta 2 {
-    \partial 8 {\grg d16 b}
-    \grg a d \grG d e \grg e d \grG d f
-    \grA g a \grg f a \grg e d \grG d b
-    \grg G b \grg d b \grg a d \grG d a~
-    a \grg c \grG c d \dble e8
-    \set Score.repeatCommands = #'((volta "2.--2.")) 
-    \grg d16 b \break
-
-    \grg a d \grG d e \grg e d \grG d f
-    \grA g a \grg f a \grg e d \grG d b
-    \grg G b \grg d b \grg a d \grG d a
-    \grg c d \grG d c \thrwd d8
-    \set Score.repeatCommands = #'((volta #f))
+    \grg f16 d \grg a f \grg d a \grg f a
+    \grg b d \grG d a \grg b d \grg e g
+    \grA f d \grg a f \grg d a \grg f a
+    \grg b d \grg e f \dblg g8 A
     \break
-    } %end repeat
+    f16 d \grg a f \grg d a \grg f a
+    \grg b d \grG d a \grg b d \grg e g
+    A f \grg a A g e \grg c d
+    \grg e a \grd c e \thrwd d4
+    \bar "||" \break
 
     % Part 2
-    \repeat volta 2 {
-    \grg f16 g
-    A a \grA g a \grg f d d f
-    \dblg g8 \grA f16 d \grg e d \grG d b
-    \grg G b \grg d b \grg a d \grG d a~
-    a \grg c \grG c d \dble e8
-    \set Score.repeatCommands = #'((volta "1."))
-    \grg f16 g \break
-
-    A a \grA g a \grg f d d f
-    \dblg g8 \grA f16 d \grg e d \grG d b
-    \grg G b \grg d b \grg a d \grG d a
-    \grg c d \grG d c \thrwd d8
-    \set Score.repeatCommands = #'((volta #f)) 
+    \dblA A4 \grg A16 d \grg f A
+    g e \grg c d \grg e a \grd c e
+    \grg f A d f A d \grg f d
+    \grg f a \grg c d \dble e8 [ \dblg g ]
     \break
-    } %end repeat
-    
-    % Part 3
-    \repeat volta 2 {
-    \grg d16 e
-    \grg e [ f \gre f \gbirl a~ ] a f \grg f a
-    g a \grg f a \grg e d \grG d e
-    \grg e [ f \gre f \gbirl a~ ] a f \grg f a
-    \grg e [ a \gbirl a8 ] \grg e16 a \grg d e
-    \break
-
-    \grg f a \grG a \grg a~ a f \grg f b
-    \dblg g8 \grA f16 d \grg e d \grG d b
-    \grg G b \grg d b \grg a d \grc d a
-    \grg c d \grG d c \thrwd d8
-    \break
-    } %end repeat
-
-    % Part 4
-    \grg f16 g
-    A f \grG f \grg f~ f A \grg A f
-    \dblg g8 \grA f16 d \grg e d \grg e f
-    \grA g d a \grg f d a \grg e d
-    a e \grg d a \grg e a \grg d e
-    \break
-    
-    A f \grG f \grg f~ f A \grg A f
-    \dblg g8 \grA f16 d \grg e d \grG d b
-    \grg G b \grg d b \grg a d \grG d a
-    \grg c d \grG d c \thrwd d8 \grg f16 g
-    \break
-
-    A f \gre f \grg f~ f A \grg A f
-    \dblg g8 \grA f16 d \grg e a \grg d b
-    \grg G \grd b \grG b a \grd c \grG c \grg b d
-    \grc d c \grg e \grG e \grg d f \gre f g
-    \break
-
-    A g \grf g \grA g f \gre f \grg f e
-    \gra e \grg e d \grc d \grg d c \grG c b
-    \grg G b d b \grg a d \grc d a
-    \grg c d \grc d c \thrwd d8
+    \dblA A4 \grg A16 d \grg f A
+    g e \grg c d \grg e a \grd c e
+    A f \grg a A g e \grg c d
+    \grg e a \grd c e \thrwd d4
     \bar "|."
+
+    % Part 3
+    % Part 4
+
     } %end staff
     
   \header {
     meter = "Hornpipe"
-    piece = "Mr. & Mrs. Duncans Golden Wedding"
-    composer = "Gordon Duncan"
+    piece = "Airlies Big Day"
+    composer = "Murray Blair"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings
