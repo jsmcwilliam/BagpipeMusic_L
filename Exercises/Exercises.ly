@@ -39,7 +39,7 @@ common = {
     	 \times 2/3 {\grg a8 \grd a \gre a} \times 2/3 { \grg c8 \grd c \gre c}
    	 \times 2/3 {\grg b8 \grd b \gre b} \grg a4 \break
     } % end repeat
-
+%{
     \repeat volta 2 {
     \grg c8 \grd a \grg c \grd a |\grg b \grd G \grg b \grd G
     \grg c8 \grd a \grg c \grd a |\grg b \grd G \grg a4 \bar ":..:"
@@ -47,8 +47,9 @@ common = {
     \times 2/3 {\grg a8 (\grd a \gre a)} \dblc c \gre a
     \times 2/3 {\grg G8 (\grd G \gre G)} \dblb b \gre G \break
     } % end repeat
+%}    
     }%end staff    
-    
+   
   \header {
     piece = "1. G,D&E Gracenotes"
   }
@@ -149,6 +150,7 @@ common = {
 \score {
 	\new staff {
 	\common
+	\time 4/4
         \bar ".|:"
 	\repeat volta 2 {
 		\grg c8 \grd a \grg c \grd a
@@ -159,8 +161,18 @@ common = {
 		\grg c16 \grd a8. \grg c16 \grd a8.
 		\grg b16 \grd G8. \grg b16 \grd G8.
 		\grg c16 \grd a8. \grg c16 \grd a8.
-		\grg b16 \grd G8. \grg a4
+		\grg b16 \grd G8. \grg a4 %\break
 	} %end repeat
+			
+	\repeat volta 2 {
+		\repeat unfold 4 {\grg c16 \grd a8.}
+		\repeat unfold 4 {\grg b16 \grd G8.}
+		\repeat unfold 4 {\grg c16 \grd b8.}
+		\repeat unfold 4 {\grg b16 \grd a8.}
+		\repeat unfold 2 {\grg c16 \grd b8. \grg c16 \grd a8.}
+		\repeat unfold 2 {\grg b16 \grd a8. \grg b16 \grd G8.}
+	} %end repeat
+
 	} %end staff
   \header {
     piece = "5. Tachums"
@@ -182,8 +194,15 @@ common = {
 		\dblc c16 \gre a8. \dblc c16 \gre a8.
 		\dblb b16 \gre G8. \dblb b16 \gre G8.
 		\dblc c16 \gre a8. \dblc c16 \gre a8.
-		\dblb b16 \gre G8. \grg a4
+		\dblb b16 \gre G8. \grg a4 \break
 	} %end repeat
+	
+	\repeat volta 2 {
+		\dblc c8 \gre a \dblc c \gre a |\dblb b \gre G \dblb b \gre G 
+		\times 2/3 {\grg a8 (\grd a \gre a)} \dblc c \gre a
+		\times 2/3 {\grg G8 (\grd G \gre G)} \dblb b \gre G \break
+	} % end repeat
+
 	} %end staff
   \header {
     piece = "6. Strathspey Movements"
@@ -204,7 +223,7 @@ common = {
 		\grg b8. \grd G16 \gre G8
 		\grg c8. \grd a16 \gre a8
 		\grg c8. \grd a16 \gre a8
-		\grg b8. \grd G16 \gre G8 \grg a4
+		\grg b8. \grd G16 \gre G8 \grg a4 
 	} %end repeat
 	} %end staff
   \header {

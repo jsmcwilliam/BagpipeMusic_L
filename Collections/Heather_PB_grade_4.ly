@@ -62,7 +62,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 	\pageBreak %after title page		
 	\markuplist \table-of-contents
 	\pageBreak
-
+%{
 	\bookpart {
 		\header {
 			title = "2/4 Marches"
@@ -94,23 +94,24 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../3-4_marches/Kilworth_hills.ly" 
 		\pageBreak
 		}	
-
+%}
 			\bookpart {
 		\header {
 			title = "4/4 Marches"
 			subtitle = ##f}
 		\tocSection \markup { 4/4 Marches } 
-		\tocItem \markup {1. Scotland the Brave}
+%{		\tocItem \markup {1. Scotland the Brave}
 		\include "../4-4_marches/Scotland_the_brave.ly" 
 %		\pageBreak
 		\tocItem \markup {2. Rowan Tree}
 		\include "../4-4_marches/Rowan_tree.ly" 
 %		\pageBreak
+%}
 		\tocItem \markup {6. Flett from Flotta}
 		\include "../4-4_marches/Flett_from_flotta_3.ly" 
 %		\pageBreak
 		}	
-
+%{
 	\bookpart {
 		\header {
 			title = "6/8 Marches"
@@ -132,7 +133,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {1. Cullen Bay}
 		\include "../9-8_marches/Cullen_bay.ly" 
 		}	
-
+%}
 	\bookpart {
 		\header {
 			title = "Airs"
@@ -140,13 +141,14 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocSection \markup { Airs }
 		\tocItem \markup {1. Dark Isle }
 		\include "../Airs/Dark_isle_3.ly"
-%		\pageBreak
+%{		\pageBreak
 		\tocItem \markup {2. Amazing Grace }
 		\include "../Airs/Amazing_grace_2.ly"
 %		\pageBreak
 		\tocItem \markup {3. Our Ain Fireside }
 		\include "../Airs/Our_ain_fireside.ly"
 %		\pageBreak
+%}
 		}
 
 		\bookpart {
@@ -160,13 +162,14 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 %		\pageBreak
 %{		\tocItem \markup {2. Fare Thee Weel Ye Allourman Braes }
 		\include ""
-		\pageBreak %}
+		\pageBreak 
 		\tocItem \markup {3. Campbells Farewell to Redcastle }
 		\include "../2-4_marches/Campbells_fairwell.ly"
 		\pageBreak
 		\tocItem \markup {4. 25th. K.O.S.B.s Farewell to Meerut }
 		\include "../2-4_marches/25th_kosbs_farewell.ly"
 		\pageBreak
+%}		
 		}
 		
 		\bookpart {
@@ -178,7 +181,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {1. Donald MacLean's Farewell to Oban}
 		\include "../2-4_marches/Donald_macleans_farewell_to_oban.ly"
 		\pageBreak
-		\tocItem \markup {2. Susan MacLeod }
+%{		\tocItem \markup {2. Susan MacLeod }
 		\include "../Strathspeys/Susan_macleod.ly"
 		\pageBreak
 		\tocItem \markup {3. Mrs MacPherson of Inveran }
@@ -201,7 +204,8 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\pageBreak 		
 		\tocItem \markup {6. Silver Spear }
 		\include "../Reels/Silver_spear.ly" 
-		\pageBreak 		
+		\pageBreak
+%} 		
 		}
 
 		\bookpart {
@@ -216,7 +220,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {2. Airlies Big Day }
 		\include "../Hornpipes/Airlies_big_day.ly" 
 		\pageBreak
-		\tocItem \markup {4. P/M Joe Wilson }
+%{		\tocItem \markup {4. P/M Joe Wilson }
 		\include "../Jigs/Joe_wilson.ly" 
 %		\pageBreak
 		\tocItem \markup {5. Callin Mo Ruin-Sa }
@@ -231,6 +235,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {8. Itchy Fingers }
 		\include "../Hornpipes/Itchy_fingers.ly" 
 		\pageBreak
+%}		
 		}
 		
 		\bookpart {
