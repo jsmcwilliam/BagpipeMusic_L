@@ -13,7 +13,7 @@
 %
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -53,30 +53,33 @@
     	f \grg d A f e d
     	\dblg g4 b8 \grg b \grd b \gre b
     	\dble e4 d8 \grg c e A
-    	%\break 
-    	
-    	\grg a \grd a \gre a d \gre a d
+    
+    	\set Score.repeatCommands = #'((volta "2.--2."))
+    	a \grd a \gre a d \gre a d
     	f \grg d A f e d
     	\dblg g4 e8 \grg f e d
     	\dble e4. \gra e4
+    	\set Score.repeatCommands = #'((volta #f))
     	\break
     } %end repeat
     
     % Part 2
-    \repeat volta 2 {
-    	A8
+	\repeat volta 2 {    	
+	A8
     	f4. \dblf f8 d f
     	\dblA A4 d8 \grg f e d
      	\dblg g4 b8 \grg b \grd b \gre b
     	\dble e4 d8 \grg c e A
-    	
-    	f4. \dblf f8 d f
+
+    	\set Score.repeatCommands = #'((volta "1."))
+	f4. \dblf f8 d f
     	\dblA A4 d8 \grg f e d
     	\dblg g4 \grg e8 \grg f e d
     	\dble e4. \gra e4
+    	\set Score.repeatCommands = #'((volta #f))
     	\break
-    } %end repeat
-    
+    } %end repeat    	
+%{    
     % Part 3
     \repeat volta 2 {
     	f8
@@ -105,7 +108,7 @@
     	\dblg g4 e8 \grg f e d
     	\dble e4. \gra e4	
     } %end repeat
-    
+%}    
 
     } %end staff
     

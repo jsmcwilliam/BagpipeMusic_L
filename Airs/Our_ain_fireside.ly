@@ -49,26 +49,26 @@
     % Part 1
     \repeat volta 2 {
     	\partial 8 a8
-    	\wbirl a8. [ \grd c16 \gre b16 \grG a16 ] \grg e4 f8 
-    	\grg e4. \grd c4 \grg b8 
- 	\grG a8. [ \grd c16 \gre b16 \grG a16 ] \grg e4 \grd c8 
+    	\wbirl a8. [ \grd c16 b16 \grG a16 ] \grg e4 f8 
+    	\grg e4. \dblc c4 \grg b8 
+ 	\grG a8. [ \grd c16 b16 \grG a16 ] \grg e4 c8 
  	\grg b4. \grip b4 \grG a8  
  	%\break
 
- 	\wbirl a8. [ \grd c16 \gre b16 \grG a16 ] \grg e8. [ f16 \grA g16 A16 ] 
- 	e4. \grd c4 \grg c16 [ b16 ] 
- 	\grG a8. [ \grd b16 \gre a16 \grd b16 ] \grip c4 \gre b8 
+ 	\wbirl a8. [ \grd c16 b16 \grG a16 ] \grg e8. [ \grg f16 g16 A16 ] 
+ 	\dble e4. \dblc c4 \grg c16 [ b16 ] 
+ 	\grG a8. [ \grd b16 a16 b16 ] \grip c4 \gre b8 
  	\grG a4. \wbirl a4.  \break
  
  	\grg f8. [ d16 \grg a16 d16 ] \grg f4 A8 
- 	e4. \grd c4 \grg b8 
- 	\grG a8. [ \grd c16 \gre b16 \grG a16 ] \grg e4 \grd c8 
+ 	\dble e4. \dblc c4 \grG a8 
+ 	\grg f8. [ d16 \grg a16 d16 ] \grg f8. c16 \grg e c 
  	\grg b4. \grip b4 \grG a8  
  	%\break
 
- 	\wbirl a8. [ \grd c16 \gre b16 \grG a16 ] \grg e8. [ f16 \grA g16 A16 ] 
- 	e4. \grd c4 \grg b8 
- 	\grG a8. [ \grd b16 \gre a16 \grd b16 ] \grip c4 \gre b8 
+ 	\wbirl a8. [ \grd c16 b16 \grG a16 ] \grg e8. [\grg f16 g16 A16 ] 
+ 	e4. \dblc c4 \grg c16 b 
+ 	\grG a8. [ \grd b16 a16 b16 ] \grip c4 \gre b8 
  	\grG a4. \wbirl a4. %\bar ":|" 
  	\break	
     } %end repeat
@@ -82,7 +82,7 @@
   \header {
     meter = "Air"
     piece = "Our Ain Fireside"
-    composer = "Composer"
+    composer = "James Scott Skinner"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

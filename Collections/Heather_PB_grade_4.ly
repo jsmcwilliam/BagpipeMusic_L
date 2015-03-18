@@ -121,7 +121,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../6-8_marches/Murdo_mackenzie_of_torridon.ly"
 %		\pageBreak
 		\tocItem \markup {2. Mrs Lily Christie}
-		\include "../6-8_marches/Mrs_lily_christie.ly"
+		\include "../6-8_marches/Mrs_lily_christie_3.ly"
 		\pageBreak
 		}
 
@@ -200,7 +200,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../Strathspeys/Molly_connel.ly" 
 %		\pageBreak
 		\tocItem \markup {5. The Ale is Dear }
-		\include "../Reels/Ale_is_dear.ly" 
+		\include "../Reels/Ale_is_dear_3.ly" 
 		\pageBreak 		
 		\tocItem \markup {6. Silver Spear }
 		\include "../Reels/Silver_spear.ly" 
@@ -221,19 +221,19 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../Hornpipes/Airlies_big_day.ly" 
 		\pageBreak
 %{		\tocItem \markup {4. P/M Joe Wilson }
-		\include "../Jigs/Joe_wilson.ly" 
+		\include "../Jigs/Joe_wilson_3.ly" 
 %		\pageBreak
 		\tocItem \markup {5. Callin Mo Ruin-Sa }
 		\include "../Airs/Callin_mo_ruin_sa.ly" 
 %		\pageBreak
 		\tocItem \markup {6. Molly Connel }
-		\include "../Strathspeys/Molly_connel.ly" 
+		\include "../Strathspeys/Molly_connel_3.ly" 
 		\pageBreak
 		\tocItem \markup {7. Dalnahasaig }
 		\include "../Strathspeys/Dalnahasaig.ly" 
 %		\pageBreak
 		\tocItem \markup {8. Itchy Fingers }
-		\include "../Hornpipes/Itchy_fingers.ly" 
+		\include "../Hornpipes/Itchy_fingers_3.ly" 
 		\pageBreak
 %}		
 		}

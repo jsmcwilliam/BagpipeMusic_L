@@ -47,17 +47,17 @@
 %    \bar "|."
     		
     % Part 1
-    \partial 4 {\grg b8 [ d8 ]}
-     \grg e8 [ a8 ] \gbirl a4 \grg a4 \grg b8 d  
- \grg e8 [ g8 \grA f8 d8 ] \grg e8 [ d8 \grg b8 d8 ]  
- \grg e8 [ a8 ] \gbirl a4 \grg b8 [ \grd a8 \grg b8 c8 ]  
- \slurd d4 \grg e8 [ d8 ] \grg b [ d ] \slurd d4   
+ \grg G8 [ a8 \grg a8 \grd a8 ] \grg b8 [ a8 \grg a8 \grd a8 ] 
+ \grg d8 [ f8 \grg e8 d8 ] \grg b8 [ d8 \grg d8 \grc d8 ] 
+ \grg G8 [ a8 \grg a8 \grd a8 ] \grg b8 [ a8 \grg a8 \grd a8 ] 
+ \grg d8 [ f8 \grg e8 d8 ] \dblb b4 \grG a4
  \break
 
- \grg e8 [ a8 ] \gbirl a4 \grg a4 \grg b8 d  
- \grg e8 [ g8 \grA f8 d8 ] \grg e8 [ d8 \grg b8 d8 ]  
- \dblg g4 \grA g8 [ e8 ] f8 [ \grg f8 \gre f8 e8 ]  
- \grg d8 [ f8 \grg e8 d8 ] \dblb b4 \grG a4 \bar "|." \break 
+ \grg G8 [ a8 \grg a8 \grd a8 ] \grg b8 [ a8 \grg a8 \grd a8 ] 
+ \grg d8 [ f8 \grg e8 d8 ] \grg b8 [ d8 \grg e8 f8 ] 
+ g8 [ \grA g8 \grf g8 e8 ] f8 [ \gre f8 \grg f8 e8 ] 
+ \grg d8 [ f8 \grg e8 d8 ] \dblb b4 \grG a4 \bar "|." 
+ \break 
 
     % Part 2
 %     \bar "|." 
@@ -68,7 +68,7 @@
 
  \grg f8 [ A8 \grg A8 \grg A8 ] f8 [ A8 \grg A8 f8 ]  
  \grA g8 [ f8 \grg e8 d8 ] \grg b8 [ d8 \grg e8 f8 ]  
- \dblg g4 \grA g8 [ e8 ] f8 [ \grg f8 \gre f8 e8 ]  
+ g8 [ \grA g8 \grf g e8 ] f8 [ \grg f8 \gre f8 e8 ]  
  \grg d8 [ f8 \grg e8 d8 ] \dblb b4 \grG a4 \bar "|." \break 
 
     % Part 3

@@ -10,10 +10,10 @@
 %  	2. Comment out top section when compiling book
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
-%{
+%
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -61,7 +61,7 @@
     % Part 2
  \grd c16 
  \dble e4 \gra e8. [ f16 ] \grg c16 [ e8. ] \gra e8. [ c16 ] 
- \grg a8. [ b16 ] \dblc c16 [ \gre a8. ] \grg c16 [ e8. ] \dblc c16 [ \gre a8. ] 
+ \grg a8. [ b16 ] \dblc c16 [ \gre a8. ] \grg c16 [ e8. ] \dblc e16 [ \gre a8. ] 
  \grg f4 \dblf f8. [ e16 ] \grg d16 [ f8. ] \gre f8. [ g16 ] 
  \dblA A8. [ e16 ] \grg f16 [ g16 A8 ] \hdble e8. [ A16 ] \hdblc c16 [ A8. ]  \break
 
@@ -88,7 +88,7 @@
  e16 
  \grg f16 [ A8. ] \grg A8. [ c16 ] \grg c16 [ e8. ] \gra e8. [ c16 ] 
  \grg a8. [ b16 ] \dblc c16 [ \gre a8. ] \grg c16 [ e8. ] \gra e8. [ f16 ] 
- \grg f16 [ A8. ] \grg A8. [ d16 ] \grg d16 [ f8. ] \gre f8. [ e16 ] 
+ \grg f16 [ A8. ] \grg A8. [ d16 ] \grg d16 [ f8. ] \gre f8. [ g16 ] 
  \dblA A8. [ e16 ] \grg f16 [ g16 A8 ] \hdblc c16 [ A8. ] \hdblf f8. [ e16 ]  \break
 
  \grg f16 [ A8. ] \grg A8. [ c16 ] \grg c16 [ e8. ] \gra e8. [ c16 ] 

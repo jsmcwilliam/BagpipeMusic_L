@@ -7,13 +7,13 @@
   but does not have any adverse effects
 %}
 %   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book
+%  	2. Comment out top section when compiling book.........................
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
 %
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -29,7 +29,7 @@
 \score {
 
     \new Staff  {
-    \time 6/8	    %adjust time to suit specific tunes
+    \time 4/4	    %adjust time to suit specific tunes
     \tempo 4 = 80   % adjust speed accordingly for playback
     \bagpipeKey
 %   \set Staff.midiInstrument = #"bagpipe"  is set in bagpipe_new.ly (\layout)
@@ -48,71 +48,35 @@
     		
     % Part 1
     \repeat volta 2 {
-    	\partial 8 f8
-    	\grg a \grd a \gre a d \gre a d
-    	f \grg d A f e d
-    	\dblg g4 b8 \grg b \grd b \gre b
-    	\dble e4 d8 \grg c e A
-    	%\break 
-    	
-    	\grg a \grd a \gre a d \gre a d
-    	f \grg d A f e d
-    	\dblg g4 e8 \grg f e d
-    	\dble e4. \gra e4
-    	\break
+\dblc c4 \gre a8. [ \grd c16 ] \grg e8. [ f16 ] \dblA A8. [ e16 ] 
+ \grg f16 [ A8. ] f16 ([ e16^\markup {3} c8-- ]) \dble e8. [ c16 ] \slurb b4 
+ \set Score.repeatCommands = #'((volta "2. --2"))  
+ \dblc c4 \gre a8. [ \grd c16 ] \grg e8. [ f16 ] \dblA A8. [ e16 ] 
+ \grg f16 ([ e16^\markup {3} c8-- ]) \dble e8. [ c16 ] \dblb b4 \grG a4 
+ \set Score.repeatCommands = #'((volta #f)) 
+ \break
     } %end repeat
-    
+
     % Part 2
     \repeat volta 2 {
-    	A8
-    	f4. \dblf f8 d f
-    	\dblA A4 d8 \grg f e d
-     	\dblg g4 b8 \grg b \grd b \gre b
-    	\dble e4 d8 \grg c e A
-    	
-    	f4. \dblf f8 d f
-    	\dblA A4 d8 \grg f e d
-    	\dblg g4 \grg e8 \grg f e d
-    	\dble e4. \gra e4
-    	\break
+ \dblA A4 e16 [ A8. ] f16 ([ e16^\markup {3} c8-- ]) \dble e4 
+ \grg c16 [ e8. ] \gra e8. [ f16 ] \dble e8. [ c16 ] \slurb b4 
+ \set Score.repeatCommands = #'((volta "1"))  
+ \dblA A4 e16 [ A8. ] f16 ([ e16^\markup {3} c8-- ]) \dble e4 
+ \grg f8. [ e16 ] \gra e8. [ c16 ] \dblb b4 \grG a4 
+ \set Score.repeatCommands = #'((volta #f)) 
+ \break
     } %end repeat
-    
+
     % Part 3
-    \repeat volta 2 {
-    	f8
-    	\grg a4 f8 \grg a \grd a \gre a
-    	d \gre a d \grg f e d
-    	\dblg g4 b8 \grg b \grd b \gre b
-    	\dble e4 d8 \grg c e A
-
-    	\grg a4 f8 \grg a \grd a \gre a
-    	d \gre a d \grg f e d
-    	\dblg g4 e8 \grg f e d
-    	\dble e4. \gra e4
-    	\break
-    } %end repeat
-	    
     % Part 4
-    \repeat volta 2 {
-	A8
-	\hdblf f4 A8 \thrwd d4 A8 
-	f A \grg A f e d
-    	\dblg g4 b8 \grg b \grd b \gre b
-    	\dble e4 d8 \grg c e A
-
-	\hdblf f4 A8 \thrwd d4 A8 
-	f A \grg A f e d
-    	\dblg g4 e8 \grg f e d
-    	\dble e4. \gra e4	
-    } %end repeat
-    
 
     } %end staff
     
   \header {
-    meter = "Jig"
-    piece = "P/M Joe Wilson"
-    composer = "P/M Angus MacDonald"
+    meter = "Strathspey"
+    piece = "Molly Connel"
+    composer = "James Walk"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings
