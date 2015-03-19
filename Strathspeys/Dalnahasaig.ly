@@ -48,19 +48,19 @@
     		
     % Part 1
     \repeat volta 2 {
-    \dblf f4 \grg e8. [ d16 ] \grg d16 [ f8. ] \birl a4 
-    \dblf f4 \grg e8. [ f16 ] \thrwd d8. [ f16 ] \dblA A8. [ g16 ] 
-    \hdblf f4 \grg e8. [ d16 ] \grg d16 [ f8. ] \birl a8. [ f16 ] 
-    \hdblf g4 \hdble e8. [ g16 ] \hdblb c8. g16 \grg e16 [ f g8 ]   
+    \dblf f4 \grg e8. [ d16 ] \grg d16 [ f8. ] \gbirl a4 
+    \dblf f4 \grg e8. [ c16 ] \thrwd d8. [ f16 ] \dblA A8. [ g16 ] 
+    \hdblf f4 \grg e8. [ d16 ] \grg d16 [ f8. ] \gbirl a8. [ f16 ] 
+    \dblg g4 \hdble e8. [ g16 ] \hdblc c8. g16 \grA e16 [ f g8 ]   
     \break
     } %end repeat
     
     % Part 2
     \repeat volta 2 {
-     \dblA A4 \hdblf f8. [ A16 ] \hslurd d8. [ f16 ] \birl a8. [ f16 ] 
-     \dblA A4 \hdblf f8. [ A16 ] \hslurd d8. f16 \grg e16 f g8
-     \dblA A4 \hdblf f8. [ A16 ] \hslurd d8. [ f16 ] \birl a8. [ f16 ] 
-     \dblg g4 \hdble e8. [ g16 ] \hdblb c8. g16 \grg e16 [ f g8 ]  
+     \dblA A4 \hdblf f8. [ A16 ] \thrwd d8. [ f16 ] \gbirl a8. [ f16 ] 
+     \dblA A4 \hdblf f8. [ A16 ] \thrwd d8. f16 \grg e16 f g8
+     \dblA A4 \hdblf f8. [ A16 ] \thrwd d8. [ f16 ] \gbirl a8. [ f16 ] 
+     \dblg g4 \hdble e8. [ g16 ] \hdblc c8. g16 \grA e16 [ f g8 ]  
      \break
     } %end repeat
 

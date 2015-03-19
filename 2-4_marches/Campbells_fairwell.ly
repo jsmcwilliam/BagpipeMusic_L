@@ -50,17 +50,17 @@
  \dble e8 [ A8 ] \grg A8 [ g16. f32 ] |
  \dble e8 [ A8 ] \hdble e8. [ d16 ] |
  \dblc c8 [ \gre a8 ] \wbirl a8 [ \grg b16. c32 ] |
- \set Score.measureLength = #(ly:make-moment 3 4)
- \thrwd d8. [ b16 ] 
+ \set Score.measureLength = #(ly:make-moment 5/8)
+ \thrwd d8. [ b16 ] \grg G8
  \set Score.repeatCommands = #'((volta "1"))  
- \grg G8 [ g16. f32 ] 
+ g16. f32 
  \once \hide Score.BarLine
- \once \hide Score.SpanBar
+% \once \hide Score.SpanBar
  \set Score.repeatCommands = #'((volta #f)) 
  \once \override Score.VoltaBracket.shorten-pair = #'(0.7 . 0)
  \set Score.repeatCommands = #'((volta "2") end-repeat)  
- \grg G8 [ \grd b8 ] 
- \set Score.repeatCommands = #'((volta #f)) |
+ \grd b8 
+ \set Score.repeatCommands = #'((volta #f) end-repeat) |
  \set Score.measureLength = #(ly:make-moment 2 4)
 % \break 
     }
@@ -81,7 +81,7 @@
  	 {
  \set Score.repeatCommands = #'((volta "2")) 
  \set Score.measureLength = #(ly:make-moment 2 4)
- \grg a16. [ b32 c16. d32 ] \grg c16. [ d32  \grg e16. f32 ] |
+ \grg a16. [ b32 \grg c16. d32 ] \grg c16. [ d32  \grg e16. f32 ] |
  \grg e16. [ f32 \grA g32 A16. ] \hdble e8. [ d16 ] |
  \dblc c8 [ \grg b32 \grd a16. ] \grg G8 [ \grd b8 ] |
  \set Score.measureLength = #(ly:make-moment 3 4)

@@ -7,7 +7,7 @@
   but does not have any adverse effects
 %}
 %   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book
+%  	2. Comment out top section when compiling book.........................
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
 %
@@ -29,7 +29,7 @@
 \score {
 
     \new Staff  {
-    \time 9/8	    %adjust time to suit specific tunes
+    \time 3/4	    %adjust time to suit specific tunes
     \tempo 4 = 80   % adjust speed accordingly for playback
     \bagpipeKey
 %   \set Staff.midiInstrument = #"bagpipe"  is set in bagpipe_new.ly (\layout)
@@ -44,32 +44,31 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-%    \bar "|."
+    \bar ".|:"
     		
     % Part 1
-    \grg a8 [ b8 d8 ] \grg f4. \dble e4 f8 
-    \dble e8 [ d8 b8 ] \grg a4.~ a4 f8 
-    \dblg g8 [ \grA f8 g8 ] \dblA A4. \hdblf f4 e8 
-    \grg d8 [ b8 d8 ] \dble e4.~ e4 A8  
-    \break
-
-    \grg A4 \grip A8 \hdblf f4. \dble e4 d8 
-    \dble e8 [ d8 b8 ] \grg a4.~ a4 f8 
-    \dblg g8 [ \grA f8 g8 ] \dblA A4. \hdblf f4 d8 
-    \dble e8 [ d8 b8 ] \thrwd d4.~ d4 a8 \bar "|." 
-    \break 
+    \repeat volta 2 {
+ \grg a8. [ b16 ] \grip c4 \dblc c4 
+ \dble e4 \dblc c8 [ \gre b8 ] \grG a4 
+ \grg a8. [ b16 ] \grip c4 \dble e4 
+ \dblA A4 \hdblf f2 
+ \dble e8. [ d16 ] \dblc c4 \dble e4 
+ \dblc c8 [ \gre a8 ] \grip b4 \grd c4 
+ \dblA A8. [ f16 ] \dble e4 \dblc c8 [ \gre a8 ] 
+ \grip b4 \grG a2 \break
+    } %end of repeat
 
     % Part 2
-     \wbirl a8 [ b8 \grG a8 ] \thrwd d4. \dble e4 f8 
-     \dble e8 [ d8 b8 ] \grg a4.~ a4 f8 
-    \dblg g8 [ \grA f8 g8 ] \dblA A4. \hdblf f4 e8 
-    \grg d8 [ b8 d8 ] \dble e4.~ e4 A8  
-    \break
-
-    \grg A4 \grip A8 \hdblf f4. \dble e4 d8 
-    \dble e8 [ d8 b8 ] \grg a4.~ a4 f8 
-    \dblg g8 [ \grA f8 g8 ] \dblA A4. \hdblf f4 d8 
-    \dble e8 [ d8 b8 ] \thrwd d4.~ d4. \bar "|." 
+    \repeat volta 2 {
+ \grg c8. [ d16 ] \dble e4 \gra e4 
+ \dblA A4 \hdblf f4 \grg e4 
+ \grg c8. [ d16 ] \dble e4 \grg f4 
+ A4 \grg A2 
+ a8. [ b16 ] \grip c4 \dblb b4 
+ \grG a4 \grg b4 \grd c4 
+ \dblA A8. [ f16 ] \dble e4 \dblc c8 [ \gre a8 ] 
+ \grip b4 \grG a2 \break
+    } %End of repeat
 
     % Part 3
     % Part 4
@@ -77,9 +76,9 @@
     } %end staff
     
   \header {
-    meter = "Gaelic Air"
-    piece = "Callin Mo Ruin Sa"
-    composer = "Trad."
+    meter = "March"
+    piece = "Collin's Cattle"
+    composer = "W. MacLean"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

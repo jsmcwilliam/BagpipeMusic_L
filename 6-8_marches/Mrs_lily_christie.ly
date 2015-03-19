@@ -1,7 +1,7 @@
 \version "2.18.0"
 %   1. Comment out generation of midi files before compiling book
 %  2. Comment out from here when compiling book.........................
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
