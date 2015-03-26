@@ -10,10 +10,10 @@
 %  	2. Comment out top section when compiling book.........................
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
-%{
+%
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -25,6 +25,8 @@
 				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
+
+\defineBarLine "|.-.|" #'("|." ".|" "")
 
 \score {
 
@@ -44,7 +46,7 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-%    \bar ".|:"
+    \bar ".|"
     		
     % Part 1
     \partial 4 {\grg a8. [ b16 ]} 
@@ -55,7 +57,7 @@
  \grip c4. \grg c8 \grip c4 \gre b4 
  \dblc c8 e4. \dblf f4. e8 
  \dble e8 c4. \dblb b4. \grG a8 
- \grg a2 \wbirl a4. \bar "||" \break 
+ \grg a2 \wbirl a4. \bar "|.-.|" \break 
 
     % Part 2
  \grg e8 

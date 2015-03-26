@@ -26,6 +26,8 @@
 %to here..........................................................
 %}
 
+\defineBarLine "|.-.|" #'("|." ".|" "")
+
 \score {
 
     \new Staff  {
@@ -57,7 +59,7 @@
  \grg b4. d8 \grg a4. d8 
  \grg G4 \thrwd d4 \dblc c4. d8 
  \dble e4. f8 \grA g8 [ e8 ] \grg c16 [ e8. ] 
- \thrwd d2 \slurd d4 \bar "||" \break 
+ \thrwd d2 \slurd d4 \bar "|.-.|" \break 
 
     % Part 2
  \dble e8. [ d16 ] 

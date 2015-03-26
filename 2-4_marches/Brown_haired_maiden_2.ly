@@ -11,7 +11,7 @@
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
 %
-#(allow-volta-hook "||") % enables volta hook outside repeat context
+% #(allow-volta-hook "||") % enables volta hook outside repeat context
 % from here
 %{
 #(ly:set-option 'point-and-click #t)
@@ -26,7 +26,8 @@
 %to here..........................................................
 %}
 
-\defineBarLine ".|:-|." #'("|." ".|:" "|.")
+\defineBarLine ".|-.|:" #'("|." ".|:" "")
+\defineBarLine ":|.-.|" #'(":|." ".|" "")
 
 \score {
 
@@ -59,7 +60,7 @@
  a4 \thrwd d8. [ e16 ] 
  \grg f4 \dblg g8 [ e8 ] 
  \thrwd d4 \wslurd d8 
- \break
+ \break \bar ":|.-.|"
     } %end repeat
 
     % Part 2
@@ -82,7 +83,7 @@
  a4 \thrwd d8. [ e16 ] 
  \grg f4 \dblg g8 [ e8 ] 
  \set Score.measureLength = #(ly:make-moment 3/8) 
- \thrwd d4 \wslurd d8 \bar ".|:-|." \break
+ \thrwd d4 \wslurd d8 \bar ".|-.|:" \break
 
     % Part 3
  \set Score.repeatCommands = #'(start-repeat)

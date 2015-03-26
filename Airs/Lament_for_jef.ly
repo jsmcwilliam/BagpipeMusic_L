@@ -26,6 +26,8 @@
 %to here..........................................................
 %}
 
+\defineBarLine "|.-.|" #'("|." ".|" "")
+
 \score {
 
     \new Staff  {
@@ -46,7 +48,7 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-%    \bar ".|:"
+    \bar ".|"
     		
     % Part 1
  \grg b4 \grd b8 \grg f4. 
@@ -60,7 +62,7 @@
  \hdbld d8 [ c8 d8 ] \grg e4. 
  \grA g8 [ f8 e8 ] \dbld d4 b8 
  \time 9/8
- \grg c4 d8 \dblb b2. \bar "||" \break 
+ \grg c4 d8 \dblb b2. \bar "|.-.|" \break 
  
  \time 6/8
  \grg d4.^\markup {\center-align\large\fontsize #3 {Harmony - Bar 5, 1st part}} 
@@ -69,7 +71,7 @@
  \grg d4 e8 \grg f4. 
  \time 9/8
 
- \grg e8 [ c8 d8 ] \dble e8 [ d8 c8 ] \dblb b4. \bar "||" 
+ \grg e8 [ c8 d8 ] \dble e8 [ d8 c8 ] \dblb b4. \bar "|.-.|" 
  
   	\stopStaff 
         % Increasing the unfold counter will expand the staff-free space

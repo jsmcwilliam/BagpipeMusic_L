@@ -26,6 +26,8 @@
 %to here..........................................................
 %}
 
+\defineBarLine ":|.-.|" #'(":|." ".|" "") 
+
 \score {
 
     \new Staff  {
@@ -52,6 +54,7 @@
     \grg b16 d8. \grg a8. f16 \grg e8. d16 \grg e16 f8. |
     \thrwd d8. e16 \grg f8.d16 \grg b16 d8. \grg a4 |
     \grg b16 d8. \grg a8. f16 \grg e4 \thrwd d |
+    \bar ":|.-.|"
     } %end repeat
     
     % Part 2

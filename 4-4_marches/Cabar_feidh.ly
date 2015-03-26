@@ -10,10 +10,10 @@
 %  	2. Comment out top section when compiling book.........................
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
-%
+%{
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%{
+%
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -26,7 +26,7 @@
 %to here..........................................................
 %}
 
-\defineBarLine ".|:-|." #'("|." ".|:" "|.")
+\defineBarLine ".|-|." #'("|." ".|" "")
 
 \score {
 
@@ -46,7 +46,7 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-%    \bar ".|"
+    \bar ".|"
     		
     % Part 1
     \partial 8 e8 
@@ -58,7 +58,7 @@
  \dblg g8. [ A16 ] \grf g8 [ e8 ] \dblg g4 \thrwd d8. [ e16 ] 
  \dblg g4 \thrwd d8. [ c16 ] \dblb b8. [ a16 ] \grg G8 [ \grd b8 ] 
  \grg a8. [ b16 ] \grg c4 \grip e8. [ f16 ] \dblg g8 [ e8 ] 
- \dblA A4 \hdble e8. [ d16 ] \dblc c8. [ b16 ] \grg a8 \bar "||" \break 
+ \dblA A4 \hdble e8. [ d16 ] \dblc c8. [ b16 ] \grg a8 \bar ".|-|." \break 
 
     % Part 2
      \dblg g8 
@@ -70,7 +70,7 @@
  \grA G8. [ b16 ] \thrwd d8 [ \gre G8 ] \dblb b8 [ \gre G8 ] \hdbld d8. [ b16 ] 
  \grg G8. [ \grd b16 ] \thrwd d8 [ \gre G8 ] \dblb b8. [ a16 ] \grg G8 [ \grd b8 ] 
  \grg a8. [ b16 ] \grg c4 \grip e8. [ f16 ] \dblg g8 [ e8 ] 
- \dblA A4 \hdble e8. [ d16 ] \dblc c8. [ b16 ] \grg a8 \bar "||" \break 
+ \dblA A4 \hdble e8. [ d16 ] \dblc c8. [ b16 ] \grg a8 \bar ".|-|." \break 
  
     % Part 3
  e8 
@@ -82,7 +82,7 @@
  \gcatchc c4 \dblg g8 [ c8 ] \dble e8 [ c8 ] \dblg g8. [ e16 ] 
  \grg c4 \grip e8. [ f16 ] \dblg g8. [ e16 ] \dblc c8 [ e8 ] 
  \dblA A8. [ f16 ] \dblg g8 [ e8 ] \dblf f8 [ d8 ] \dble e8 [ c8 ] 
- \dblA A4 \hdble e8. [ d16 ] \dblc c8. [ b16 ] \grg a8 \bar "||" \break 
+ \dblA A4 \hdble e8. [ d16 ] \dblc c8. [ b16 ] \grg a8 \bar ".|-|." \break 
 
     % Part 4
  \dblg g8 
@@ -94,7 +94,7 @@
  \grA G8. [ \grd G16 ] \gre G8 [ \grd b8 ] \grg G8. [ \grd G16 ] \gre G8 [ \grd b8 ] 
  \grg G8. [ \grd G16 ] \gre G8 [ \Gthrwd d8 ] \dblb b8. [ a16 ] \grg G8 [ \grd b8 ] 
  \grg a8. [ b16 ] \grg c4 \grip e8. [ f16 ] \dblg g8 [ e8 ] 
- \dblA A4 \hdble e8. [ d16 ] \dblc c8. [ b16 ] \grg a8 \bar ".|:-|." \break
+ \dblA A4 \hdble e8. [ d16 ] \dblc c8. [ b16 ] \grg a8 \bar "|." \break
 
 
     } %end staff
