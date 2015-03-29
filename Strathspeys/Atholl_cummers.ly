@@ -30,8 +30,9 @@
 %to here..........................................................
 %}
 
-\defineBarLine ".|:-|." #'("|." ".|:" "|.")
-
+\defineBarLine "|.-.|" #'("|." ".|" "")
+\defineBarLine "|.-.|:" #'("|." ".|:" "")
+\defineBarLine ":|.-|." #'(":|." "|." "")
 
 \score {
 
@@ -51,10 +52,10 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-    \bar ".|:"
+    \bar ".|"
     		
     % Part 1
- \bar "|." \grg a4 \taor a8. [ \grd b16 ] \grg a8. [ \grd c16 ] \dble e8. [ c16 ] 
+ \grg a4 \taor a8. [ \grd b16 ] \grg a8. [ \grd c16 ] \dble e8. [ c16 ] 
  \grg a4 \taor a8. [ \grd b16 ] \grg G8. [ b16 ] \thrwd d8. [ b16 ] 
  \grg a4 \taor a8. [ \grd b16 ] \grg a8. [ \grd b16 ] \dble e8. [ d16 ] 
  \grg e16 [ f16 g8 ] \thrwd d8. [ g16 ] \hdblb b16 [ \gre G8. ] \Gthrwd d8. [ b16 ]  
@@ -64,10 +65,10 @@
  \gbirl a4 \dblc c16 [ \gre a8. ] \dblb b16 [ \gre G8. ] \Gthrwd d8. [ b16 ] 
  \grg a4 \taor a8. [ \grd b16 ] \grg a8. [ \grd b16 ] \dble e8. [ d16 ] 
  \grg e16 [ f16 g8 ] \thrwd d8. [ g16 ] \hdblb b16 [ \gre G8. ] \Gthrwd d8. [ b16 ] 
- \bar ".|" \break 
+ \bar "|.-.|" \break 
 
     % Part 2
- \bar "|." \dble e8. [ a16 ] \dble e8. [ d16 ] \dble e8. [ a16 ] \grg e16 [ A8. ] 
+ \dble e8. [ a16 ] \dble e8. [ d16 ] \dble e8. [ a16 ] \grg e16 [ A8. ] 
  \hdble e8. [ a16 ] \dble e8. [ d16 ] \dblb b16 [ \gre G8. ] \Gthrwd d8. [ b16 ] 
  \dble e8. [ a16 ] \dble e8. [ d16 ] \grg a8. [ \grd b16 ] \dble e8. [ d16 ] 
  \grg e16 [ f16 g8 ] \thrwd d8. [ g16 ] \hdblb b16 [ \gre G8. ] \Gthrwd d8. [ b16 ]  
@@ -77,10 +78,10 @@
  \birl a4 \dble e8. [ d16 ] \dblb b16 [ \gre G8. ] \Gthrwd d8. [ b16 ] 
  \dble e8. [ a16 ] \dble e8. [ b16 ] \thrwd d8. [ e16 ] \grg f16 [ g16 A8 ] 
  g16 [ f16 e8 ] \dblg g8. [ d16 ] \dblb b16 [ \gre G8. ] \Gthrwd d8. [ c16 ] 
- \bar ".|" \break 
+ \bar "|.-.|" \break 
  
     % Part 3
- \bar "|." \grg b4 \taor b8. [ \grd c16 ] \grg b8. [ \grd c16 ] \dblf f8. [ e16 ] 
+ \grg b4 \taor b8. [ \grd c16 ] \grg b8. [ \grd c16 ] \dblf f8. [ e16 ] 
  \grg b4 \taor b8. [ \grd c16 ] \grg a8. [ \grd c16 ] \dble e8. [ c16 ] 
  \grg b4 \taor b8. [ \grd c16 ] \grg b8. [ \grd c16 ] \dblf f8. [ e16 ] 
  \grg f16 [ g16 A8 ] \hdble e8. [ A16 ] \hdblc c16 [ \gre a8. ] \dble e8. [ c16 ]  
@@ -90,10 +91,10 @@
  \grg f16 [ b16 \grG b8 ] \dblc c8. [ b16 ] \grg a8. [ \grd c16 ] \dble e8. [ c16 ] 
  \darodo b4 \dblc c16 [ \gre a8. ] \grg b8. [ \grd c16 ] \dblf f8. [ e16 ] 
  \grg f16 [ g16 A8 ] \hdble e8. [ A16 ] \hdblc c16 [ \gre a8. ] \dble e8. [ c16 ] 
- \bar ".|" \break 
+ \bar "|.-.|" \break 
  
     % Part 4
- \bar "|." \dblf f8. [ b16 ] \dblf f8. [ e16 ] \dblf f8. [ b16 ] \grg f16 [ A8. ] 
+ \dblf f8. [ b16 ] \dblf f8. [ e16 ] \dblf f8. [ b16 ] \grg f16 [ A8. ] 
  \hdblf f8. [ b16 ] \dblf f8. [ e16 ] \dblc c16 [ \gre a8. ] \dble e8. [ c16 ] 
  \dblf f8. [ b16 ] \dblf f8. [ e16 ] \grg f16 [ b16 \grG b8 ] \dblf f8. [ e16 ] 
  \grg f16 [ g16 A8 ] \hdble e8. [ A16 ] \hdblc c16 [ \gre a8. ] \dble e8. [ c16 ]  
@@ -103,7 +104,7 @@
  \catchb b4 \dblf f8. [ e16 ] \dblc c16 [ \gre a8. ] \dble e8. [ c16 ] 
  \dblf f8. [ b16 ] \dblf f8. [ e16 ] \thrwd d8. [ e16 ] \grg f16 [ g16 A8 ] 
  g16 [ f16 e8 ] \grg f16 [ g16 A8 ] \hdblb b16 [ \gre G8. ] \dblb b16 [ A8. ] 
- \bar ".|:-|." \break
+ \bar "|.-.|:" \break
 
     % Part 5
  \set Score.repeatCommands = #'(start-repeat)
@@ -119,12 +120,11 @@
  \set Score.repeatCommands = #'((volta #f)(volta "2.") end-repeat)
   \Gthrwd d8. [ c16 ] 
  \set Score.repeatCommands = #'((volta #f)) 
- \bar ":|."
+ \bar ":|.-|."
  \break
   \set Score.measureLength = #(ly:make-moment 4/4) 
  
     % Part 6
-% \bar "|." 
  \dblb b16 [ A8. ] \hdblf f8. [ e16 ] \dblf f8. [ \grg b16 ] \grG b8. [ \grd c16 ] 
  \dblb b16 [ A8. ] \hdblf f8. [ e16 ] \dblc c16 [ \gre a8. ] \dble e8. [ c16 ] 
  \dblb b16 [ A8. ] \hdblf f8. [ e16 ] \grg f16 [ b16 \grG b8 ] \dblf f8. [ e16 ] 

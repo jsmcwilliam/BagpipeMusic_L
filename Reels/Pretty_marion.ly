@@ -26,6 +26,8 @@
 %to here..........................................................
 %}
 
+\defineBarLine "|.-.|" #'("|." ".|" "")
+
 \score {
 
     \new Staff  {
@@ -44,7 +46,7 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-%    \bar ".|:"
+    \bar ".|"
     		
     % Part 1
     \dblc c4 \gre a8. [ \grd c16 ] \grg e8. [ f16 \dble e8. d16 ] 
@@ -56,7 +58,7 @@
     \hdblc c4 \gre a8. [ \grd c16 ] \grg e8. [ f16 \dble e8. d16 ] 
     \grg c16 [ e8. A8. e16 ] \grg f8. [ b16 \grG b8. d16 ] 
     \dblc c4 \gre a8. [ \grd c16 ] \grg e8. [ f16 \grg e8. c16 ] 
-    \gbirl a4 \grg e8. [ c16 ] \dble e4 \birl a8. [ A16 ] \bar "|." 
+    \gbirl a4 \grg e8. [ c16 ] \dble e4 \birl a8. [ A16 ] \bar "|.-.|" 
     \break 
 
     % Part 2
@@ -69,7 +71,7 @@
     e8. [ a16 \dble e8. c16 ] \gbirl a4 A8. [ f16 ] 
     \grg e8. [ a16 \dble e8. c16 ] \grg f8. [ b16 \grG b8. d16 ] 
     \dblc c8. [ b16 \grg c16 \grd a8. ] \grg c16 [ e8. A8. e16 ] 
-    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|." 
+    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|.-.|" 
     \break 
 
     % Part 3
@@ -82,7 +84,7 @@
     \hdblf f4 \grg e8. [ c16 ] \grg e8. [ f16 A8. e16 ] 
     \grg f16 [ A8. c16 e8. ] \grg f8. [ b16 \grG b8. g16 ] 
     \hdblf f8. [ e16 \grg f8. d16 ] \grg c16 [ e8. A8. e16 ] 
-    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|." 
+    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|.-.|" 
     \break 
 
     % Part 4
@@ -95,9 +97,9 @@
     \birl a4 \grg e8. [ c16 ] \gbirl a4 A8. [ c16 ] 
     \gbirl a4 \dble e8. [ c16 ] \grg f8. [ b16 ] \grG b8. [ d16 ] 
     \dblc c8. [ b16 \grg c16 \grd a8. ] \grg c16 [ e8. A8. e16 ] 
-    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|." 
+    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|.-.|"
     \break 
-
+%\pageBreak
     % Part 5
     \hdblf f4 \grg e8. [ c16 ] \grg e8. [ f16 ] A8. [ e16 ] 
     \grg f16 [ A8. c16 e8. ] \grg f8. [ b16 ] \grG b8. [ A16 ] 
@@ -108,7 +110,7 @@
     \hdblf f4 \grg e8. [ c16 ] \grg e8. [ f16 ] A8. [ e16 ] 
     \grg f16 [ A8. c16 e8. ] \grg f8. [ b16 ] \grG b8. [ g16 ] 
     \hdblf f8. [ e16 ] \grg f8. [ d16 ] \grg c16 [ e8. A8. e16 ] 
-    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ f16 ] \bar "|."
+    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ f16 ] \bar "|.-.|"
     \break 
 
     % Part 6
@@ -121,7 +123,7 @@
     \grg e16 [ A8. \hslurc c8. A16 ] \hdble e4 \birl a8. [ f16 ] 
     \grg e16 [ A8. \hslurc c8. A16 ] \hdblf f8. [ b16 \grG b8. f16 ] 
     \grg e16 [ A8. \hslurc c8. A16 ] e16 [ A8. \hslurc c8. A16 ] 
-    f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|." 
+    f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|.-.|" 
     \break 
 
     % Part 7
@@ -134,7 +136,7 @@
     c16 [ \grd a8. \grg e8. c16 ] \dble e4 \birl a8. [ A16 ] 
     c16 [ \grd a8. \dble e8. c16 ] \grg f8. [ b16 \grG b8. d16 ] 
     \dblc c8. [ b16 \grg c16 \grd a8. ] \grg c16 [ e8. A8. e16 ] 
-    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|." 
+    \grg f16 [ A8. e8. c16 ] \dble e4 \birl a8. [ A16 ] \bar "|.-.|" 
     \break 
 
     % Part 8

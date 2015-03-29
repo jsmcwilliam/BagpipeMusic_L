@@ -26,7 +26,9 @@
 %}
 
 #(allow-volta-hook "|") % enables volta hook outside repeat context
-\defineBarLine ".|:-|." #'("|." ".|:" "|.")
+\defineBarLine "|.-.|:" #'("|." ".|:" "")
+\defineBarLine ":|.-.|" #'(":|." ".|" "")
+\defineBarLine "|.-.|" #'("|." ".|" "")
 
 \score {
 
@@ -66,10 +68,10 @@
     	\grg e16 [ g8. ] \grA d16 [ g8. ] 
     	\grA b8. [ \grd G16 ] \gre G8. [ \grd b16 ] 
     \set Score.repeatCommands = #'(end-repeat)
+    \bar ":|.-.|"
     \break	
 
     % Part 2
-% \bar "|." 
  	\gbirl a4 A8. [ g16 ] A4 \taor a8. [ \grd b16 ] 
  	\gbirl a4 A8. [ f16 ] \grA g4 \taor G8. [ \grd b16 ] 
  	\gbirl a4 A8. [ g16 ] A4 \grip A8. [ g16 ] 
@@ -80,10 +82,9 @@
  	\gbirl a8. [ A16 ] e8. [ f16 ] \grA g8. [ G16 ] \dbld d8. [ b16 ] 
  	\gbirl a8. [ A16 g16 A8. ] f16 [ A8. ] e8. [ g16 ] 
  	\grA f16 [ A8. ] e8. [ f16 ] \grA g8. [ G16 ] \dbld d8. [ c16 ] 
- 	\bar "|." \break 
+ 	\bar "|.-.|" \break 
 
     % Part 3
-    	\bar "|." 
     	\grg b4 \taor b8. [ \grd c16 ] \grg f8. [ b16 ] \grG b8. [ \grd c16 ] 
     	\grg b4 \taor b8. [ \grd c16 ] \dble e8. [ a16 ] \dble e8. [ c16 ] 
     	\grg b4 \taor b8. [ c16 ] \thrwd d4 \grG d8. [ e16 ] 
@@ -94,10 +95,9 @@
     	\darodo b4 \grg b8. [ \grd c16 ] \dble e8. [ a16 ] \dble e8. [ c16 ] 
     	\grg b4 \taor b8. [ c16 ] \thrwd d4 \grG d8. [ e16 ] 
     	\dblf f4 \grg e8. [ d16 ] \grg c4 \taor a8. [ \grd c16 ] 
-    	\bar "|." \break 
+    	\bar "|.-.|" \break 
 
     % Part 4
-    	\bar "|." 
     	\grg b16 [ \grd b8. ] \grg f8. [ e16 ] \grg f8. [ b16 ] \grG b8. [ \grd c16 ] 
     	\grg b16 [ \grd b8. ] A8. [ f16 ] \dble e8. [ a16 ] \dble e8. [ c16 ] 
     	\grg b16 [ \grd b8. ] \grg f8. [ e16 ] \grg f8. [ b16 ] \grg f8. [ g16 ] 
@@ -108,10 +108,9 @@
     	\darodo b4 A8. [ f16 ] \dble e8. [ a16 ] \dble e8. [ c16 ] 
     	\grg b16 [ \grd b8. ] \grg f8. [ e16 ] \grg f8. [ b16 ] \grg f8. [ g16 ] 
     	\dblA A4 \hdble e8. [ d16 ] \grg c4 \taor a8. [ A16 ] 	
-    	\bar "|." \break 
+    	\bar "|.-.|" \break 
 
     % Part 5
-    	\bar "|." 
     	a8. [ b16 ] \grip c8. [ d16 ] \dble e8. [ a16 \grd c16 A8. ] 
     	a8. [ b16 ] \grip c8. [ d16 ] \dbld d8. [ G16 \grd b16 A8. ] 
     	a8. [ b16 ] \grip c8. [ d16 ] \dble e8. [ d16 ] \grg c8. [ d16 ] 
@@ -122,10 +121,9 @@
     	a8. [ b16 ] \grip c8. [ d16 ] \dbld d8. [ G16 \grd b16 A8. ] 
     	\birl a4 \dble e8. [ c16 ] \grg f8. [ d16 ] \dble e8. [ c16 ] 
     	\dbld d8. [ b16 \grg c16 \grd a8. ] \grg b8. [ \grd G16 ] \gre G8. [ \grd b16 ] 
-    	\bar "|." \break 
+    	\bar "|.-.|" \break 
 
     % Part 6
-    	\bar "|." 
     	\gbirl a8. [ A16 ] a8. [ A16 ] g16 [ \grA a8. ] \dble e8. [ c16 ] 
     	\gbirl a8. [ A16 ] a8. [ A16 ] g16 [ \grA G8. ] \dbld d8. [ b16 ] 
     	\gbirl a8. [ A16 ] a8. [ A16 ] g16 [ A8. ] e8. [ A16 ] 
@@ -136,8 +134,8 @@
     	\dblA A4 g16 [ \grA e8. ] \grA g4 \taor G8. [ \grd b16 ] 
     	\dblA A4 \grg A4 \times 2/3 {e8 ( f8 g8 )} \dblA A4 
     	\times 2/3 {e8 ( f8 g8 )} \grA f8. [ d16 ] \grA g4 \taor G8. [ b16 ] 
-    	\bar ".|:-|." \break
-
+    	\bar "|.-.|:" \break
+\pageBreak
     % Part 7
     \set Score.repeatCommands = #'(start-repeat)
     	\gbirl a8. [ e16 ] \grg a8. [ e16 ] \gra e8. [ a16 ] \dbld d8. [ b16 ] 
@@ -145,8 +143,9 @@
     	\gbirl a8. [ e16 ] \grg a8. [ e16 ] \grg d8. [ e16 ] \gra e8. [ d16 ] 
     	\grg b8. [ d16 ] \grG d8. [ e16 ] \gra e8. [ G16 ] \dbld d8. [ b16 ] 
     \set Score.repeatCommands = #'(end-repeat)
+    	\bar ":|.-.|"
     	\break	
-\pageBreak
+
     % Part 8
     	\gbirl a4 \dblg g4 A4 \taor a8. [ \grd b16 ] 
     	\gbirl a4 \dblA A4 g4 \taor G8. [ \grd b16 ] 

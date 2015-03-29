@@ -86,7 +86,7 @@
          \grg a8. b16 d8 \dble e4 A8
          \grf g8. f16 \grg e8 \thrwd d8. \grg e16 g8
          \set Score.measureLength = #(ly:make-moment 5/8)
-         \grA e8. d16 b8 \grG a4 \bar ".|"
+         \grA e8. d16 b8 \grG a4 \bar "|."
          \set Score.repeatCommands = #'((volta #f)) 
 
          \override Score.BarLine.break-visibility = #end-of-line-invisible

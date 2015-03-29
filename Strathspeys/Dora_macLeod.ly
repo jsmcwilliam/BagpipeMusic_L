@@ -26,7 +26,8 @@
 %to here..........................................................
 %}
 
-\defineBarLine ".|:-|." #'("|." ".|:" "|.")
+\defineBarLine "|.-.|:" #'("|." ".|:" "")
+\defineBarLine ":|.-.|" #'(":|." ".|" "") 
 
 \score {
 
@@ -54,8 +55,8 @@
  \gbirl a4 \dble e8. [ c16 ] \dblf f8. [ e16 ] \grg f16 [ g16 A8 ]  
  \birl a4 \dble e8. [ c16 ] \dblb b16 [ \gre a8. ] \grg c16 [ \grip e8. ]  
  \grg f16 [ g16 A8 ] \hdblf f8. [ c16 ] \dble e8. [ a16 ] \dblc c16 [ \gre b8. ] 
+ \bar ":|.-.|"
  \break
-	
     } %end repeat
 
     % Part 2
@@ -69,7 +70,7 @@
  \grg f16 [ A8. ] \grg A8. [ f16 ] \dblA A8. [ e16 ] \grg f16 [ g16 A8 ]  
  \hdble e8. [ f16 ] \gbirl a4 \dblc c16 [ \gre b8. ] \grg c16 [ \grip e8. ]  
  \grg f16 [ g16 A8 ] \hdblf f8. [ c16 ] \dble e8. [ a16 ] \dblc c16 [ \gre b8. ] 
- \bar ".|:-|." \break
+ \bar "|.-.|:" \break
     
     % Part 3
     \repeat volta 2 {
@@ -77,6 +78,7 @@
  \thrwf f4 \dblf f8. [ e16 ] \dblA A8. [ e16 ] \grg f16 [ g16 A8 ]  
  \birl a4 \grd a8. [ b16 ] \gcatchc c4 \dblc c8. [ e16 ]  
  \grg f16 [ g16 A8 ] \hdblf f8. [ c16 ] \dble e8. [ a16 ] \dblc c16 [ \gre b8. ] 
+ \bar ":|.-.|"
  \break
 	
     } %end repeat
