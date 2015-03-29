@@ -25,6 +25,7 @@
 				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
+\defineBarLine "|.-.|" #'("|." ".|" "")
 
 \score {
 
@@ -44,7 +45,7 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-    \bar ".|:"
+    \bar ".|"
     		
     % Part 1
     \grg f16 d \grg a f \grg d a \grg f a
@@ -56,7 +57,8 @@
     \grg b d \grG d a \grg b d \grg e g
     A f \grg a A g e \grg c d
     \grg e a \grd c e \thrwd d4
-    \bar "||" \break
+    \bar "|.-.|" 
+    \break
 
     % Part 2
     \dblA A4 \grg A16 d \grg f A

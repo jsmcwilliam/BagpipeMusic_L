@@ -25,6 +25,7 @@
 				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
+\defineBarLine ":|.-.|" #'(":|." ".|" "")
 
 \score {
 
@@ -52,6 +53,7 @@
  \grg f16 [ A8. ] e16 [ A8. ] c16 [ \grd a8. ] \grg e8. [ c16 ] 
  \dblf f4 \grg e8. [ f16 ] \slurb b4 \grg f8. [ e16 ] 
  \grg f16 [ A8. ] e8. [ c16 ] \grg b8. [ \grd b16 ] \gre b8. [ \grd c16 ] 
+ \bar ":|.-.|"
  \break
     } %end repeat
 

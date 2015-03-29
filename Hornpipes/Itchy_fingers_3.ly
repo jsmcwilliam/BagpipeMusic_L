@@ -10,10 +10,10 @@
 %  	2. Comment out top section when compiling book
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
-%{
+%
 #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
@@ -25,6 +25,8 @@
 				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
+\defineBarLine ":|.-.|" #'(":|." ".|" "") 
+\defineBarLine "|.-.|" #'("|." ".|" "")
 
 \score {
 
@@ -71,7 +73,7 @@
  	\dble e4 \gra e8 [ f8 ] \grg e8 [ a8 \grd c8 e8 ] 
  	\grg f8 [ a8 \grg d8 f8 ] \dble e4 \grg c8 [ e8 ] 
  	\grg d8 [ c8 \grg c8 b8 ] \grg b8 [ f8 e8 b8 ] 
- 	\dblc c4 \gre a4 \wbirl a4
+ 	\dblc c4 \gre a4 \wbirl a4 \bar ":|.-.|"
  	\break
     } %end repeat
 
@@ -85,7 +87,8 @@
  \dblA A4 a8 [ A8 ] c8 [ A8 a8 A8 ] 
  f8 [ A8 d8 A8 ] \hdble e4 \grg c8 [ e8 ] 
  \grg d8 [ c8 \grg c8 b8 ] \grg b8 [ f8 \grg e8 b8 ] 
- \dblc c4 \gre a4 \wbirl a4 \bar "|." \break 
+ \dblc c4 \gre a4 \wbirl a4 \bar "|.-.|" 
+ \break 
 
     % Part 3
  \grg c8 [ e8 ] 

@@ -26,8 +26,8 @@
 %to here..........................................................
 %}
 
-\defineBarLine ".|:-|." #'("|." ".|:" "|.")
-
+\defineBarLine ":|.-.|" #'(":|." ".|" "")
+\defineBarLine "|.-.|:" #'("|." ".|:" "")
 \score {
 
     \new Staff  {
@@ -63,6 +63,7 @@
          \set Score.repeatCommands = #'((volta #f)(volta "2.") end-repeat)
          a16
          \set Score.repeatCommands = #'((volta #f) end-repeat)
+         \bar ":|.-.|"
 	 \break
 	 
     % Part 2
@@ -77,7 +78,7 @@
     	\wslurd d4 \gre a8. [ d16 ] \dbld d8. [ c16 \grG c8. d16 ] 
     	\grg c4 \taor a8. [ b16 ] \grg c8. [ d16 \grg e8. f16 ] 
     	\grA g8. [ f16 \grg e16 A8. ] \hdblf f8. [ d16 \grc d8. g16 ] 
-    	\bar ".|:-|."
+    	\bar "|.-.|:"
     	\break 
 
     % Part 3
@@ -93,6 +94,7 @@
          \set Score.repeatCommands = #'((volta #f)(volta "2.") end-repeat)
          a16
          \set Score.repeatCommands = #'((volta #f) end-repeat)
+         \bar ":|.-.|"
          \break
     
     % Part 4
@@ -108,7 +110,7 @@
     	\grg d16 [ f8. \grg e8. d16 ] \dbld d8. [ c16 \grG c8. d16 ] 
     	\dblc c4 \grg b8. [ \grd c16 ] \grg a8. [ \grd c16 \grg e8. g16 ] 
     	\grA f16 [ A8. c16 e8. ] \dble e8. [ d16 \grc d8. g16 ]  
-    	\bar ".|:-|."
+    	\bar "|.-.|:"
     	\break 
 
     % Part 5
@@ -124,6 +126,7 @@
          \set Score.repeatCommands = #'((volta #f)(volta "2.") end-repeat)
          a16
          \set Score.repeatCommands = #'((volta #f) end-repeat)
+         \bar ":|.-.|"
     	\break
      } %end repeat
  

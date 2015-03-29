@@ -25,6 +25,8 @@
 				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
+\defineBarLine ":|.-.|" #'(":|." ".|" "") 
+\defineBarLine "|.-.|" #'("|." ".|" "")
 
 \score {
 
@@ -57,7 +59,8 @@
     	\dble e8 [ \gra e16 f16 ] \grg e16 [ a16 \grd c16 e16 ] 
     	\grg f16 [ a16 \grg d16 f16 ] \dble e8 [ \grg c16 e16 ] 
     	\grg d16 [ c16 \grg c16 b16 ] \grg b16 [ f16 \grg e16 b16 ] 
-    	\dblc c8 [ a8 ] \wbirl a8 %\bar ":|:" 
+    	\dblc c8 [ a8 ] \wbirl a8 
+    	\bar ":|.-.|" 
     	\break
     } %end repeat
 
@@ -92,7 +95,7 @@
     } %end staff
     
   \header {
-    meter = "Reel"
+    meter = "Hornpipe"
     piece = "Itchy Fingers"
     composer = "P/M Jim Motherwell"
     parttagline = "Copied by John S. McWilliam"
