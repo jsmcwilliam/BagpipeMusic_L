@@ -26,6 +26,10 @@
 %to here..........................................................
 %}
 
+\defineBarLine "|.-.|" #'("|." ".|" "")
+\defineBarLine "|.-.|:" #'("|." ".|:" "")
+\defineBarLine ":|.-.|" #'(":|." ".|" "")
+
 \score {
 
     \new Staff  {
@@ -44,19 +48,19 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-    \bar ".|:"
+    \bar ".|"
     		
     % Part 1
     \partial 8 A8
     c16 e8. \gra e8. f16 \dble e8. c16 A8. c16 |
     \dblg g4 A8. e16 \grg f8. b16 \grG b8. d16 |
-    \grg c16 e8. \grA e8. g16 \dble e8. c16 A8.c16 |
+    \grg c16 e8. \gra e8. g16 \dble e8. c16 A8.c16 |
     \grg b8. c16 \dbld d8. b16 \grg c8. \grd a16 \gre a8. A16 | 
     
     c16 e8. \gra e8. f16 \dble e8. c16 \dblA A4 |
     \catchc c4 A8. e16 \grg f8. b16 \grG b8. d16 |
     \grg c4 \grip e16 f8. \dble e8. c16 A8.c16 |
-    \grg b8. c16 \dbld d8. b16 \grg c8. \grd a16 \gre a8. A16 \bar "||" 
+    \grg b8. c16 \dbld d8. b16 \grg c8. \grd a16 \gre a8. A16 \bar "|.-.|" 
     \break
     
     % Part 2
@@ -68,7 +72,7 @@
     \birl a4 \grg c16 \grd a8. \grg b16 \grd a8. \grg c16 \grd a8. |
     \gbirl a4 \grg c16 \grd a8. \grg b8. \grd G16 \gre G8. A16 |
     e8. c16 \dbld d8. b16 \grg c16 \grd a8. \grg b16 \grd G8. |
-    \grg a8. \grd a16 \gre a8. b16 \grg c8. \grd a16 \gre a8. b16 \bar "||"
+    \grg a8. \grd a16 \gre a8. b16 \grg c8. \grd a16 \gre a8. b16 \bar "|.-.|:"
     \break
     
     % Part 3
@@ -86,7 +90,7 @@
     \set Score.repeatCommands = #'((volta #f)(volta "2.") end-repeat)
     A16
     \set Score.repeatCommands = #'((volta #f))
-    \break
+    \bar ":|.-.|" \break
     } %end repeat
     
     % Part

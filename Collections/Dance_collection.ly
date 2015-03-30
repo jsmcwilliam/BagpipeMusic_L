@@ -62,7 +62,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 	\pageBreak %after title page		
 	\markuplist \table-of-contents
 	\pageBreak
-
+%{
 	\bookpart {
 		\header {
 			title = "Hornpipes"
@@ -78,7 +78,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 		\include "../Hornpipes/Ballachulish_walkabout.ly"
 		\pageBreak
 		}
-	
+%}	
 	\bookpart {
 		\header {
 			title = "Jigs"
@@ -157,5 +157,5 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 		\include "../Other/It_came_upon_a_midnight_clear.ly"
 %		\pageBreak
 		}
-
+%}
 }%end book

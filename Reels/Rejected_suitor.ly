@@ -15,6 +15,8 @@
 %to here..........................................................
 %}
 
+\defineBarLine "|.-.|" #'("|." ".|" "")
+
 \score {
 
     \new Staff  {
@@ -22,7 +24,8 @@
     \time 2/2
     \tempo 4 = 120
     \bagpipeKey
-%    \quarterBeaming			
+%    \quarterBeaming
+    \bar ".|"
 
     % Part 1
  \partial 8 d8  \grg c16 [ e8. \dble e8. a16 ] \dblg g4 \grA f16 [ A8. ] |
@@ -34,7 +37,8 @@
  \grg c16 [ e8. \dble e8. a16 ] \dblg g4 \grA f8. [ g16 ] |
  A8. [ a16 ] \dble e8. [ d16 ] \grg c8. [ \grd a16 ] \gre a8. [ b16 ] |
  \thrwd d4 \grg f8. [ d16 ] \grg c16 [ e8. A8. c16 ] |
- \grg b16 [ d8. \grA g8. d16 ] \grg b8. [ \grd G16 \gre G8 ] \bar "||" \break 
+ \grg b16 [ d8. \grA g8. d16 ] \grg b8. [ \grd G16 \gre G8 ] \bar "|.-.|" 
+ \break 
     
     % Part 2
  b8 |\dble e8. [ a16 ] \dble e8. [ d16 ] \dblc c4 \gre a8. [ \grd c16 ] |
@@ -46,7 +50,8 @@
  \dble e8. [ a16 ] \dble e8. [ d16 ] \dblc c4 \gre a8. [ g16 ] |
  \grA f16 [ A8. e8. a16 ] \grg c8. [ \grd a16 ] \gre a8. [ b16 ] |
  \thrwd d4 \grg f8. [ d16 ] \grg c16 [ e8. A8. c16 ] |
- \grg b16 [ d8. \grA g8. d16 ] \grg b8. [ \grd G16 \gre G8 ] \bar "||" \break 
+ \grg b16 [ d8. \grA g8. d16 ] \grg b8. [ \grd G16 \gre G8 ] \bar "|.-.|" 
+ \break 
 
     % Part 3
  b8 |\gbirl a4 \dblA A4 g16 [ \grA e8. ] \dblA A4 |
@@ -58,7 +63,8 @@
  \gbirl a4 \dblA A4 g16 [ \grA e8. ] \dblA A4 |
  \birl a16 [ A8. e8. a16 ] \grg c8. [ \grd a16 ] \gre a8. [ b16 ] |
  \thrwd d4 \grg f8. [ d16 ] \grg c16 [ e8. A8. c16 ] |
- \grg b16 [ d8. \grA g8. d16 ] \grg b8. [ \grd G16 \gre G8] \bar "||" \break 
+ \grg b16 [ d8. \grA g8. d16 ] \grg b8. [ \grd G16 \gre G8] \bar "|.-.|" 
+ \break 
 
     % Part 4
  g8 |\grA f16 [ A8. e16 A8. ] \hdblc c4 \gre a8. [ g16 ] |
