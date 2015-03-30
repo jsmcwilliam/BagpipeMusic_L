@@ -85,10 +85,10 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 %		\pageBreak
 		\tocItem \markup {2. Earl of Mansfield}
 		\include "../2-4_marches/Earl_of_mansfield.ly"
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {3. Greenwood Side}
 		\include "../2-4_marches/Greenwood_side.ly"
-%		\pageBreak
+		\pageBreak
 		\tocItem \markup {4. Men of Argyll}
 		\include "../2-4_marches/Men_of_argyll.ly"
 		\pageBreak
@@ -132,7 +132,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocSection \markup { 4/4 Marches } 
 		\tocItem \markup {1. Badge of Scotland}
 		\include "../4-4_marches/Badge_of_scotland.ly"
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {2. Intercontinental Gathering}
 		\include "../4-4_marches/Intercontinental_gathering.ly"
 		\pageBreak
@@ -259,5 +259,6 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {Westering Home }
 		\include "../Airs/Westering_home.ly"
 		\pageBreak
-		}		
+		}
+
 }%end book

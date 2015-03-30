@@ -65,7 +65,7 @@
  \dblc c8 [ e8 ] \dblA A4. g8 
  A8. [ f16 ] \grg e8 [ a8 ] \wbirl a4 
  \grg f16 [ e16 d8 ] \dblc c4. e8 
- \grg d16 [ c16 b8 ] \grG a2 \bar "||"
+ \grg d16 [ c16 b8 ] \grG a2 \bar "|."
      }}
  
       \override Score.BarLine.break-visibility = #end-of-line-invisible
@@ -76,6 +76,7 @@
       \startStaff  % Resume bar count and show staff lines again  +
 
     % Part 2
+    \bar ".|"
  \grg e8. [ f16 ] \dble e4. c8 
  \grg a8 [ \grd c8 ] \dblf f8 [ e8 ] \gra e4 
  \dblA A8. [ g16 ] A4. f8 

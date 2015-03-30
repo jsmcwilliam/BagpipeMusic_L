@@ -88,7 +88,7 @@
 % added layout options. See bagpipe_new.ly (\layout) for default settings
   \layout {
   	  #(layout-set-staff-size 18)
-  	  ragged-last = ##t
+  	  ragged-last = ##f
   	}
 
 % \midi {} %Generation of midi files option.

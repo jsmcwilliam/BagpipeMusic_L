@@ -68,7 +68,7 @@
       \grg c16 \grd a8. \grd c8 \dblb b4 \gre G8
       \set Score.measureLength = #(ly:make-moment 5/8)
       \grg a4. \wbirl a4 
-      \bar "||"
+      \bar "|."
       \set Score.repeatCommands = #'((volta #f)) 
       
       \override Score.BarLine.break-visibility = #end-of-line-invisible

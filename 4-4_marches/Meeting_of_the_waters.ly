@@ -26,6 +26,8 @@
 %to here..........................................................
 %}
 
+\defineBarLine "|.-.|:" #'("|." ".|:" "")
+
 \score {
 
     \new Staff  {
@@ -44,7 +46,7 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-%    \bar ".|:"
+    \bar ".|"
     		
     % Part 1
     \partial 4 {\grg a8. [ b16 ] }
@@ -56,7 +58,7 @@
  \thrwd d4 \wslurd d8 [ f8 ] \birl a4 \thrwd d8. [ c16 ] 
  \grg b8 [ d8 ] \grg b8 [ \gre G8 ] \grg a4 \thrwd d8. [ e16 ] 
  \grg f8 [ A8 ] \grf g8 [ f8 ] \dblg g8 [ a8 ] \grg c8 [ e8 ] 
- \thrwd d2 \dbld d4 \dblA A8. [ g16 ] \bar "||" 
+ \thrwd d2 \dbld d4 \dblA A8. [ g16 ] \bar "|.-.|:"
  \break
 
     % Part 2 

@@ -59,9 +59,10 @@
  \set Score.measureLength = #(ly:make-moment 9/8) 
  \thrwd d4. 
  \set Score.repeatCommands = #'((volta "1"))  
- \dbld d8. [ c16 b8 ] 
- \set Score.repeatCommands = #'((volta #f)) 
- \set Score.repeatCommands = #'((volta "2"))  
+ \dbld d8. [ c16 b8 ]
+ \once \hide Score.BarLine
+ \once \hide Score.SpanBar
+ \set Score.repeatCommands = #'((volta #f) (volta "2.") end-repeat) 
  \dbld d4. 
  \set Score.repeatCommands = #'((volta #f)) 
  \break

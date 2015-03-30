@@ -3,8 +3,8 @@
 %   2. Comment out from here when compiling book.........................
 %{
 #(ly:set-option 'point-and-click #t)
-\include "bagpipe.ly"
-\include "format.ly"
+\include "bagpipe_new.ly"
+\include "BP_format.ly"
 %}%to here..........................................................
 \paper {
 	#(set-paper-size "a4" 'landscape)
@@ -17,6 +17,8 @@
 		}}}
 }%end paper
 
+\defineBarLine "|.-.|" #'("|." ".|" "")
+
 \score {
     \new Staff	{
     \set Staff.midiInstrument = #"bagpipe"
@@ -24,7 +26,8 @@
     \tempo 4 = 80   % adjust speed accordingly for playback
     \showKeySignature
     \quarterBeaming
-
+    \bar ".|"
+    
     % Part 1
 
     \grg \partial 4 a8. b16
@@ -37,7 +40,7 @@
     \grg a4 \taor a8 \grg b \gbirl a4 \thrwd d8. e16
     \grg f16 A8. \hdblf f8 A \birl a4 \grg f8. e16
     \thrwd d4 \slurd d8. e16 \thrwd d4
-    \bar "||" \break
+    \bar "|.-.|" \break
 
     % Part 2
 

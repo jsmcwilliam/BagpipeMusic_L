@@ -106,7 +106,7 @@
     \alternative {
       {
         \grg c16. d32]
-        \break
+%        \break
         \dble e8 A16. e32 \dblc c8 A16. e32
         \grg f16. g32 A16. f32 \thrwd d8[ \dblA A]
         \hdblf f16. e32 A16. f32 \grg e32 f16. \grg a16. b32
@@ -134,7 +134,7 @@
   }
   \layout {
   	  #(layout-set-staff-size 18)
-  	  ragged-last = ##t
+  	  ragged-last = ##f
   	}
   	
 %Generation of midi files can be removed here.

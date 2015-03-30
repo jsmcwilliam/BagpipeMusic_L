@@ -87,7 +87,7 @@
  A8. [ c16 \grG c8 ] \grg c8. [ f16 e8 ] |
  \grg f8. [ b16 \grG b8 ] \grg b8. [ f16 e8 ] |
  \grg f16 [ A8. c8 ] \dble e8. [ d16 b8 ] |
- \grg a4. \wbirl a4 \bar "||" 
+ \grg a4. \wbirl a4 \bar "|." 
     }}
  
       \override Score.BarLine.break-visibility = #end-of-line-invisible

@@ -66,7 +66,7 @@
     \grg f4. \grA g8. [ f16 \grg e8 ] |
     \thrwd d4. \dbld c4 \gre b8 |
     \grg a8. [ d16 \grg f8 ] A8. [ a16 g8 ] |
-    \grA f4 e8 \thrwd d4. \bar "||"
+    \grA f4 e8 \thrwd d4. \bar "|."
     \set Score.repeatCommands = #'((volta #f) )
     
        \override Score.BarLine.break-visibility = #end-of-line-invisible

@@ -11,9 +11,7 @@
 %	3. Option to comment out "meter" from title e.g. if more than one tune
 %	   per page.
 %
-#(allow-volta-hook "||") % enables volta hook outside repeat context
-%\defineBarLine ".|:-|." #'("|." ".|:" "|.")
-
+% #(allow-volta-hook "||") % enables volta hook outside repeat context
 % from here
 %{
 #(ly:set-option 'point-and-click #t)
@@ -54,17 +52,14 @@
  \dblf f4 A16. [ f32 \grg e16. f32 ] 
  \thrwd d16. [ e32 \grg d16. c32 ] \dblb b8 [ \grg d16 c16 ] 
  \grg b32 [ \grd G16. \grg b16. c32 ] \thrwd d16. [ e32 \grg f32 A16. ] 
- \set Score.measureLength = #(ly:make-moment 3/8)
- \hdble e4 \gra e8 \break
- 
+ \hdble e4 \gra e8 
  \set Score.repeatCommands = #'((volta "1. 2-2"))  
- \set Score.measureLength = #(ly:make-moment 1/8)
  \grg a16 [ d16 ] 
-\set Score.measureLength = #(ly:make-moment 2/4) 
+ \break
+ 
  \dblf f4 A16. [ f32 \grg e16. f32 ] 
  \thrwd d16. [ e32 \grg d16. c32 ] \dblb b8 [ \dblg g8 ] 
  \grA f32 [ A16. \hdblf f16. d32 ] \grg a16. [ \grd c32 \dble e16. c32 ] 
- \set Score.measureLength = #(ly:make-moment 3/8)
  \thrwd d4 \wslurd d8 
  \set Score.repeatCommands = #'((volta #f)) 
  \break
@@ -72,74 +67,61 @@
 
     % Part 2
     \repeat volta 2 {
- \set Score.measureLength = #(ly:make-moment 1/8)
  \grg f16 [ g16 ] 
- \set Score.measureLength = #(ly:make-moment 2/4)
  \dblA A16. [ a32 \wbirl a8 ] \dblf f16. [ a32 \wbirl a8 ] 
  \thrwd d16. [ e32 \grg d16. c32 ] \dblb b8 [ \grg d16 c16 ] 
  \grg b32 [ \grd G16. \grg b16. c32 ] \thrwd d16. [ e32 \grg f32 A16. ] 
- \set Score.measureLength = #(ly:make-moment 3/8)
- \hdble e4 \gra e8 \break
- 
- \set Score.measureLength = #(ly:make-moment 1/8)
+ \hdble e4 \gra e8 
  \set Score.repeatCommands = #'((volta "1., 2-3"))  
  \grg f16 [ g16 ]
- \set Score.measureLength = #(ly:make-moment 2/4)
+ \break 
+ 
  \dblA A16. [ a32 \wbirl a8 ] \dblf f16. [ a32 \wbirl a8 ] 
  \thrwd d16. [ e32 \grg d16. c32 ] \dblb b8 [ \dblg g8 ] 
  \grA f32 [ A16. \hdblf f16. d32 ] \grg a16. [ \grd c32 \dble e16. c32 ]
- \set Score.measureLength = #(ly:make-moment 3/8)
- \thrwd d4 \wslurd d8 \break
+ \thrwd d4 \wslurd d8 
  \set Score.repeatCommands = #'((volta #f)) 
+ \break
  } %end repeat
 
     % Part 3
     \repeat volta 2 {
- \set Score.measureLength = #(ly:make-moment 1/8)
  \grg a16 [ d16 ] 
- \set Score.measureLength = #(ly:make-moment 2/4)
  \grg f16. [ a32 A16. f32 ] \grg d16. [ a32 b16. c32 ] 
  \thrwd d16. [ e32 d16. c32 ] \dblb b8 [ \grg d16 c16 ] 
  \grg b32 [ \grd G16. \grg b16. c32 ] \thrwd d16. [ e32 \grg f32 A16. ] 
- \set Score.measureLength = #(ly:make-moment 3/8)
- \hdble e4 \gra e8 \break 
-
- \set Score.measureLength = #(ly:make-moment 1/8)
+ \hdble e4 \gra e8  
  \set Score.repeatCommands = #'((volta "1., 2-4"))  
- \grg a16 [ d16 ] 
- \set Score.measureLength = #(ly:make-moment 2/4)
+ \grg a16 [ d16 ]
+ \break
+ 
  \grg f16. [ a32 A16. f32 ] \grg d16. [ a32 b16. c32 ] 
  \thrwd d16. [ e32 d16. c32 ] \dblb b8 [ \dblg g8 ] 
  \grA f32 [ A16. \hdblf f16. d32 ] \grg a16. [ \grd c32 
  \dble e16. c32 ] 
- \set Score.measureLength = #(ly:make-moment 3/8)
- \thrwd d4 \wslurd d8 \break
+ \thrwd d4 \wslurd d8 
  \set Score.repeatCommands = #'((volta #f)) 
+ \break
     } %end repeat
 
 
     % Part 4
     \repeat volta 2 {
-% \bar ".|:"
- \set Score.measureLength = #(ly:make-moment 1/8)
  \grg f16 [ g16 ] 
- \set Score.measureLength = #(ly:make-moment 2/4)
  \dblA A16. [ a32 f16. e32 ] \grg d16. [ a32 b16. c32 ] 
  \thrwd d16. [ e32 d16. c32 ] \grg b32 [ \grd a16. \grg b16. c32 ] 
  \grg d16. [ c32 d16. e32 ] \grg f16. [ d32 \grg f32 A16. ] 
- \set Score.measureLength = #(ly:make-moment 3/8)
- \hdble e4 \gra e8  \break
- 
+ \hdble e4 \gra e8  
  \set Score.repeatCommands = #'((volta "1."))  
- \set Score.measureLength = #(ly:make-moment 1/8)
  \grg f16 [ g16 ] 
- \set Score.measureLength = #(ly:make-moment 2/4)
+ \break
+ 
  \dblA A16. [ a32 f16. e32 ] \grg d16. [ a32 b16. c32 ] 
  \thrwd d16. [ e32 d16. c32 ] \dblb b8 [ \dblg g8 ] 
  \grA f32 [ A16. \hdblf f16. d32 ] \grg a16. [ \grd c32 \dble e16. c32 ] 
- \set Score.measureLength = #(ly:make-moment 3/8)
- \thrwd d4 \wslurd d8 \break 
+ \thrwd d4 \wslurd d8  
  \set Score.repeatCommands = #'((volta #f)) 
+ \break
     } %end repeat
 
     } %end staff

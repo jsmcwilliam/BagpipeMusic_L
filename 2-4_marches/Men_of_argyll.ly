@@ -36,7 +36,7 @@
  \grg c32 [ \grd a16. \grg c16. d32 ] \dble e8
  \set Score.repeatCommands = #'((volta "2. --2."))
  \grg f16. e32  | 
-% \break
+ \break
 
  \thrwd d8 [ \grg c16. d32 ] \dblb b8 [ \thrwd d16. e32 ] |
  \dblf f8 [ A8 ] \hdblf f8 [ \grg d16. e32 ] |
@@ -52,11 +52,10 @@
  \dblf f8 [ A8 ] \hdblf f8 [ \grg c16. d32 ] |
  \dble e8 [ \grg a8 ] \dblc c8. [ d16 ] |
  \dble e16. [ c32 ] \grg a16. [ \grd c32 ] \dble e8  
- \bar "|"   
-% \break 
-
  \set Score.repeatCommands = #'((volta "1."))
  \dblg g8
+ \break 
+
  \dblA A8 [ \thrwd d8 ] \dblf f8 [ e32 d16. ] |
  \dblf f8 [ A8 ] \hdblf f8 [ \grg d16. e32 ] |
  \grg f16. [ e32 \grg f32 A16. ] \hdblc c8 [ \gre a8 ] |
@@ -88,7 +87,7 @@
  \grg f16. [ e32 \grg f32 A16. ] \hdblf f8 [ e32 c16. ] |
  \dble e8 [ \birl a8 ] \dble e8. [ f16 ] |
  \dble e16. [ c32 \grg b32 \grd c16. ] \grg a16. [ b32 \grg c32 e16. ] | 
-%\break 
+ \break 
 
  \set Score.repeatCommands = #'((volta "1."))
  \dblf f8 [ b8 ] \dblf f8. [ e16 ] |
