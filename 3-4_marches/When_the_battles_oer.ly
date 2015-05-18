@@ -78,7 +78,7 @@
   \header {
     meter = "March"
     piece = "When the Battle's O'er"
-    composer = "PM William Robb"
+    composer = "P/M William Robb (1863-1909)"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

@@ -97,7 +97,7 @@
   \header {
 %    meter = "3/4 Retreat March"
     piece = "Loch Maree"
-    composer = "PM G.S.MacLennan (Arr. Ed Krintz)"
+    composer = "P/M G.S.MacLennan 1884-1929 (Arr. Ed Krintz)"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

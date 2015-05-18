@@ -53,7 +53,7 @@
  \thrwd d16. [ e32 \grg d16. c32 ] \dblb b8 [ \grg d16 c16 ] 
  \grg b32 [ \grd G16. \grg b16. c32 ] \thrwd d16. [ e32 \grg f32 A16. ] 
  \hdble e4 \gra e8 
- \set Score.repeatCommands = #'((volta "1. 2-2"))  
+ \set Score.repeatCommands = #'((volta "2. --2,4"))  
  \grg a16 [ d16 ] 
  \break
  
@@ -72,7 +72,7 @@
  \thrwd d16. [ e32 \grg d16. c32 ] \dblb b8 [ \grg d16 c16 ] 
  \grg b32 [ \grd G16. \grg b16. c32 ] \thrwd d16. [ e32 \grg f32 A16. ] 
  \hdble e4 \gra e8 
- \set Score.repeatCommands = #'((volta "1., 2-3"))  
+ \set Score.repeatCommands = #'((volta "1."))  
  \grg f16 [ g16 ]
  \break 
  
@@ -91,7 +91,6 @@
  \thrwd d16. [ e32 d16. c32 ] \dblb b8 [ \grg d16 c16 ] 
  \grg b32 [ \grd G16. \grg b16. c32 ] \thrwd d16. [ e32 \grg f32 A16. ] 
  \hdble e4 \gra e8  
- \set Score.repeatCommands = #'((volta "1., 2-4"))  
  \grg a16 [ d16 ]
  \break
  
@@ -100,7 +99,6 @@
  \grA f32 [ A16. \hdblf f16. d32 ] \grg a16. [ \grd c32 
  \dble e16. c32 ] 
  \thrwd d4 \wslurd d8 
- \set Score.repeatCommands = #'((volta #f)) 
  \break
     } %end repeat
 

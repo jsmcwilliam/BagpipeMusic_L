@@ -78,7 +78,7 @@
   \header {
 %    meter = "2/4 March"
     piece = "Marie's Wedding"
-    composer = "Trad. (Arr. Sandy Jones)"
+    composer = "Trad. (Arr. Johnny Bannerman 1935)"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

@@ -70,7 +70,7 @@
   \header {
 %    meter = "6/4 Retreat March"
     piece = "Farewell to Nigg"
-    composer = "Duncan Johnstone"
+    composer = "Duncan Johnstone 1925-1999"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

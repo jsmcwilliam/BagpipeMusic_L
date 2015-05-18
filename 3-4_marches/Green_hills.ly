@@ -78,7 +78,7 @@
   \header {
     meter = "March"
     piece = "Green Hills of Tyrol"
-    composer = "PM J. MacLeod"
+    composer = "PM John. MacLeod 1854"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

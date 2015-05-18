@@ -78,7 +78,7 @@
   \header {
 %    meter = "2/4 March"
     piece = "Barren Rochs of Aden"
-    composer = "PM Angus McKellar"
+    composer = "P/M Angus McKellar ca 1850"
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings

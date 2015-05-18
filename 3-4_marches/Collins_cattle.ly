@@ -78,7 +78,7 @@
   \header {
     meter = "March"
     piece = "Collin's Cattle"
-    composer = "W. MacLean"
+    composer = "Trad."
     parttagline = "Copied by John S. McWilliam"
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings
