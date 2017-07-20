@@ -62,7 +62,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 	\pageBreak %after title page		
 	\markuplist \table-of-contents
 	\pageBreak
-%{
+%
 	\bookpart {
 		\header {
 			title = "Hornpipes"
@@ -74,7 +74,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 		\tocItem \markup {2. The Man from Skye }
 		\include "../Hornpipes/Man_from_skye.ly"
 		\pageBreak
-		\tocItem \markup { Ballachulish Walkabout }
+		\tocItem \markup {3. Ballachulish Walkabout }
 		\include "../Hornpipes/Ballachulish_walkabout.ly"
 		\pageBreak
 		}
@@ -96,7 +96,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 		\tocItem \markup {2. The Seagull }
 		\include "../Jigs/Seagull.ly"
 		\pageBreak
-		\tocItem \markup {Braes of Mellanish }
+		\tocItem \markup {3. Braes of Mellanish }
 		\include "../Jigs/Braes_of_mellinish.ly"
 %		\pageBreak
 		}		
@@ -115,10 +115,10 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 		\tocItem \markup {3. The Devil in the Kitchen}
 		\include "../Strathspeys/Devil_in_the_kitchen.ly"
 		\pageBreak
-		\tocItem \markup {Caledonian Society of London}
+		\tocItem \markup {4. Caledonian Society of London}
 		\include "../Strathspeys/Caledonian_society_of_london.ly"
 		\pageBreak
-		\tocItem \markup {John Roy Stewart}
+		\tocItem \markup {5. John Roy Stewart}
 		\include "../Strathspeys/John_roy_stewart.ly"
 		\pageBreak
 		}
@@ -134,16 +134,16 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 		\tocItem \markup { 2. The Piper of Drummond }
 		\include "../Reels/Piper_of_drummond.ly"
 		\pageBreak
-		\tocItem \markup { Lord MacDonald }
+		\tocItem \markup { 3. Lord MacDonald }
 		\include "../Reels/Lord_macdonald.ly"
 		\pageBreak
-		\tocItem \markup { The Rejected Suitor }
+		\tocItem \markup { 4. The Rejected Suitor }
 		\include "../Reels/Rejected_suitor.ly"
 		\pageBreak
-		\tocItem \markup { Sandy Cameron }
+		\tocItem \markup { 5. Sandy Cameron }
 		\include "../Reels/Sandy_cameron.ly"
 		\pageBreak
-		\tocItem \markup { Twisted Fingers }
+		\tocItem \markup { 6. Twisted Fingers }
 		\include "../Reels/Twisted_fingers.ly"
 %		\pageBreak
 		}
