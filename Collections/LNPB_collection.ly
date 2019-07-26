@@ -10,9 +10,8 @@ tocSection = #(define-music-function (parser location text) (markup?)
 VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald McLean
 logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 
-\include "bagpipe_extra.ly"
-\include "bagpipe_new.ly"
-\include "BP_format.ly"
+\include "bagpipe.ly"
+\include "../../Includes/BP_format.ly"
 
 \book {
 
@@ -78,7 +77,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 	\pageBreak %after title page		
 	\markuplist \table-of-contents
 	\pageBreak
-
+%
 	\bookpart {
 		\header {
 			title = "2/4 Marches"
@@ -87,7 +86,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\tocSection \markup { 2/4 Marches }		
 		\tocItem \markup {1. The High Road to Gairloch}
 		\include "../2-4_marches/High_road_to_gairloch_2.ly"
-%		\pageBreak
+		\pageBreak
 		\tocItem \markup {2. Weary Maid}
 		\include "../2-4_marches/Weary_maid.ly" 
 %		\pageBreak
@@ -98,13 +97,13 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\include "../2-4_marches/Barren_rocks_of_aden.ly" 
 		\pageBreak
 		}
-
+%
 	\bookpart {
 		\header {
 			title = "3/4 Marches"
 			subtitle = ##f
 			picture = ##f}
-		\tocSection \markup { 2/4 Marches }		
+		\tocSection \markup { 3/4 Marches }		
 		\tocItem \markup {1. Green Hills of Tyrol}
 		\include "../3-4_marches/Green_hills.ly" 
 %		\pageBreak
@@ -124,8 +123,8 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\include "../3-4_marches/Collins_cattle.ly" 
 		\pageBreak
 		}
-
-		\bookpart {
+%
+	\bookpart {
 		\header {
 			title = "4/4 Marches"
 			subtitle = ##f
@@ -156,8 +155,8 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\include "../4-4_marches/Macrae_meadow.ly" 
 		\pageBreak
 		}
-
-		\bookpart {
+%
+	\bookpart {
 		\header {
 			title = "6/8 Marches"
 			subtitle = ##f
@@ -171,7 +170,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\pageBreak
 		}
 
-		\bookpart {
+	\bookpart {
 		\header {
 			title = "Slow Marches/Airs"
 			subtitle = ##f
@@ -197,8 +196,8 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\include "../Airs/For_the_honor.ly"
 		\pageBreak
 		}
-		
-		\bookpart {
+%		
+	\bookpart {
 		\header {
 			title = "Other Marches"
 			subtitle = ##f
@@ -210,7 +209,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\include "../9-8_marches/Cullen_bay.ly" 
 		}
 		
-		\bookpart {
+	\bookpart {
 		\header {
 			title = "Hornpipes"
 			subtitle = ##f
@@ -221,8 +220,8 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\tocItem \markup {2. An Dro}
 		\include "../Hornpipes/An_dro.ly" 
 		}
-		
-		\bookpart {
+%		
+	\bookpart {
 		\header {
 			title = "March, Strathspey & Reel"
 			subtitle = ##f
@@ -245,7 +244,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\pageBreak 		
 		}
 
-		\bookpart {
+	\bookpart {
 		\header {
 			title = "Medley-1"
 			subtitle = ##f
@@ -270,8 +269,8 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\include "../Medley/An_dro.ly" 
 		\pageBreak
 		}
-		
-		\bookpart {
+%		
+	\bookpart {
 		\header {
 			title = "Medley-2"
 			subtitle = ##f

@@ -6,13 +6,14 @@
 
 %
 #(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "letter") % option 'landscape
+#(set-default-paper-size "a4") % option 'landscape
 #(set-global-staff-size 16)
 #(allow-volta-hook "|") % enables volta hook outside repeat context
 
-\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "bagpipe_extra.ly"	%(Extras)
-\include "BP_format_piobaireachd.ly" 	
+%\include "bagpipe.ly"
+\include "../../Includes/bagpipe_new.ly" 	%(Replaces bagpipe.ly)
+\include "../../Includes/bagpipe_extra.ly"	%(Extras)
+\include "../../Includes/BP_format_piobaireachd.ly" 	
 				%(Tagline: Copied by John McWilliam, date)
 				%(Paper format Letter, Portrait  ))
 %...to here

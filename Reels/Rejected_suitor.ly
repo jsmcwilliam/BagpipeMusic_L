@@ -6,9 +6,9 @@
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
-\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "bagpipe_extra.ly"	%(Extras)
-\include "BP_format.ly" 		%(Tagline: Copied by John McWilliam, date)
+\include "bagpipe.ly"		%(Original)
+%\include "../../bagpipe_new.ly"%(Replaces bagpipe.ly)
+\include "../../BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Landscape)
 				%(Header: peice, meter and composer)
 				%(Otherwise Lilypond subtitle)
@@ -23,7 +23,8 @@
     \set Staff.midiInstrument = #"bagpipe"    
     \time 2/2
     \tempo 4 = 120
-    \bagpipeKey
+%    \bagpipeKey
+    \hideKeySignature
 %    \quarterBeaming
     \bar ".|"
 

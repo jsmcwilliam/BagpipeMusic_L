@@ -17,9 +17,11 @@
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
-\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
+\include "bagpipe.ly"           %(Original)
+%\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
 %\include "bagpipe_extra.ly"	%(Extras)
-\include "BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
+\include "../../Includes/BP_format.ly" 	
+                                %(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Landscape)
 				%(Header: piece, meter and composer)
 				%(Otherwise Lilypond subtitle)
@@ -31,7 +33,7 @@
     \new Staff  {
     \time 6/8	    %adjust time to suit specific tunes
     \tempo 4 = 80   % adjust speed accordingly for playback
-    \bagpipeKey
+    \hideKeySignature
 %   \set Staff.midiInstrument = #"bagpipe"  is set in bagpipe_new.ly (\layout)
 %   \showKeySignature (for BMW compatibility)
 %   \quarterBeaming % Sets the autobeamer to span quarter notes only. 
@@ -69,7 +71,7 @@
     } % end repeat
 
     % Part 2
-    \repeat volt 2 {
+    \repeat volta 2 {
  \set Score.measureLength = #(ly:make-moment 6/8)
  \dblA A8. [ f16 \grg d8 ] \dbld d8. [ e16 f8 ] 
  \dble e8. [ \grg d16 e8 ] \birl a4. 

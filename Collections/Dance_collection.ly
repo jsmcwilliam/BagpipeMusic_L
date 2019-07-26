@@ -9,9 +9,10 @@ tocSection = #(define-music-function (parser location text) (markup?)
         	(add-toc-item! 'tocSectionMarkup text)) 
 VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 
-\include "bagpipe_extra.ly"
-\include "bagpipe_new.ly"
-\include "BP_format.ly"
+%\include "../../Includes/bagpipe_extra.ly"
+%\include "../../Includes/bagpipe_new.ly"
+\include "bagpipe.ly"
+\include "../../Includes/BP_format.ly"
 
 \book {
 

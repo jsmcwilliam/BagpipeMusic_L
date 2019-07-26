@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 
 %Header formatting for bagpipe tunes. Customize to get name in the tag line.
 %Bring in the time/date package. Set format to month day, year. Set format for
@@ -6,7 +6,7 @@
 
 today = #(strftime "%d-%m-%Y" (localtime (current-time)))
 \paper {
-    #(set-paper-size "letter") %alternative: "letter" 'landscape
+  #(set-default-paper-size "a4" 'landscape)
     ragged-bottom = ##t
     tagline = \markup {
         \line {
@@ -14,13 +14,12 @@ today = #(strftime "%d-%m-%Y" (localtime (current-time)))
             \concat { "(rev. " \today ")" }
         }
     }
-%{
 	scoreTitleMarkup = \markup {
 	\column {
 		\fill-line {
+		        \fromproperty #'header:meter
 			\fontsize #4 \bold \fromproperty #'header:piece
-			\fromproperty #'header:meter
 			\fromproperty #'header:composer
 		}}}
-%}
+
 }

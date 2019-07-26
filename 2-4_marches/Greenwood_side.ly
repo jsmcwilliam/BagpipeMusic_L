@@ -6,12 +6,13 @@
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
-%\include "bagpipe.ly"		%(Original)
-\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
+\include "bagpipe.ly"           %(Original)
+%\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
 %\include "bagpipe_extra.ly"	%(Extras)
-\include "BP_format.ly" 		%(Tagline: Copied by John McWilliam, date)
+\include "../../Includes/BP_format.ly" 	
+                                %(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Landscape)
-				%(Header: peice, meter and composer)
+				%(Header: piece, meter and composer)
 				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
@@ -19,10 +20,9 @@
 \score {
 
     \new Staff  {
-    \set Staff.midiInstrument = #"bagpipe"    
-    \bagpipeKey
-    \time 2/4
-    \tempo 4 = 80
+    \time 2/4	    %adjust time to suit specific tunes
+    \tempo 4 = 80   % adjust speed accordingly for playback
+    \hideKeySignature
     \quarterBeaming
     \bar ".|:"			
 

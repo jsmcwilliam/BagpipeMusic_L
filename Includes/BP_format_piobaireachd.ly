@@ -6,7 +6,7 @@
 
 today = #(strftime "%d-%m-%Y" (localtime (current-time)))
 \paper {
-    #(set-paper-size "letter") %alternative: "letter" 'landscape
+    #(set-paper-size "a4") %alternative: "letter" 'landscape
     ragged-bottom = ##t
     tagline = \markup {
         \line {

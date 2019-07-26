@@ -9,15 +9,16 @@ tocSection = #(define-music-function (parser location text) (markup?)
         	(add-toc-item! 'tocSectionMarkup text)) 
 VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald McLean
 
-\include "bagpipe_extra.ly"
-\include "bagpipe_new.ly"
-\include "BP_format.ly"
+\include "bagpipe.ly"		%(Origonal)
+%\include "bagpipe_extra.ly"
+%\include "bagpipe_new.ly"
+\include "../../Includes/BP_format.ly"
 
 \book {
 
 \header {
     title = "Light Music for the Highland Bagpipe"
-    subtitle = "March collection"
+    subtitle = "March collection including Airs"
     copyright = \markup {
     	    		\line {"Compiled by John S. McWilliam,"
     	    			\concat { "(rev. " \date ")" }}}
@@ -92,35 +93,35 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {4. Men of Argyll}
 		\include "../2-4_marches/Men_of_argyll.ly"
 		\pageBreak
-		\tocItem \markup {Arthur Bignold}
+		\tocItem \markup {1. Arthur Bignold}
 		\include "../2-4_marches/Arthur_bignold.ly"
 		\pageBreak
-		\tocItem \markup {Balmoral Highlanders}
+		\tocItem \markup {2. Balmoral Highlanders}
 		\include "../2-4_marches/Balmoral_highlanders.ly"
 		\pageBreak
-		\tocItem \markup {Donald MacLean's Farewell to Oban}
+		\tocItem \markup {3. Donald MacLean's Farewell to Oban}
 		\include "../2-4_marches/Donald_macleans_farewell_to_oban.ly"
 		\pageBreak
-		\tocItem \markup {Dugald MacColl}
+		\tocItem \markup {1. Dugald MacColl}
 		\include "../2-4_marches/Dugald_maccoll.ly"
 		\pageBreak
-		\tocItem \markup {Duncan McInnes}
+		\tocItem \markup {2. Duncan McInnes}
 		\include "../2-4_marches/Duncan_mcinnes.ly"
 		\pageBreak
-		\tocItem \markup {Leaving Glen Urquhuart}
+		\tocItem \markup {3. Leaving Glen Urquhuart}
 		\include "../2-4_marches/Leaving_glen_urquhart.ly"
 		\pageBreak
-		\tocItem \markup {Road to the Isles}
+		\tocItem \markup {1. Road to the Isles}
 		\include "../2-4_marches/Road_to_the_isles_2.ly"
 		\pageBreak
 		}
-
+%
 	\bookpart {
 		\header {
 			title = "3/4 Marches"
 			subtitle = ##f}
 		\tocSection \markup { 3/4 Marches } 
-		\tocItem \markup {Pipe Major J.K. Cairns}
+		\tocItem \markup {1. Pipe Major J.K. Cairns}
 		\include "../3-4_marches/Pipe_major_jk_cairns.ly"
 %		\pageBreak
 		}	
@@ -152,7 +153,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../4-4_marches/Lord_lovats_lament.ly"
 %		\pageBreak
 		}	
-
+%
 	\bookpart {
 		\header {
 			title = "6/8 Marches"
@@ -203,15 +204,15 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {4. Dovecote Park}
 		\include "../6-8_marches/Dovecote_park.ly" 
 		\pageBreak
-		\tocItem \markup {Blue Bonnets oer the Border}
+		\tocItem \markup {1. Blue Bonnets oer the Border}
 		\include "../6-8_marches/Blue_bonnets.ly" 
 		\pageBreak
-		\tocItem \markup {Glendaruel Highlanders}
+		\tocItem \markup {2. Glendaruel Highlanders}
 		\include "../6-8_marches/Glendaruel_highlanders.ly" 
 		\pageBreak
 		}
-
-			\bookpart {
+%
+	\bookpart {
 		\header {
 			title = "9/8 Marches"
 			subtitle = ##f}
@@ -223,40 +224,40 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../9-8_marches/Battle_of_the_somme.ly"
 %		\pageBreak
 		}	
-
+%
 	\bookpart {
 		\header {
 			title = "Airs"
 			subtitle = ##f}
 		\tocSection \markup { Airs }
-		\tocItem \markup {Auld Lang Syne }
+		\tocItem \markup {1. Auld Lang Syne }
 		\include "../Airs/Auld_lang_syne.ly"
 %		\pageBreak
-		\tocItem \markup {Dark Isle }
+		\tocItem \markup {2. Dark Isle }
 		\include "../Airs/Dark_isle.ly"
 %		\pageBreak
-		\tocItem \markup {Flower of Scotland }
+		\tocItem \markup {3. Flower of Scotland }
 		\include "../Airs/Flower_of_scotland.ly"
 		\pageBreak
-		\tocItem \markup {Flowers of the Forest }
+		\tocItem \markup {1. Flowers of the Forest }
 		\include "../Airs/Flowers.ly"
 %		\pageBreak
-		\tocItem \markup {Going Home  }
+		\tocItem \markup {2. Going Home  }
 		\include "../Airs/Going_home.ly"
 %		\pageBreak
-		\tocItem \markup {Leaving Lismore }
+		\tocItem \markup {3. Leaving Lismore }
 		\include "../Airs/Leaving_lismore.ly"
 		\pageBreak
-		\tocItem \markup {Loch Etive Side }
+		\tocItem \markup {4. Loch Etive Side }
 		\include "../Airs/Loch_etive_side.ly"
 %		\pageBreak
-		\tocItem \markup {Skye Boat Song }
+		\tocItem \markup {1. Skye Boat Song }
 		\include "../Airs/Skye_boat_song.ly"
 %		\pageBreak
-		\tocItem \markup {Waters of Kylesku }
+		\tocItem \markup {2. Waters of Kylesku }
 		\include "../Airs/Waters_of_kylesku.ly"
 		\pageBreak
-		\tocItem \markup {Westering Home }
+		\tocItem \markup {3. Westering Home }
 		\include "../Airs/Westering_home.ly"
 		\pageBreak
 		}

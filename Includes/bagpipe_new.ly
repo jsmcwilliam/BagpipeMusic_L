@@ -1,4 +1,5 @@
-﻿%{
+﻿\version "2.19.80"
+%{
   Bagpipe music settings for Lilypond.
   This file builds on work by Andrew McNabb (http://www.mcnabbs.org/andrew/)
 
@@ -7,8 +8,6 @@
   (http://www.murrays.nu)
 %}
 
-\version "2.18.0"
-
 % Notes of the scale of the Great Highland Bagpipe. Extra high notes for bombarde.
 % Flat notes used mainly in some modern music.
 
@@ -16,27 +15,27 @@ pitchnamesBagpipe = #`(
   (G     . ,(ly:make-pitch 0 4 NATURAL))
   (a     . ,(ly:make-pitch 0 5 NATURAL))
   (b     . ,(ly:make-pitch 0 6 NATURAL))
-  (bflat . ,(ly:make-pitch 0 6 FLAT))
+  (b-flat . ,(ly:make-pitch 0 6 FLAT))
   (c     . ,(ly:make-pitch 1 0 SHARP))
-  (cflat . ,(ly:make-pitch 1 0 FLAT))
+  (c-flat . ,(ly:make-pitch 1 0 FLAT))
   (d     . ,(ly:make-pitch 1 1 NATURAL))
   (e     . ,(ly:make-pitch 1 2 NATURAL))
   (f     . ,(ly:make-pitch 1 3 SHARP))
-  (fflat . ,(ly:make-pitch 1 3 FLAT))
+  (f-flat . ,(ly:make-pitch 1 3 FLAT))
   (g     . ,(ly:make-pitch 1 4 NATURAL))
-  (gflat . ,(ly:make-pitch 1 4 FLAT))
+  (g-flat . ,(ly:make-pitch 1 4 FLAT))
   (A     . ,(ly:make-pitch 1 5 NATURAL))
   (B     . ,(ly:make-pitch 1 6 NATURAL))
   (C     . ,(ly:make-pitch 2 0 SHARP))
 )
 pitchnames = \pitchnamesBagpipe
-#(ly:parser-set-note-names parser pitchnames)
+#(ly:parser-set-note-names pitchnames)
 
 % Bagpipe music is written in something like D major. If we use
 % flattened notes, the flat should be shown on all instances.
 bagpipeKey = {
-    \key d \major
-    \accidentalStyle forget
+  \key d \major
+  \accidentalStyle forget
 }
 
 % Show the key signature e.g. for BMW compatibility.
@@ -63,8 +62,8 @@ showTrueKeySignature = {
 
 % Various tweaks to get good defaults for bagpipe music.
 \paper {
-    top-margin = 4\mm
-    bottom-margin = 4\mm
+  top-margin = 4\mm
+  bottom-margin = 4\mm
 }
 
 \layout {
@@ -79,7 +78,6 @@ showTrueKeySignature = {
     \override Slur.direction = #up
     \override Tie.direction = #up
 
-    \override KeySignature.print-function = ##f
     \override VoltaBracketSpanner.Y-extent = #'(-1.5 . 0)
     \override VoltaBracket.height = #2.2
   }
@@ -96,6 +94,7 @@ showTrueKeySignature = {
 
     extraNatural = ##f
     midiInstrument = #"bagpipe"
+    strictBeatBeaming = ##t
 
     \override KeySignature.stencil = ##f
   }
@@ -111,13 +110,15 @@ showTrueKeySignature = {
 
 % Sets the autobeamer to span quarter notes only. Use for fast music.
 quarterBeaming = {
-    \set Score.baseMoment = #(ly:make-moment 1/4)
-    \set Score.beatStructure = #'(1 1 1 1)
+  \set Timing.beamExceptions = #'()
+  \set Score.baseMoment = #(ly:make-moment 1/4)
+  \set Score.beatStructure = 1,1,1,1
 }
 % Sets the autobeamer to span half notes. Mostly used in reels.
 halfBeaming = {
-    \set Score.baseMoment = #(ly:make-moment 1/2)
-    \set Score.beatStructure = #'(1 1)
+  \set Timing.beamExceptions = #'()
+  \set Score.baseMoment = #(ly:make-moment 1/2)
+  \set Score.beatStructure = 1,1
 }
 
 % Reels are in allabreve time with half note beaming.
@@ -133,17 +134,18 @@ marchTime = {
 }
 
 % Add appropriate tweaks needed for piping grace notes to look great.
-stemspace = #(define-music-function (parser location extent) (pair?) #{
+stemspace = #(define-music-function (extent) (pair?) #{
   \once \override Staff.Stem.X-extent = #extent
 #})
-pgrace = #(define-music-function (parser location notes) (ly:music?) #{
+pgrace = #(define-music-function (notes) (ly:music?) #{
   \override Score.GraceSpacing.spacing-increment = #0
   \override Score.Stem.beamlet-max-length-proportion = #'(0.5 . 0.5)
   \small \grace $notes \normalsize
   \revert Score.Stem.beamlet-default-length
 #})
+morespace = \once \override NoteColumn.X-offset = 0.5
 
-% Single pgrace notes
+% Single grace notes
 grG = { \pgrace { G32 } }
 gra = { \pgrace { a32 } }
 grb = { \pgrace { b32 } }
@@ -153,9 +155,6 @@ gre = { \pgrace { e32 } }
 grf = { \pgrace { f32 } }
 grg = { \pgrace { g32 } }
 grA = { \pgrace { A32 } }
-
-% Double grace notes
-gd = { \pgrace { g32[ c]}}
 
 % Doublings
 dblG = { \pgrace { g32[ G d] } }
@@ -190,94 +189,97 @@ tdble = { \pgrace { A32[ e f] } }
 tdblf = { \pgrace { A32[ f g] } }
 tdblg = { \pgrace { A32[ g f] } }
 
-% Shakes
-% A few of these can't really be played and are here only for consistency.
+% Shakes / Pele
 shakea = { \pgrace { g32[ a e a G] } }
 shakeb = { \pgrace { g32[ b e b G] } }
 shakec = { \pgrace { g32[ c e c G] } }
 shaked = { \pgrace { g32[ d e d G] } }
-cshaked = { \pgrace { g32[ d e d c] } }
+wshaked = { \pgrace { g32[ d e d c] } }
 shakee = { \pgrace { g32[ e f e a] } }
-shakef = { \pgrace { g32[ f g f a] } }
+shakef = { \pgrace { g32[ f g f e] } }
 shakeg = { \pgrace { A32[ f g a] } }
 shakeA = { \pgrace { A32[ g A a] } }
 
-% Half shakes
-hshakea = { \pgrace { a32[ d a G] } }
-hshakeb = { \pgrace { b32[ d b G] } }
-hshakec = { \pgrace { c32[ d c G] } }
+% Half shakes / Half Pele
+hshakea = { \pgrace { a32[ e a G] } }
+hshakeb = { \pgrace { b32[ e b G] } }
+hshakec = { \pgrace { c32[ e c G] } }
 hshaked = { \pgrace { d32[ e d G] } }
+whshaked = { \pgrace { d32[ e d c] } }
 hshakee = { \pgrace { e32[ f e a] } }
-hshakef = { \pgrace { f32[ g f a] } }
-hshakeg = { \pgrace { g32[ f g a] } }
+hshakef = { \pgrace { f32[ g f e] } }
+hshakeg = { \pgrace { g32[ A g f] } }
 hshakeA = { \pgrace { A32[ g A a] } }
 
-% Thumb shakes
-tshakea = { \pgrace { A32[ a d a G] } }
-tshakeb = { \pgrace { A32[ b d b G] } }
-tshakec = { \pgrace { A32[ c d c G] } }
+% Thumb shakes / Thumb Peles
+tshakea = { \pgrace { A32[ a e a G] } }
+tshakeb = { \pgrace { A32[ b e b G] } }
+tshakec = { \pgrace { A32[ c e c G] } }
 tshaked = { \pgrace { A32[ d e d G] } }
+wtshaked = { \pgrace { A32[ d e d c] } }
 tshakee = { \pgrace { A32[ e f e a] } }
-tshakef = { \pgrace { A32[ f g f a] } }
-tshakeg = { \pgrace { A32[ f g a] } }
+tshakef = { \pgrace { A32[ f g f e] } }
+tshakeg = { \pgrace { A32[ g A g f] } }
 tshakeA = { \pgrace { A32[ g A a] } }
 
-% Slurs
-% A few of these can't really be played and are here only for consistency.
+% Slurs / G - Grace Strike
 slura  = { \pgrace { g32[ a G] } }
 slurb  = { \pgrace { g32[ b G] } }
 slurc  = { \pgrace { g32[ c G] } }
 slurd  = { \pgrace { g32[ d G] } }
 wslurd = { \pgrace { g32[ d c] } }
 slure  = { \pgrace { g32[ e a] } }
-slurf  = { \pgrace { g32[ f a] } }
+slurf  = { \pgrace { g32[ f e] } }
 slurg  = { \pgrace { A32[ f a] } }
 slurA  = { \pgrace { f32[ a] } }
 
-% Half slurs
+% Half slurs / Half Strike
 hslura  = { \pgrace { a32[ G] } }
 hslurb  = { \pgrace { b32[ G] } }
 hslurc  = { \pgrace { c32[ G] } }
-hslurd  = { \pgrace { d32[ G] } }
+hslurd  = { \pgrace { d32[ \morespace G] } }
 whslurd = { \pgrace { d32[ c] } }
-hslure  = { \pgrace { e32[ a] } }
-hslurf  = { \pgrace { f32[ a] } }
-hslurg  = { \pgrace { g32[ a] } }
+hslure  = { \pgrace { e32[ \morespace a] } }
+hslurf  = { \pgrace { f32[ e] } }
+hslurg  = { \pgrace { g32[ f] } }
 hslurA  = { \pgrace { A32[ a] } }
 
-% Thumb slurs
+% Thumb slurs / Thumb Strike
 tslura  = { \pgrace { A32[ a G] } }
 tslurb  = { \pgrace { A32[ b G] } }
 tslurc  = { \pgrace { A32[ c G] } }
 tslurd  = { \pgrace { A32[ d G] } }
 wtslurd = { \pgrace { A32[ d c] } }
 tslure  = { \pgrace { A32[ e a] } }
-tslurf  = { \pgrace { A32[ f a] } }
-tslurg  = { \pgrace { A32[ f a] } }
+tslurf  = { \pgrace { A32[ f e] } }
+tslurg  = { \pgrace { A32[ g f] } }
 tslurA  = { \pgrace { f32[ a] } }
 
-% Catches
-catcha = { \pgrace { a32[ G d G] } }
-catchb = { \pgrace { b32[ G d G] } }
-catchc = { \pgrace { c32[ G d G] } }
-catchd = { \pgrace { d32[ G b G] } }
-catche = { \pgrace { e32[ G d G] } }
+% Catches / G-Grace Grip
+catcha = { \pgrace { g32[ a G d G] } }
+catchb = { \pgrace { g32[ b G d G] } }
+catchc = { \pgrace { g32[ c G d G] } }
+catchd = { \pgrace { g32[ d G d G] } }
+wcatchd = { \pgrace { g32[ d G b G] } }
+catche = { \pgrace { g32[ e G d G] } }
 
-% G-pgrace catches
-gcatcha = { \pgrace { g32[ a G d G] } }
-gcatchb = { \pgrace { g32[ b G d G] } }
-gcatchc = { \pgrace { g32[ c G d G] } }
-gcatchd = { \pgrace { g32[ d G b G] } }
-gcatche = { \pgrace { g32[ e G d G] } }
+% Half Catches / Half Grip
+hcatcha = { \pgrace { a32[ G d G] } }
+hcatchb = { \pgrace { b32[ G d G] } }
+hcatchc = { \pgrace { c32[ G d G] } }
+hcatchd = { \pgrace { d32[ G d G] } }
+whcatchd = { \pgrace { d32[ G b G] } }
+hcatche = { \pgrace { e32[ G d G] } }
 
-% Thumb catches
+% Thumb catches / Thumb Grip
 tcatcha = { \pgrace { A32[ a G d G] } }
 tcatchb = { \pgrace { A32[ b G d G] } }
 tcatchc = { \pgrace { A32[ c G d G] } }
-tcatchd = { \pgrace { A32[ d G b G] } }
+tcatchd = { \pgrace { A32[ d G d G] } }
+wtcatchd = { \pgrace { A32[ d G b G] } }
 tcatche = { \pgrace { A32[ e G d G] } }
 
-% Triple strikes (BMW has them all, but I've never seen any but the A one used, so ...)
+% Triple strikes
 tripleA = { \pgrace { A32[ g A g A g] } }
 
 % Throws
@@ -294,9 +296,9 @@ wbirl = { \pgrace { G32[ a G] } }
 gbirl = { \pgrace { g32[ a G a G] } }
 dbirl = { \pgrace { d32[ a G a G] } }
 
-% Grips
+% Grips / Leumluath
 grip  = { \pgrace { G32[ d G] } }
-dgrip = { \pgrace { G32[ b G] } }
+bgrip = { \pgrace { G32[ b G] } }
 egrip = { \pgrace { G32[ e G] } }
 fgrip = { \pgrace { G32[ f G] } }
 
@@ -304,12 +306,13 @@ fgrip = { \pgrace { G32[ f G] } }
 taor    = { \pgrace { G32[ d G e] } }
 taorjmd = { \pgrace { G32[ d a e] } }
 taorold = { \pgrace { G32[ d G a e] } }
-dtaor   = { \pgrace { G32[ b G e] } }
+btaor   = { \pgrace { G32[ b G e] } }
 Gtaor   = { \pgrace { d32[ G e] } }
 taoramb = { \pgrace { G32[ d G b e] } }
 taoramc = { \pgrace { G32[ d G c e] } }
 taoramd = { \pgrace { G32[ d G c d e] } }
 
+% Special piobaireachd notations
 % Crunluaths
 crun    = { \pgrace { G32[ d G e a f a ] } }
 dcrun   = { \pgrace { G32[ b G e a f a ] } }
@@ -322,7 +325,6 @@ crunambfosg = { \pgrace { e32[ b f b ] } }
 crunamcfosg = { \pgrace { e32[ c f c ] } }
 crunamdfosg = { \pgrace { e32[ d f d ] } }
 
-% Special piobaireachd notations
 grGcad   = { \pgrace { G16 } }
 gracad   = { \pgrace { a16 } }
 grecad   = { \pgrace { e16 } }
@@ -359,27 +361,17 @@ GbarluadhG = { \pgrace { d32[ a e G f G e G d G c G b G e G f G] } }
 trebling = \markup {
   \override #'(baseline-skip . 0.4)
   \column {
-    \musicglyph #"scripts.tenuto"
-    \musicglyph #"scripts.tenuto"
-    \musicglyph #"scripts.tenuto"
+    \musicglyph "scripts.tenuto"
+    \musicglyph "scripts.tenuto"
+    \musicglyph "scripts.tenuto"
   }
 }
 % Abbreviated notation common in piobaireachd scores.
-% TODO: Make sure these are put on a fixed Y-position.
 txtaor = \markup { \center-align "T" }
 txcrun = \markup { \center-align "C" }
-txleum = \markup { \center-align "L"}
 txtaorcrun = \markup {
   \override #'(baseline-skip . 1.8)
   \column {
-    \center-align "T"
-    \center-align "C"
-  }
-}
-txleumtaorcrun = \markup {
-  \override #'(baseline-skip . 1.8)
-  \column {
-    \center-align "L"
     \center-align "T"
     \center-align "C"
   }

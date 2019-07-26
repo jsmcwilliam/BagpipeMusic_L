@@ -15,9 +15,9 @@
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
-\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "bagpipe_extra.ly"	%(Extras)
-\include "BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
+\include "bagpipe.ly"
+%\include "../../bagpipe_new.ly"%(Replaces bagpipe.ly)
+%\include "../../BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Landscape)
 				%(Header: piece, meter and composer)
 				%(Otherwise Lilypond subtitle)
@@ -29,7 +29,8 @@
     \new Staff  {
     \time 6/8	    %adjust time to suit specific tunes
     \tempo 4 = 160   % adjust speed accordingly for playback
-    \bagpipeKey
+%    \bagpipeKey
+    \hideKeySignature
     \set Staff.midiInstrument = #"bagpipe"  %is set in bagpipe_new.ly (\layout)
 %   \showKeySignature (for BMW compatibility)
 %   \quarterBeaming % Sets the autobeamer to span quarter notes only. 

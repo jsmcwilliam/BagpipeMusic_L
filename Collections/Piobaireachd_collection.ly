@@ -6,10 +6,11 @@
 
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-\include "bagpipe_extra.ly"
-\include "bagpipe_new.ly"
-\include "BP_format_piobaireachd.ly"
-\include "../Piobaireachd/Mackintoshs_lament_test_definitions.ly"
+%\include "bagpipe.ly"
+\include "../../Includes/bagpipe_new.ly"
+%\include "../../Includes/bagpipe_extra.ly"
+\include "../../Includes/BP_format_piobaireachd.ly"
+%\include "../Piobaireachd/Mackintoshs_lament_test_definitions.ly"
 %\include "../Piobaireachd/Black_donalds_march_test_definitions.ly"
 
 \book {
@@ -70,7 +71,7 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 			subtitle = "MacDhomhnuill Duibh"
 			composer = "Traditional ca 1431" }
 		\tocItem \markup {1. Black Donalds March }
-		\include "../Piobaireachd/Black_donalds_march_test.ly"
+		\include "../Piobaireachd/Black_donalds_march.ly"
 		\pageBreak 
 	} %end bookpart
 %}
@@ -80,7 +81,7 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 			subtitle = "Cumha Mhic-an-Toisich" 
 			composer = "Macintyre ca 1550" }
 		\tocItem \markup {2. Mackintoshs Lament }
-		\include "../Piobaireachd/Mackintoshs_lament_test.ly"
+		\include "../Piobaireachd/Mackintoshs_lament.ly"
 		\pageBreak
 	} %end bookpart
 	

@@ -9,9 +9,10 @@ tocSection = #(define-music-function (parser location text) (markup?)
         	(add-toc-item! 'tocSectionMarkup text)) 
 %VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald McLean
 
-\include "bagpipe_extra.ly"
-\include "bagpipe_new.ly"
-\include "BP_format.ly"
+\include "bagpipe.ly"		%(Origonal)
+%\include "bagpipe_extra.ly"
+%\include "bagpipe_new.ly"
+\include "../../Includes/BP_format.ly"
 
 \book {
 
@@ -62,77 +63,8 @@ tocSection = #(define-music-function (parser location text) (markup?)
 	\pageBreak %after title page		
 	\markuplist \table-of-contents
 	\pageBreak
-%{
-	\bookpart {
-		\header {
-			title = "2/4 Marches"
-			subtitle = ##f}
-		\tocSection \markup { 2/4 Marches }		
-		\tocItem \markup {1. }
-		\include "../2-4_marches/.ly"
-		\pageBreak
-		}
 
-	\bookpart {
-		\header {
-			title = "3/4 Marches"
-			subtitle = ##f}
-		\tocSection \markup { 3/4 Marches } 
-		\tocItem \markup {1. }
-		\include "../3-4_marches/.ly" 
-		\pageBreak
-		}	
-
-			\bookpart {
-		\header {
-			title = "4/4 Marches"
-			subtitle = ##f}
-		\tocSection \markup { 4/4 Marches } 
-		\tocItem \markup {1. }
-		\include "../4-4_marches/.ly" 
-		\pageBreak
-		}	
-
-	\bookpart {
-		\header {
-			title = "6/8 Marches"
-			subtitle = ##f}
-		\tocSection \markup { 6/8 Marches } 
-		\tocItem \markup {1. }
-		\include "../6-8_marches/.ly"
-		\pageBreak
-		}
-
-			\bookpart {
-		\header {
-			title = "Other Marches"
-			subtitle = ##f}
-		\tocSection \markup { Other Marches } 
-		\tocItem \markup {1.}
-		\include "../9-8_marches/.ly" 
-		}	
-
-	\bookpart {
-		\header {
-			title = "Airs"
-			subtitle = ##f}
-		\tocSection \markup { Airs }
-		\tocItem \markup {1. }
-		\include "../Airs/.ly"
-		\pageBreak
-		}
-
-		\bookpart {
-		\header {
-			title = "Competition Marches"
-			subtitle = ##f
-			picture = ##f}
-		\tocSection \markup { Competition Marches } 
-		\tocItem \markup {1. }
-		\include "../2-4_marches/.ly"
-		\pageBreak
-		}
-%}		
+		
 		\bookpart {
 		\header {
 			title = "March, Strathspey & Reel"
@@ -159,27 +91,5 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\pageBreak 		
 		
 		}
-%{
-		\bookpart {
-		\header {
-			title = "Medley-1"
-			subtitle = ##f
-			picture = ##f}
-		\tocSection \markup { Medley-1 } 
-		\tocItem \markup {1. }
-		\include "../Polka/.ly" 
-		\pageBreak
-		}
-		
-		\bookpart {
-		\header {
-			title = "Medley-2"
-			subtitle = ##f
-			picture = ##f}
-		\tocSection \markup { Medley-2 } 
-		\tocItem \markup {1. }
-		\include "../Airs/.ly" 
-		\pageBreak
-		}
-%}
+
 }%end book
