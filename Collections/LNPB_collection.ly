@@ -1,17 +1,13 @@
 \version "2.18.0"    
 
-#(ly:set-option 'relative-includes #t) 
-#(set-default-paper-size "a4" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
+%#(set-global-staff-size 15) 
 
-date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 tocSection = #(define-music-function (parser location text) (markup?) 
         	(add-toc-item! 'tocSectionMarkup text)) 
-VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald McLean
 logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 
 \include "bagpipe.ly"
-\include "../../Includes/BP_format.ly"
+\include "../Includes/BP_format15.ily"
 
 \book {
 
@@ -21,7 +17,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
     picture = \logo
     copyright = \markup {
     	    		\line {"Compiled by John S. McWilliam,"
-    	    			\concat { "(rev. " \date ")" }}}
+    	    			\concat { "(rev. " \today ")" }}}
 %    parttagline = "Copied by John S. McWilliam"
   }
 
@@ -86,7 +82,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\tocSection \markup { 2/4 Marches }		
 		\tocItem \markup {1. The High Road to Gairloch}
 		\include "../2-4_marches/High_road_to_gairloch_2.ly"
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {2. Weary Maid}
 		\include "../2-4_marches/Weary_maid.ly" 
 %		\pageBreak
@@ -95,7 +91,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 %		\pageBreak
 		\tocItem \markup {4. Barren Rocks of Aden}
 		\include "../2-4_marches/Barren_rocks_of_aden.ly" 
-		\pageBreak
+%		\pageBreak
 		}
 %
 	\bookpart {
@@ -121,7 +117,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 %		\pageBreak
 		\tocItem \markup {6. Colin's Cattle}
 		\include "../3-4_marches/Collins_cattle.ly" 
-		\pageBreak
+%		\pageBreak
 		}
 %
 	\bookpart {
@@ -153,7 +149,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 %		\pageBreak
 		\tocItem \markup {8. MacRae Meadow}
 		\include "../4-4_marches/Macrae_meadow.ly" 
-		\pageBreak
+%		\pageBreak
 		}
 %
 	\bookpart {
@@ -167,7 +163,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 %		\pageBreak
 		\tocItem \markup {2. The Bind}
 		\include "../6-8_marches/Bind.ly" 
-		\pageBreak
+%		\pageBreak
 		}
 
 	\bookpart {
@@ -194,7 +190,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\pageBreak
 		\tocItem \markup {6. For the Honor}
 		\include "../Airs/For_the_honor.ly"
-		\pageBreak
+%		\pageBreak
 		}
 %		
 	\bookpart {
@@ -208,7 +204,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\tocItem \markup {2. Cullen Bay}
 		\include "../9-8_marches/Cullen_bay.ly" 
 		}
-		
+%		
 	\bookpart {
 		\header {
 			title = "Hornpipes"
@@ -218,7 +214,7 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\tocItem \markup {1. The Bumpy Old Road}
 		\include "../Hornpipes/Bumpy_old_road.ly" 
 		\tocItem \markup {2. An Dro}
-		\include "../Hornpipes/An_dro.ly" 
+		\include "../Hornpipes/An_dro_1.ly" 
 		}
 %		
 	\bookpart {
@@ -241,9 +237,9 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 %		\pageBreak
 		\tocItem \markup {5. The Ale is Dear }
 		\include "../Reels/Ale_is_dear.ly" 
-		\pageBreak 		
+%		\pageBreak 		
 		}
-
+%
 	\bookpart {
 		\header {
 			title = "Medley-1"
@@ -251,22 +247,22 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 			picture = ##f}
 		\tocSection \markup { Medley-1 } 
 		\tocItem \markup {1. The Bumpy Old Road - parts 1 & 2}
-		\include "../Medley/Bumpy_old_road_1.ly" 
+		\include "../Hornpipes/Bumpy_old_road_1.ly" 
 %		\pageBreak
 		\tocItem \markup {2. Fittie Boatmen}
-		\include "../Medley/Fittie_boatmen.ly" 
+		\include "../Jigs/Fittie_boatmen_1.ly" 
 %		\pageBreak
 		\tocItem \markup {3. Mac an Irish}
 		\include "../Strathspeys/Mac_an_Irish.ly" 
 		\pageBreak
 		\tocItem \markup {4. Drowsy Maggie}
-		\include "../Medley/Drowsy_maggie.ly" 
+		\include "../Reels/Drowsy_maggie.ly" 
 %		\pageBreak
 		\tocItem \markup {5. Lament for Jef ar Penven}
 		\include "../Airs/Lament_for_jef.ly" 
 %		\pageBreak
 		\tocItem \markup {6. An Dro}
-		\include "../Medley/An_dro.ly" 
+		\include "../Hornpipes/An_dro_1.ly" 
 		\pageBreak
 		}
 %		
@@ -277,25 +273,25 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 			picture = ##f}
 		\tocSection \markup { Medley-2 } 
 		\tocItem \markup {1. The Bumpy Old Road - parts 1 & 2}
-		\include "../Medley/Bumpy_old_road_1.ly" 
+		\include "../Hornpipes/Bumpy_old_road_1.ly" 
 %		\pageBreak
 		\tocItem \markup {2. Fittie Boatmen}
-		\include "../Medley/Fittie_boatmen.ly" 
+		\include "../Jigs/Fittie_boatmen_1.ly" 
 %		\pageBreak
 		\tocItem \markup {3. Mist Covered Mountains}
-		\include "../Medley/Mist_covered_mountains.ly" 
+		\include "../Airs/Mist_covered_mountains.ly" 
 		\pageBreak
 		\tocItem \markup {4. Lady Carmichael}
-		\include "../Medley/Lady_carmichael.ly" 
+		\include "../Strathspeys/Lady_carmichael.ly" 
 %		\pageBreak
 		\tocItem \markup {5. Yester House}
-		\include "../Medley/Yester_house.ly" 
+		\include "../Strathspeys/Yester_house.ly" 
 %		\pageBreak
 		\tocItem \markup {6. Drowsy Maggie}
-		\include "../Medley/Drowsy_maggie.ly" 
+		\include "../Reels/Drowsy_maggie.ly" 
 		\pageBreak
 		\tocItem \markup {7. Bumpy Old Road - parts 3 & 4}
-		\include "../Medley/Bumpy_old_road_2.ly" 
+		\include "../Hornpipes/Bumpy_old_road_2.ly" 
 %		\pageBreak
 		}
 %}

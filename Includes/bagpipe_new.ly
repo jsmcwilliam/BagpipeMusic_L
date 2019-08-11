@@ -1,4 +1,4 @@
-﻿\version "2.19.80"
+\version "2.19.80"
 %{
   Bagpipe music settings for Lilypond.
   This file builds on work by Andrew McNabb (http://www.mcnabbs.org/andrew/)

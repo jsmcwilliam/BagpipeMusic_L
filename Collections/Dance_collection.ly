@@ -1,18 +1,10 @@
 \version "2.18.0"    
 
-#(ly:set-option 'relative-includes #t) 
-#(set-default-paper-size "a4" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
-
-date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 tocSection = #(define-music-function (parser location text) (markup?) 
         	(add-toc-item! 'tocSectionMarkup text)) 
-VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 
-%\include "../../Includes/bagpipe_extra.ly"
-%\include "../../Includes/bagpipe_new.ly"
 \include "bagpipe.ly"
-\include "../../Includes/BP_format.ly"
+\include "../Includes/BP_format.ily"
 
 \book {
 
@@ -21,7 +13,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
     subtitle = "Dance collection"
     copyright = \markup {
     	    		\line {"Compiled by John S. McWilliam,"
-    	    			\concat { "(rev. " \date ")" }}}
+    	    			\concat { "(rev. " \today ")" }}}
     parttagline = "Copied by John S. McWilliam"
   }
 
@@ -63,45 +55,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 	\pageBreak %after title page		
 	\markuplist \table-of-contents
 	\pageBreak
-%
-	\bookpart {
-		\header {
-			title = "Hornpipes"
-			subtitle = ##f}
-		\tocSection \markup { Hornpipes } 
-		\tocItem \markup {1. Crossing the Minch }
-		\include "../Hornpipes/Crossing_the_minch.ly"
-		\pageBreak
-		\tocItem \markup {2. The Man from Skye }
-		\include "../Hornpipes/Man_from_skye.ly"
-		\pageBreak
-		\tocItem \markup {3. Ballachulish Walkabout }
-		\include "../Hornpipes/Ballachulish_walkabout.ly"
-		\pageBreak
-		}
-%}	
-	\bookpart {
-		\header {
-			title = "Jigs"
-			subtitle = ##f}
-		\tocSection \markup { Jigs }
-		\tocItem \markup {1. The Irish Washerwoman }
-		\include "../Jigs/Irish_washer_woman.ly"
-%		\pageBreak
-		\tocItem \markup {2. Paddy's Leather Breeches }
-		\include "../Jigs/Paddys_leather_breeches.ly"
-		\pageBreak
-		\tocItem \markup {1. Barbara's Jig }
-		\include "../Jigs/Barbaras_jig.ly"
-%		\pageBreak
-		\tocItem \markup {2. The Seagull }
-		\include "../Jigs/Seagull.ly"
-		\pageBreak
-		\tocItem \markup {3. Braes of Mellanish }
-		\include "../Jigs/Braes_of_mellinish.ly"
-%		\pageBreak
-		}		
-		
+
 	\bookpart {
 		\header {
 			title = "Strathspeys"
@@ -112,7 +66,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 %		\pageBreak
 		\tocItem \markup {2. Inverness Rant}
 		\include "../Strathspeys/Inverness_rant_1.ly"
-%		\pageBreak
+		\pageBreak
 		\tocItem \markup {3. The Devil in the Kitchen}
 		\include "../Strathspeys/Devil_in_the_kitchen.ly"
 		\pageBreak
@@ -148,6 +102,45 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 		\include "../Reels/Twisted_fingers.ly"
 %		\pageBreak
 		}
+		
+	\bookpart {
+		\header {
+			title = "Hornpipes"
+			subtitle = ##f}
+		\tocSection \markup { Hornpipes } 
+		\tocItem \markup {1. Crossing the Minch }
+		\include "../Hornpipes/Crossing_the_minch.ly"
+		\pageBreak
+		\tocItem \markup {2. The Man from Skye }
+		\include "../Hornpipes/Man_from_skye.ly"
+		\pageBreak
+		\tocItem \markup {3. Ballachulish Walkabout }
+		\include "../Hornpipes/Ballachulish_walkabout.ly"
+		\pageBreak
+		}
+	
+	\bookpart {
+		\header {
+			title = "Jigs"
+			subtitle = ##f}
+		\tocSection \markup { Jigs }
+		\tocItem \markup {1. The Irish Washerwoman }
+		\include "../Jigs/Irish_washer_woman.ly"
+%		\pageBreak
+		\tocItem \markup {2. Paddy's Leather Breeches }
+		\include "../Jigs/Paddys_leather_breeches.ly"
+		\pageBreak
+		\tocItem \markup {1. Barbara's Jig }
+		\include "../Jigs/Barbaras_jig.ly"
+%		\pageBreak
+		\tocItem \markup {2. The Seagull }
+		\include "../Jigs/Seagull.ly"
+		\pageBreak
+		\tocItem \markup {3. Braes of Mellanish }
+		\include "../Jigs/Braes_of_mellinish.ly"
+%		\pageBreak
+		}		
+		
 				
 	\bookpart {
 		\header {
@@ -156,7 +149,9 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}}
 		\tocSection \markup { Other }
 		\tocItem \markup {1. It came upon a midnight clear}
 		\include "../Other/It_came_upon_a_midnight_clear.ly"
-%		\pageBreak
+		\pageBreak
+		\tocItem \markup {2. The Rose of Kelvingrove}
+		\include "../Other/Rose_of_Kelvingrove.ly"
 		}
-%}
-}%end book
+
+} %end book

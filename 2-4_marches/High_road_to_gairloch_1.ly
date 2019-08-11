@@ -1,35 +1,25 @@
 \version "2.18.0"
-%{Running this template always results in the following warning:
-  Cannot find property type-check for `print-function' (backend-type?).  
-  Perhaps a typing error? 
-  Warning: skipping assignment. It seems to have its source in "bagpipe_new.ly"
-  but does not have any adverse effects
-%}
-%   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book.........................
-%
-% #(allow-volta-hook "|") % enables volta hook outside repeat context
-% from here
-%{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'landscape)
 
-\include "bagpipe.ly"           %(Original)
-%\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "bagpipe_extra.ly"	%(Extras)
-\include "../../Includes/BP_format.ly" 	
-                                %(Tagline: Copied by John McWilliam, date)
-				%(Paper format A4, Landscape)
-				%(Header: piece, meter and composer)
-				%(Otherwise Lilypond subtitle)
+% When ready to include in collection:	
+%	1. Comment out top section with \Include file(s)
+%					
+%	2. \midi section if present.
+%	3. Option to comment out "meter" from title e.g. if first tune following
+%	   section title.
+                                    
+%Comment out from here
+%{
+\include "bagpipe.ly" %(Original)
+\include "../Includes/BP_format.ily" 	
+
 %to here..........................................................
 %}
 
 \score {
 
     \new Staff  {
-    \time 2/4	    %adjust time to suit specific tunes
-    \tempo 4 = 80   % adjust speed accordingly for playback
+    \time 2/4	    
+    \tempo 4 = 80 
     \hideKeySignature
     \quarterBeaming
     \bar ".|:"
@@ -73,19 +63,9 @@
     title = ##f
     subtitle = ##f
   }
-  \layout {
-  	  #(layout-set-staff-size 18)
-%  	  ragged-last = ##t
-  	}
   	
 %Generation of midi files can be removed here.
+
 %  \midi {}
+
 }%end score
-%................................................................
-%Useful commands for upgrading from older versions of Lilypond:
-%\set Score.measureLength = #(ly:make-moment 5/8)
-%\set Score.repeatCommands = #'((volta "1.--2."))
-%\set Score.repeatCommands = #'((volta #f))
-%\unfoldRepeats for better playback
-%remove midi when compiling book
-%................................................................

@@ -1,29 +1,27 @@
 \version "2.18.0"
-%
-%   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book.........................
 
-#(allow-volta-hook "|")
-%from here
+% When ready to include in collection:	
+%	1. Comment out top section with \Include file(s)
+%					
+%	2. \midi section if present.
+%	3. Option to comment out "meter" from title e.g. if first tune following
+%	   section title.
+                                    
+%Comment out from here
 %{
-#(ly:set-option 'point-and-click #t)  
+\include "bagpipe.ly" %(Original)
+\include "../Includes/BP_format.ily" 	
 
-\include "bagpipe.ly"           %(Original)
-%\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "bagpipe_extra.ly"	%(Extras)
-\include "../../Includes/BP_format.ly" 	
-                                %(Tagline: Copied by John McWilliam, date)
-				%(Paper format A4, Landscape)
-				%(Header: piece, meter and composer)
-				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
+
+#(allow-volta-hook "|")
 
 \score {
 
     \new Staff  {
-    \time 2/4	    %adjust time to suit specific tunes
-    \tempo 4 = 80   % adjust speed accordingly for playback
+    \time 2/4	    
+    \tempo 4 = 80   
     \hideKeySignature
     \quarterBeaming
     \bar ".|:"			
@@ -50,7 +48,7 @@
  \grg f8. [ g16 ] \hdblf f8 [ a8 ] |
  \thrwd d16. [ e32 ] \grg f16. [ g32 ] \dblA A8 [ g16. f32 ] |
  \grg e8. [ f16 ] \dble e8 [ \grg a8 ] |
- \grg c16. [ d32 ] \grg e16. [ f32 ] \dblg g8 [ \grA f16. e32 ] |
+ \grg c16. [ d32 ] \grg e16. [ f32 ] \dblg g8 [ \grA f16. e32 ] \break |
 
  \grg f8. [ g16 ] \hdblf f8 [ a8 ] |
  \thrwd d16. [ e32 ] \grg f16. [ g32 ] \dblA A8 [ g32 f16. ] |
@@ -73,7 +71,7 @@
  \once \override Score.VoltaBracket.shorten-pair = #'(0.7 . 0)
  \set Score.repeatCommands = #'((volta "2") end-repeat)  
  \grg b16. [ c32 ] 
- \set Score.repeatCommands = #'((volta #f)) |
+ \set Score.repeatCommands = #'((volta #f)) \bar ":|." \break
  \set Score.measureLength = #(ly:make-moment 2 4)
 % \break
 
@@ -95,19 +93,9 @@
     parttagline = "Copied by John S. McWilliam"
 
   }
-  \layout {
-  	  #(layout-set-staff-size 15)
-%  	  ragged-last = ##t
-  	}
   	
 %Generation of midi files can be removed here.
+
 %  \midi {}
+
 }%end score
-%................................................................
-%Useful commands for upgrading from older versions of Lilypond:
-%\set Score.measureLength = #(ly:make-moment 5/8)
-%\set Score.repeatCommands = #'((volta "1.--2."))
-%\set Score.repeatCommands = #'((volta #f))
-%\unfoldRepeats for better playback
-%remove midi when compiling book
-%................................................................

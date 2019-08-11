@@ -1,26 +1,19 @@
 \version "2.18.0"    
 
-#(ly:set-option 'relative-includes #t) 
-#(set-default-paper-size "a4" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
-
-date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 tocSection = #(define-music-function (parser location text) (markup?) 
         	(add-toc-item! 'tocSectionMarkup text)) 
-VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald McLean
 
 \include "bagpipe.ly"
-%\include "bagpipe_new.ly"
-\include "../../Includes/BP_format.ly"
+\include "../Includes/BP_format.ily"
 
 \book {
 
 \header {
     title = "Heather Pipes & Drums"
-    subtitle = "Band Collection - 2015"
+    subtitle = "Grade 4 Band Collection - 2015"
     copyright = \markup {
     	    		\line {"Compiled by John S. McWilliam,"
-    	    			\concat { "(rev. " \date ")" }}}
+    	    			\concat { "(rev. " \today ")" }}}
 %    parttagline = "Copied by John S. McWilliam"
   }
 
@@ -169,7 +162,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\include "../2-4_marches/Campbells_fairwell.ly"
 		\pageBreak
 		\tocItem \markup {4. 25th. K.O.S.B.s Farewell to Meerut }
-		\include "../2-4_marches/25th_kosbs_farewell_3.ly"
+		\include "../2-4_marches/25th_kosbs_farewell.ly"
 		\pageBreak		
 		}
 %		
@@ -182,6 +175,7 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\tocItem \markup {1. Donald MacLean's Farewell to Oban}
 		\include "../2-4_marches/Donald_macleans_farewell_to_oban.ly"
 		\pageBreak
+		\tocItem \markup {2. Susan MacLeod}
 		\include "../Strathspeys/Susan_macleod.ly"
 		\pageBreak
 		\tocItem \markup {3. Mrs MacPherson of Inveran }
@@ -189,9 +183,9 @@ VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald M
 		\pageBreak
 		\tocItem \markup {1. Campbell's Fairwell to Redcastle}
 		\include "../2-4_marches/Campbells_fairwell.ly"
-%		\pageBreak
+		\pageBreak
 		\tocItem \markup {2. 25th K.O.S.B.s Farewell to Meerut }
-		\include "../2-4_marches/25th_kosbs_farewell_3.ly" 
+		\include "../2-4_marches/25th_kosbs_farewell.ly" 
 		\pageBreak
 		\tocItem \markup {3. Dalnahasaig }
 		\include "../Strathspeys/Dalnahasaig.ly" 

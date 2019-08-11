@@ -1,13 +1,16 @@
 \version "2.18.0"
-%   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out from here when compiling book.........................
-%{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'landscape)
 
-\include "bagpipe.ly"
-%\include "../../bagpipe_new.ly"%(Replaces bagpipe.ly)
-\include "../../BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
+% When ready to include in collection:	
+%	1. Comment out top section with \Include file(s)
+%					
+%	2. \midi section if present.
+%	3. Option to comment out "meter" from title e.g. if first tune following
+%	   section title.
+                                    
+%Comment out from here
+%{
+\include "bagpipe.ly" %(Original)
+\include "../Includes/BP_format.ily" 	
 
 %to here..........................................................
 %}
@@ -90,22 +93,9 @@
     piece = "Braes of Mellinish"
     composer = "Trad. arr MPD"
     parttagline = "Copied by John S. McWilliam"
-%    title = ##f
-%    subtitle = ##f
   }
-  \layout {
-  	  #(layout-set-staff-size 18)
-%  	  ragged-last = ##t
-  	}
-  	
+  
 %Generation of midi files can be removed here.
 %  \midi {}
 
-}%end score
-%................................................................
-%Useful commands for upgrading from older versions of Lilypond:
-%\set Score.measureLength = #(ly:make-moment 5/8)
-%\set Score.repeatCommands = #'((volta "1.--2."))
-%\set Score.repeatCommands = #'((volta #f))
-%\unfoldRepeats for better playback
-%................................................................
+} %end score

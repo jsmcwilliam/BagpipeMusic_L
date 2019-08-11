@@ -1,18 +1,10 @@
 \version "2.18.0"    
 
-#(ly:set-option 'relative-includes #t) 
-#(set-default-paper-size "a4" 'landscape)
-#(set-global-staff-size 15) % set staff-size when ready to print
-
-date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 tocSection = #(define-music-function (parser location text) (markup?) 
         	(add-toc-item! 'tocSectionMarkup text)) 
-%VoltaTxtTwoFour = \markup { 2. \text\fontsize #2 {--Parts: 2 & 4}} % PM Donald McLean
 
-\include "bagpipe.ly"		%(Origonal)
-%\include "bagpipe_extra.ly"
-%\include "bagpipe_new.ly"
-\include "../../Includes/BP_format.ly"
+\include "bagpipe.ly"
+\include "../Includes/BP_format14.ily"
 
 \book {
 
@@ -21,7 +13,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
     subtitle = "Grade 2 Band Collection - 2015"
     copyright = \markup {
     	    		\line {"Compiled by John S. McWilliam,"
-    	    			\concat { "(rev. " \date ")" }}}
+    	    			\concat { "(rev. " \today ")" }}}
 %    parttagline = "Copied by John S. McWilliam"
   }
 

@@ -6,10 +6,10 @@
 
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-%\include "bagpipe.ly"
-\include "../../Includes/bagpipe_new.ly"
-%\include "../../Includes/bagpipe_extra.ly"
-\include "../../Includes/BP_format_piobaireachd.ly"
+\include "bagpipe.ly"
+%\include "../Includes/bagpipe_new.ly"
+%\include "../Includes/bagpipe_extra.ly"
+\include "../Includes/BP_format_piobaireachd.ly"
 %\include "../Piobaireachd/Mackintoshs_lament_test_definitions.ly"
 %\include "../Piobaireachd/Black_donalds_march_test_definitions.ly"
 

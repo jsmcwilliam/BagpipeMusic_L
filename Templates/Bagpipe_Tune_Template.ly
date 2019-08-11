@@ -14,15 +14,13 @@
 % #(allow-volta-hook "|") % enables volta hook outside repeat context
 % from here
 %
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'landscape)
 
-\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "bagpipe_extra.ly"	%(Extras)
-\include "BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
-				%(Paper format A4, Landscape)
-				%(Header: piece, meter and composer)
-				%(Otherwise Lilypond subtitle)
+\include "bagpipe.ly" 	%(Replaces bagpipe.ly)
+\include "../Includes/BP_format.ily" 	
+      %(Tagline: Copied by John McWilliam, date)
+      %(Paper format A4, Landscape)
+      %(Header: piece, meter and composer)
+      %(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
 

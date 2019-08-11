@@ -1,33 +1,28 @@
 \version "2.18.0"
-%
-%   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book.........................
-%
-#(allow-volta-hook "||")
-%from here
-%{
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'landscape)
 
-\include "bagpipe.ly"           %(Original)
-%\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "bagpipe_extra.ly"	%(Extras)
-\include "../../Includes/BP_format.ly" 	
-                                %(Tagline: Copied by John McWilliam, date)
-				%(Paper format A4, Landscape)
-				%(Header: piece, meter and composer)
-				%(Otherwise Lilypond subtitle)
+% When ready to include in collection:	
+%	1. Comment out top section with \Include file(s)
+%					
+%	2. \midi section if present.
+%	3. Option to comment out "meter" from title e.g. if first tune following
+%	   section title.
+                                    
+%Comment out from here
+%{
+\include "bagpipe.ly" %(Original)
+\include "../Includes/BP_format.ily" 	
+
 %to here..........................................................
 %}
 
 \score {
 
     \new Staff  {
-    \time 6/8	    %adjust time to suit specific tunes
-    \tempo 4 = 80   % adjust speed accordingly for playback
+    \time 6/8	 
+    \tempo 4 = 80   
     \hideKeySignature
-    \bar ".|:"
     \quarterBeaming			
+    \bar ".|:"
 
     % Part 1
     \repeat volta 2 {
@@ -117,30 +112,12 @@
     parttagline = "Copied by John S. McWilliam"
 
   }
+  
   \layout {
-  	  indent = 0.0\cm
-%  	  ragged-right = ##t
-  	  \override Score.GraceSpacing.spacing-increment = #0
-  	  #(layout-set-staff-size 18)
-  	  ragged-bottom = ##t
-  	  ragged-last-bottom = ##t
-    
-  	  \context {
-  	  	  \Score
-  	  	  \remove "Bar_number_engraver"
-%  	  	  \override VoltaBracket.Y-offset = #7.5
-%  	  	  \override VoltaBracket.height = #2.2
-    		}
+%    \override Score.GraceSpacing.spacing-increment = #0
   	}
+  	
 %Generation of midi files can be removed here.
 %  \midi {}
 
 } %end score
-
-%................................................................
-%Useful commands for upgrading from older versions of Lilypond:
-%\set Score.measureLength = #(ly:make-moment 5/8)
-%\set Score.repeatCommands = #'((volta "1.--2."))
-%\set Score.repeatCommands = #'((volta #f))
-%\unfoldRepeats for better playback
-%remove midi when compiling book
