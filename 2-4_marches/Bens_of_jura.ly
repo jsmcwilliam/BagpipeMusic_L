@@ -1,32 +1,26 @@
 \version "2.18.0"
 
+% When ready to include in collection:	
+%	1. Comment out top section with \Include file(s)
+%					
+%	2. \midi section if present.
+%	3. Option to comment out "meter" from title e.g. if first tune following
+%	   section title.
+                                    
+%Comment out from here
+%{
+\include "bagpipe.ly" %(Original)
+\include "../Includes/BP_format.ily" 	
 
-%   	1. Comment out generation of midi files before compiling book
-%  	2. Comment out top section when compiling book.........................
-%	3. Option to comment out "meter" from title e.g. if more than one tune
-%	   per page.
-%
-#(allow-volta-hook "|") % enables volta hook outside repeat context
-% from here
-%
-#(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'landscape)
-
-\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "bagpipe_extra.ly"	%(Extras)
-\include "BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
-				%(Paper format A4, Landscape)
-				%(Header: piece, meter and composer)
-				%(Otherwise Lilypond subtitle)
 %to here..........................................................
 %}
 
 \score {
 
     \new Staff  {
-    \time 2/4	    %adjust time to suit specific tunes
-    \tempo 4 = 80   % adjust speed accordingly for playback
-    \bagpipeKey
+    \time 2/4	    
+    \tempo 4 = 80   
+%    \bagpipeKey
 
 %    \bar ".|:"
     		
@@ -100,11 +94,6 @@
     composer = "John McLellan of Dunoon. Arr: Jane Gulden & Jay Close"
     parttagline = "Copied by John S. McWilliam"
   }
-% added layout options. See bagpipe_new.ly (\layout) for default settings
-  \layout {
-  	  #(layout-set-staff-size 18)
-%  	  ragged-last = ##t
-  	}
 
 % \midi {} %Generation of midi files option.
 

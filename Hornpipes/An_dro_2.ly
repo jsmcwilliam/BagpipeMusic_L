@@ -8,7 +8,7 @@
 %	   section title.
                                     
 %Comment out from here
-%
+%{
 \include "bagpipe.ly" %(Original)
 \include "../Includes/BP_format.ily" 	
 
@@ -40,7 +40,9 @@
  \grg b16 [ c16 d16 e16 ] \grg f8 [ \grg f8 ] 
  \grg e8 [ \dblA A8 ] \hdblf f8 [ d8 ] 
  \grg b16 [ c16 d16 f16 ] \grg e8 [ c8 ] 
- \grg d16 [ b16 \grg c16 \grd a16 ] \grg b4 
+ \grg d16 [ b16 \grg c16 \grd a16 ] \grg b4 \break
+ \grg b16 [ c d c ] \grg b8 [ f~ ] f2~ f 
+ \grg d16 [ b \grg c \grd a ] \grg b4
  \bar "|." \break
 
     % Part 3
@@ -55,6 +57,9 @@
     parttagline = "Copied by John S. McWilliam"
   }
 
+  \layout {
+    ragged-last = ##t
+  }
 % \midi {} %Generation of midi files option.
 
 }%end score

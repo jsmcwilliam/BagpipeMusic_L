@@ -3,14 +3,11 @@
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4" 'landscape)
 
-\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-\include "BP_format.ly" 	%(Tagline: Copied by John McWilliam, date)
-				%(Paper format A4, Landscape)
-				%(Header: piece, meter and composer)
-				%(Otherwise Lilypond subtitle)
+\include "bagpipe.ly" 
+\include "../Includes/BP_format.ily" 	
 
 common = {
-  \bagpipeKey
+%  \bagpipeKey
   \time 2/4
   \override TextScript #'staff-padding = #2
   \override TupletBracket #'bracket-visibility = ##f
@@ -362,7 +359,6 @@ common = {
 } %end score
 
   \paper {
-  	  #(layout-set-staff-size 18)
   	  ragged-last = ##t
   	}
 

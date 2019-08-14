@@ -1,4 +1,5 @@
 \version "2.18.0"
+				%(Otherwise Lilypond subtitle)
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -18,8 +19,8 @@
 \score {
 
     \new Staff  {
-    \time 2/4	    
-    \tempo 4 = 80   
+    \time 2/4	  
+    \tempo 4 = 80  
     \hideKeySignature
     \bar ".|:"
     		
@@ -34,11 +35,10 @@
  \grA d8 [ \grg e16 f16 ] \grg d16 [ e16 \grg f16 d16 ] 
  \grg e8 [ \grg f16 g16 ] \grA e8 [ \grg d16 c16 ] 
  d16 [ \grg d16 \grc d16 c16 ] \thrwd d4 
- \break
-    } %end repeat
+    \break }%end repeat
 
     % Part 2
-    \repeat volta 2 {
+ \repeat volta 2 {
  \grg a8 [ \grg f16 d16 ] \grg a8 [ \grg f16 d16 ] 
  \grg b8 [ g16 e16 ] \grg b16 [ g16 e16 b16 ] 
  \grg c8 [ g16 e16 ] \grg c16 [ a16 \grg b16 c16 ] 
@@ -48,11 +48,10 @@
  \grg b8 [ g16 e16 ] \grg b16 [ g16 e16 b16 ] 
  \grg c8 [ g16 e16 ] \grg c16 [ a16 \grg b16 c16 ] 
  d16 [ \grg d16 \grc d16 c16 ] \thrwd d4 
-  \break
-    } %end repeat
-    
-        % Part 3
-    \repeat volta 2 {
+  \break }%end repeat
+
+    % Part 3
+ \repeat volta 2 {
  \grg e8 [ \grg b16 g16 ] \grA e8 [ \grg b16 g16 ] 
  \grA d8 [ \grg a16 f16 ] \grg d16 [ a16 \grg b16 d16 ] 
  \grg e8 [ \grg b16 g16 ] \grA e8 [ d16 c16 ] 
@@ -65,7 +64,7 @@
   \break }%end repeat
 
     % Part 4
-    \repeat volta 2 {
+ \repeat volta 2 {
  \grg a8 [ \grg d16 f16 ] \grg a16 [ d16 \grg c16 d16 ] 
  \grg G8 [ \grg b16 d16 ] \grg G16 [ b16 \grg b16 \grG b16 ] 
  \grg a8 [ e16 c16 ] \grG c16 [ a16 \grg b16 c16 ] 
@@ -77,11 +76,10 @@
  d16 [ \grg d16 \grc d16 c16 ] \thrwd d4 
   \break }%end repeat
 
-
     } %end staff
     
   \header {
-    meter = "Hornpipe"
+%    meter = "Hornpipe"
     piece = "The Bumpy Old Road"
     composer = "Philip Greer"
     parttagline = "Copied by John S. McWilliam"
