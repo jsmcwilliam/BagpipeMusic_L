@@ -24,48 +24,43 @@
     \bar ".|:"
     		
     % Part 1
+    
     \repeat volta 2 {
     \partial 8 e8
-     \grg a8. [ b16 ] \grG a8 [ \thrwd d8 ] 
-     \dble e8. [ d16 ] \dblb b8 [ \grG a8 ] 
-     \thrwd d8. [ e16 ] \grg f8 [ A8 ] 
-     \hdblf f8 [ e8 ] \gra e8 [ f8 ] 
+     \grg a8. [ b16 ] \grG a8 [ \thrwd d8 ] |
+     \dble e8. [ d16 ] \dblb b8 [ \grG a8 ] |
+     \thrwd d8. [ e16 ] \grg f8 [ A8 ] |
+     \hdblf f8 [ e8 ] \gra e8 
      
+     \set Score.repeatCommands = #'((volta "2. --2")) 
+      f8 |
      \grg a8. [ b16 ] \grG a8 [ \thrwd d8 ] 
      \dble e8. [ d16 ] \dblb b8 [ \grG a8 ] 
      \thrwd d8. [ e16 ] \grg f8 [ A8 ] 
-     \hdblf f8 [ d8 ] \dbld d8 \bar ":|.-.|" 
+     \hdblf f8 [ d8 ] \wslurd d8
+     \set Score.repeatCommands = #'((volta #f)) 
      \break
     } %end repeat
 
     % Part 2
- \dblg g8 
- \dblA A8. [ f16 ] \thrwd d8 [ f8 ] 
- \dble e8. [ d16 ] \dblb b8 [ \grG a8 ] 
- \thrwd d8. [ e16 ] \grg f8 [ A8 ] 
- \hdblf f8 [ e8 ] \grG e8 [ \dblg g8 ] 
- 
- \dblA A8. [ f16 ] \thrwd d8 [ f8 ] 
- \dble e8. [ d16 ] \dblb b8 [ \grG a8 ] 
- \thrwd d8. [ e16 ] \grg f8 [ A8 ] 
- \set Score.measureLength = #(ly:make-moment 3/8)
- \hdblf f8 [ d8 ] \dbld d8  
- \break
-
- \set Score.measureLength = #(ly:make-moment 1/8)
- \dblg g8 
- \set Score.measureLength = #(ly:make-moment 2/4)
- \dblA A8. [ f16 ] \thrwd d8 [ f8 ] 
- \dble e8. [ d16 ] \dblb b8 [ \grG a8 ] 
- \thrwd d8. [ e16 ] \grg f8 [ A8 ] 
- \hdblf f8 [ e8 ] \grG e8 [ f8 ] 
- \grg a8. [ b16 ] \grG a8 [ \thrwd d8 ] 
- \dble e8. [ d16 ] \dblb b8 [ \grG a8 ] 
- \thrwd d8. [ e16 ] \grg f8 [ A8 ] 
- \hdblf f8 [ d8 ] \dbld d8 \bar "|." 
- \break 
     
-
+  \repeat volta 2 {
+ \dblg g8 
+ \dblA A8. [ f16 ] \thrwd d8 [ f8 ] |
+ \dble e8. [ d16 ] \dblb b8 [ \grG a8 ] |
+ \thrwd d8. [ e16 ] \grg f8 [ A8 ] |
+ \hdblf f8 [ e8 ] \grG e8 \dblg  
+ 
+ \set Score.repeatCommands = #'((volta "1.")) 
+  g8 |
+ \dblA A8. [ f16 ] \thrwd d8 [ f8 ] |
+ \dble e8. [ d16 ] \dblb b8 [ \grG a8 ] |
+ \thrwd d8. [ e16 ] \grg f8 [ A8 ] |
+ \set Score.measureLength = #(ly:make-moment 3/8)
+ \hdblf f8 [ d8 ] \wslurd d8
+ \set Score.repeatCommands = #'((volta #f)) \break
+  }
+  
     % Part 3
     % Part 4
 

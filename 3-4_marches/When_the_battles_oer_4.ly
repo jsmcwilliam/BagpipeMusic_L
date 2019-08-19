@@ -8,7 +8,7 @@
 %	   section title.
                                     
 %Comment out from here
-%
+%{
 \include "bagpipe.ly" %(Original)
 \include "../Includes/BP_format.ily" 	
 
@@ -25,26 +25,26 @@
     		
     % Part 1
     \repeat volta 2 {
-\grg a8. [ b16 ] \grip c4 \dblA A4 
- \hdblf f8 [ e8 ] \dblc c4 \grG a4 
+\grg a8. [ b16 ] \grip c4 \dblA A4 |
+ \hdblf f8 [ e8 ] \dblc c4 \gre a4 |
  \grg a8. [ b16 ] \grip c4 \dble e8. [ c16 ] 
- \dblb b8 [ \grG a8 ] \grip b2 
+ \dblb  b8 [ \grG a8 ] \dblb b2 
  \grg a8. [ b16 ] \grip c4 \dblA A4 
- \hdblf f8 [ e8 ] \dblc c4 \grG a4 
+ \hdblf f8 [ e8 ] \dblc c4 \gre a4 
  \grg a8. [ b16 ] \grip c4 \dble e8. [ c16 ] 
- \grg b8. [ c16 ] \grG a2 \break
+ \grg b8. [ \grd c16 ] \grG a2 \break
     } %end of repeat
 
     % Part 2
     \repeat volta 2 {
  \dble e8. [ c16 ] \dblb b4 \grG a4 
- \dblA A8. [ g16 ] \hdblf f4 \grg e4 
+ \dblA A8. [ g16 ] \grA f4 \dble e4 
  \grg a8. [ b16 ] \grip c4 \dble e8. [ c16 ] 
- \dblb b8 [ \grG a8 ] \grip b2 
+ \dblb b8 [ a8 ] \grip b2 
  \dble e8. [ c16 ] \dblb b4 \grG a4 
- \dblA A8. [ g16 ] \hdblf f4 \grg e4 
+ \dblA A8. [ g16 ] \grA f4 \dble e4 
  \grg a8. [ b16 ] \grip c4 \dble e8. [ c16 ] 
- \grg b8. [ c16 ] \grG a2 \break
+ \grg b8 [ \grd c8 ] \grG a2 \break
     } %end of repeat
 
     % Part 3
@@ -53,7 +53,7 @@
     } %end staff
     
   \header {
-    meter = "March"
+    meter = "Retreat March"
     piece = "When the Battle's O'er"
     composer = "P/M William Robb (1863-1909)"
     parttagline = "Copied by John S. McWilliam"

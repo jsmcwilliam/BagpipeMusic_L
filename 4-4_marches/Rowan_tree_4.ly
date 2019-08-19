@@ -8,9 +8,9 @@
 %	   section title.
                                     
 %Comment out from here
-%
+%{
 \include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "../Includes/BP_format16.ily" 	
 
 %to here..........................................................
 %}
@@ -19,26 +19,35 @@
 
     \new Staff  {
     \time 4/4	    
-    \tempo 4 = 80   
+    \tempo 4 = 80  
+%    \bagpipeKey
     \hideKeySignature
-    \bar ".|:"
+    \bar ".|"
     		
     % Part 1
-    \repeat volta 2 {
-    \partial 8 a8 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d4~ d8 [ \gre a8 ] 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d2 
- \dble e4 \grg f8 [ g8 ] \dblA A4 g8 [ \grA f8 ] 
- \dble e4 \grg a4 \wbirl a4 A8. [ g16 ]  \break
+    \partial 4 {\grg a8. [ b16 ]} |
+ \grip c4. \grd c8 \gre c4 b |
+ \grg c8 e4. \gra e4 \dblA A4 | 
+ \hdblf f4. e8 \grg f4 \dblA A4 |
+ \hdblf f4. e8 \gra e4 \grg a8. [ b16 ] |
  
-  \hdblf f8. [ e16 ] \grg f8 [ g8 ] \dblA A4. a8 
- \thrwd d8. [ e16 ] \thrwd d8 [ b8 ] \grg G4. \grd b8 
- \grg a4 \thrwd d4 \dble e8 [ d8 ] \dblc c8 [ b8 ] 
- \grg a4 \thrwd d4 \wslurd d4 
- \break
-    } %end repeat
+ \grip c4. \grd c8 \gre c4 b | 
+ \grg c8 e4. \grg f4. e8 |
+ \grg e8 c4. \grg b4. \grG a8 |
+ \grg a2 \wbirl a4. e8 | \bar "|.-.|" \break 
 
     % Part 2
+ 
+ \gra e4. A8 \grg A4. g8 |
+ \grA g4 f \grg f \dblA A | 
+ \hdble e4. f8 \dblf f8 e \grg d c  |
+ \dblc c2 \gre b4 \grg a8. [ b16 ] |
+ 
+ \grip c4. \grd c8 \gre c4 b |
+ \grg c8 e4. \grg f4. e8 |
+ \grg e8 c4. \grg b4. \grG a8 
+ \grg a2 \wbirl a4. \bar "|." \break 
+
     % Part 3
     % Part 4
 
@@ -46,7 +55,7 @@
     
   \header {
     meter = "March"
-    piece = "Bonnie Lass o' Fyvie"
+    piece = "Rowan Tree"
     composer = "Traditional"
     parttagline = "Copied by John S. McWilliam"
   }

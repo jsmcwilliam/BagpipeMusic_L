@@ -8,7 +8,7 @@
 %	   section title.
                                     
 %Comment out from here
-%
+%{
 \include "bagpipe.ly" %(Original)
 \include "../Includes/BP_format.ily" 	
 
@@ -18,33 +18,33 @@
 \score {
 
     \new Staff  {
-    \time 3/4	  
-    \tempo 4 = 80  
+    \time 3/4	    
+    \tempo 4 = 80   
     \hideKeySignature
     \bar ".|:"
     		
     % Part 1
     \repeat volta 2 {
-\grg a8. [ b16 ] \grip c4 \dblA A4 
- \hdblf f8 [ e8 ] \dblc c4 \grG a4 
- \grg a8. [ b16 ] \grip c4 \dble e8. [ c16 ] 
- \dblb b8 [ \grG a8 ] \grip b2 
- \grg a8. [ b16 ] \grip c4 \dblA A4 
- \hdblf f8 [ e8 ] \dblc c4 \grG a4 
- \grg a8. [ b16 ] \grip c4 \dble e8. [ c16 ] 
- \grg b8. [ c16 ] \grG a2 \break
+ \grg a8. [ b16 ] \grip c4 \dblc c8 [ \gre a8 ] 
+ \grg c8 [ \thrwd d8 ] \dble e4 \gra e8. [ f16 ] 
+ \dblc c8 [ f8 ] \dble e8. [ c16 ] \grg b4 
+ \grip b8 [ f8 ] \dble e8. [ c16 ] \grG a4 
+ \grg a8. [ b16 ] \grip c4 \dblc c8 [ \gre a8 ] 
+ \grg c8 [ \thrwd d8 ] \dble e4 \gra e8. [ f16 ] 
+ \dblc c8 [ f8 ] \dble e8. [ c16 ] \grg b4 
+ \grip b8 [ a8 ] \dblc c4 \grG a4 \break
     } %end of repeat
-
+ 
     % Part 2
     \repeat volta 2 {
- \dble e8. [ c16 ] \dblb b4 \grG a4 
- \dblA A8. [ g16 ] \hdblf f4 \grg e4 
- \grg a8. [ b16 ] \grip c4 \dble e8. [ c16 ] 
- \dblb b8 [ \grG a8 ] \grip b2 
- \dble e8. [ c16 ] \dblb b4 \grG a4 
- \dblA A8. [ g16 ] \hdblf f4 \grg e4 
- \grg a8. [ b16 ] \grip c4 \dble e8. [ c16 ] 
- \grg b8. [ c16 ] \grG a2 \break
+ \dblc c8 [ e8 ] \dblA A4 \grg A4 
+ \grf g8 [ f8 ] \dblf f8 [ e8 ] \gra e4 
+ \grg e8. [ f16 ] \dble e8 [ d8 ] \wslurd d4 
+ \grg d8. [ e16 ] \dbld d8 [ c8 ] \grip c4 
+ \dblc c8 [ e8 ] \dblA A4 \grg A4 
+ \grf g8 [ f8 ] \dblf f8 [ e8 ] \gra e4 
+ \grg e8. [ f16 ] \dble e4 \gra e8. [ d16 ] 
+ \grg c8 [ \thrwd d8 ] \dble e4 \gra e4 \break
     } %end of repeat
 
     % Part 3
@@ -54,11 +54,12 @@
     
   \header {
     meter = "March"
-    piece = "When the Battle's O'er"
-    composer = "P/M William Robb (1863-1909)"
+    piece = "Green Hills of Tyrol"
+    composer = "PM John. MacLeod 1854"
     parttagline = "Copied by John S. McWilliam"
   }
 
 % \midi {} %Generation of midi files option.
 
 }%end score
+

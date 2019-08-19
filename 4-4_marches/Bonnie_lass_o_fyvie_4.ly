@@ -8,7 +8,7 @@
 %	   section title.
                                     
 %Comment out from here
-%
+%{
 \include "bagpipe.ly" %(Original)
 \include "../Includes/BP_format.ily" 	
 
@@ -24,18 +24,17 @@
     \bar ".|:"
     		
     % Part 1
-    \repeat volta 2 {
-    \partial 8 a8 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d4~ d8 [ \gre a8 ] 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d2 
- \dble e4 \grg f8 [ g8 ] \dblA A4 g8 [ \grA f8 ] 
- \dble e4 \grg a4 \wbirl a4 A8. [ g16 ]  \break
+  \repeat volta 2 {
+     \partial 8 a8 |
+     \thrwd d4 \wslurd d8 e \thrwd d4~ d8 a8 |
+     \thrwd d4 \wslurd d8 [ e ] \thrwd d2 | 
+     \grg e4 \grg f8 [ g ] \dblA A4 \grf g8 [ f ] |
+     \dble e4 a \wbirl a A8. [ g16 ] | \break
  
-  \hdblf f8. [ e16 ] \grg f8 [ g8 ] \dblA A4. a8 
- \thrwd d8. [ e16 ] \thrwd d8 [ b8 ] \grg G4. \grd b8 
- \grg a4 \thrwd d4 \dble e8 [ d8 ] \dblc c8 [ b8 ] 
- \grg a4 \thrwd d4 \wslurd d4 
- \break
+     \grA f4 \grip f8. [ g16 ] \dblA A4. a8 |
+     \thrwd d8. [ e16 ] \dbld d8 [ b ] \grg G4~ G8. \grd b16 |
+     \grG a4 \thrwd d \grg e8 [ d ] \dblc c8 [ b ] 
+     \grG a4 \thrwd d \wslurd d4. \break
     } %end repeat
 
     % Part 2

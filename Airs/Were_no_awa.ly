@@ -8,7 +8,7 @@
 %	   section title.
                                     
 %Comment out from here
-%
+%{
 \include "bagpipe.ly" %(Original)
 \include "../Includes/BP_format.ily" 	
 
@@ -24,20 +24,17 @@
     \bar ".|:"
     		
     % Part 1
+    
     \repeat volta 2 {
-    \partial 8 a8 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d4~ d8 [ \gre a8 ] 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d2 
- \dble e4 \grg f8 [ g8 ] \dblA A4 g8 [ \grA f8 ] 
- \dble e4 \grg a4 \wbirl a4 A8. [ g16 ]  \break
+    \partial 4 {\grg a8. b16} | \grip c4. e8 \grg d c \grg b a |
+    \dblc c4 a \wbirl a c8 e   | \dblA A4. \grg A8 \grg A8 g \grg f e |
+    \grg f2 \grg e4 \grg f8 g  | \break
+    
+    A4 \grg A \grg A4. c8      | \thrwd d4 f \dble e4. \gra e8  |
+    \grg f4 \grg e \dblA A c   | \set Score.measureLength = #(ly:make-moment 3/4)
+    \dblb b2 \grG a4 | 
  
-  \hdblf f8. [ e16 ] \grg f8 [ g8 ] \dblA A4. a8 
- \thrwd d8. [ e16 ] \thrwd d8 [ b8 ] \grg G4. \grd b8 
- \grg a4 \thrwd d4 \dble e8 [ d8 ] \dblc c8 [ b8 ] 
- \grg a4 \thrwd d4 \wslurd d4 
- \break
-    } %end repeat
-
+    }
     % Part 2
     % Part 3
     % Part 4
@@ -45,9 +42,9 @@
     } %end staff
     
   \header {
-    meter = "March"
-    piece = "Bonnie Lass o' Fyvie"
-    composer = "Traditional"
+    meter = "Air"
+    piece = "Were No Awa Tae Bide Awa"
+    composer = "Trad."
     parttagline = "Copied by John S. McWilliam"
   }
 

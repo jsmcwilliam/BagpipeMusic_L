@@ -8,7 +8,7 @@
 %	   section title.
                                     
 %Comment out from here
-%
+%{
 \include "bagpipe.ly" %(Original)
 \include "../Includes/BP_format.ily" 	
 
@@ -25,28 +25,27 @@
     		
     % Part 1
     \repeat volta 2 {
- \thrwd d4~ d8 [ e16 f16 ] \dble e8 [ d8 ] \grg a8 [ d8 ] 
- \dble e4~ e8 [ f8 ] \gre f2 
- \grg f4~ f8 [ g16 A16 ] \grf g8 [ f8 ] \grg e8 [ d8 ] 
- \dble e4~ e8 [ f8 ] \birl a2 
- \grip b4~ b8 [ c16 d16 ] \grc d8 [ \gre a8 ] \grg c8 [ d8 ] 
- \dblA A4~ A8 [ g8 ] \grA f2 
- \dble e4~
- _\markup {\italic\lower #2 {Ritardando 3rd. time through}}
- e8 [ f16 g16 ] \tdblf f8 [ d8 ] \grg a8 [ d8 ] 
- \dble e4~ e8 [ d8 ] \wslurd d2_\markup {\italic\lower #2 Fine} 
- \break
+ \thrwd d4~ d8 [ e16 f16 ] \dble e8 [ d8 ] \grg a8 [ d8 ] |
+ \dble e4~ e8 [ f8 ] \dblf f2 
+ \grg f4~ f8 [ g16 A16 ] \grf g8 [ f8 ] \dble e8 [ d8 ] |
+ \dble e4~ e8 [ f8 ] \birl a2 \break
+ 
+ \grg b4~ b8 [ c16 d16 ] \dbld d8 [ a8 ] \grg c8 [ d8 ] |
+ \dblA A4. \grf g8  \tdblf f2 
+ \dble e4~ e8 [ f16 g ] \dblA f8 [ d ] \grg a8 [ d ] |
+ \dble e4~ e8 [ d ] \wslurd d2_\markup {\italic\lower #2 Fine} | \break
     } %end-repeat
 
     % Part 2
- \dblc c4~ c8 [ \gre a8 ] \dble e4 e8 [ \grg c16 e16 ] 
- \dblf f4~ f8 [ c8 ] \grip c4 c8 [ b8 ] 
- \grG a4~ a16 [ b16 c8 ] \dblb b2 
- \dblc c4~ c16 [ d16 e8 ] \dblb b2 
- \dblc c4~ c8 [ \gre a8 ] \dble e4 e8 [ \grg c16 e16 ] 
- \dblf f4~ f8 [ c8 ] \grip c4 c8 [ b8 ] 
- \grG a4~ a16 [ b16 c8 ] \dblb b4~ b8 [ \grG a8 ] 
- \gbirl a1~ a1_\markup {\italic\lower #2 {D.C. al Fine}} 
+ \dblc c4~ c8 \gre a8 \dble e4. \grg c16 e16 |
+ \grg f4~ f8 c8 \dblc c4. \gre b8 |
+ \grG a4~ a8 [ \grg b16 c ] \dblb b2 |
+ \dblc c4~ c8 [ \grg d16 e ] \dblb b2 | \break
+ 
+ \dblc c4~ c8 [ \gre a8 ] \dble e4. \grg c16 e |
+ \grg f4~ f8 c8 \dblc c4. \gre b8 |
+ \grG a 4~ a8 [ \grg b16 c ] \dblb b4. \grG a8 |
+ \grg a2 \gbirl a_\markup {\italic\lower #2 {D.C. al Fine}} |
  \bar "|." 
 
     % Part 3

@@ -8,46 +8,57 @@
 %	   section title.
                                     
 %Comment out from here
-%
+%{
 \include "bagpipe.ly" %(Original)
 \include "../Includes/BP_format.ily" 	
 
 %to here..........................................................
 %}
 
+#(allow-volta-hook "|") % enables volta hook outside repeat context
+
 \score {
 
     \new Staff  {
-    \time 4/4	    
+    \time 6/8	    
     \tempo 4 = 80   
     \hideKeySignature
     \bar ".|:"
     		
     % Part 1
+    
     \repeat volta 2 {
-    \partial 8 a8 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d4~ d8 [ \gre a8 ] 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d2 
- \dble e4 \grg f8 [ g8 ] \dblA A4 g8 [ \grA f8 ] 
- \dble e4 \grg a4 \wbirl a4 A8. [ g16 ]  \break
- 
-  \hdblf f8. [ e16 ] \grg f8 [ g8 ] \dblA A4. a8 
- \thrwd d8. [ e16 ] \thrwd d8 [ b8 ] \grg G4. \grd b8 
- \grg a4 \thrwd d4 \dble e8 [ d8 ] \dblc c8 [ b8 ] 
- \grg a4 \thrwd d4 \wslurd d4 
- \break
-    } %end repeat
+      \grg a8. b16 \grG a8 \thrwd d8. \grg c16 d8 |
+      \grg e8. f16 \grg e8 \dblA A4. |
+      \hdblf f8. e16 \grg f8 \grg b4 \taor b8 |
+      \grg a4. \wbirl a4. |
+    }
+    \break
 
     % Part 2
+    \repeat volta 2 {
+    \dblf f8. d16 f8 \dblf f4. |
+    \grg e8. b16 e8 \gra e4. |
+    \thrwd d8. b16 d8 \dbld d4 \grg c8 |
+    \grg b4. \taor b | \break 
+    }
+
     % Part 3
+
+    \grg a8. b16 \grG a8 \thrwd d8. \grg c8 d16 |
+    \grg e8. f16 \grg e8 \dblA A4.
+    \hdblf f8. e16 \grg f8 \grg b4 \grg c8
+    \thrwd d4. \slurd d4. \bar "|."
+    
+
     % Part 4
 
     } %end staff
     
   \header {
-    meter = "March"
-    piece = "Bonnie Lass o' Fyvie"
-    composer = "Traditional"
+    meter = "Air"
+    piece = "Skye Boat Song"
+    composer = "Trad."
     parttagline = "Copied by John S. McWilliam"
   }
 

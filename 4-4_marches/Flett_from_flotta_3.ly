@@ -8,7 +8,7 @@
 %	   section title.
                                     
 %Comment out from here
-%{
+%
 \include "bagpipe.ly" %(Original)
 \include "../Includes/BP_format16.ily" 	
 

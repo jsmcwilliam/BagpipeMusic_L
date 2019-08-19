@@ -8,7 +8,7 @@
 %	   section title.
                                     
 %Comment out from here
-%
+%{
 \include "bagpipe.ly" %(Original)
 \include "../Includes/BP_format.ily" 	
 
@@ -18,36 +18,42 @@
 \score {
 
     \new Staff  {
-    \time 4/4	    
-    \tempo 4 = 80   
+    \time 3/4	    
+    \tempo 4 = 80  
     \hideKeySignature
     \bar ".|:"
     		
     % Part 1
-    \repeat volta 2 {
-    \partial 8 a8 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d4~ d8 [ \gre a8 ] 
- \thrwd d4 \dbld d8 [ e8 ] \thrwd d2 
- \dble e4 \grg f8 [ g8 ] \dblA A4 g8 [ \grA f8 ] 
- \dble e4 \grg a4 \wbirl a4 A8. [ g16 ]  \break
- 
-  \hdblf f8. [ e16 ] \grg f8 [ g8 ] \dblA A4. a8 
- \thrwd d8. [ e16 ] \thrwd d8 [ b8 ] \grg G4. \grd b8 
- \grg a4 \thrwd d4 \dble e8 [ d8 ] \dblc c8 [ b8 ] 
- \grg a4 \thrwd d4 \wslurd d4 
- \break
-    } %end repeat
+ \partial 4 {\grg a8. d16} |
+ \wslurd d2 \grg f8 [ e32 d16. ] |
+ \grg f2 \grg f8. e16 | 
+ \thrwd d2 \grg b4 |
+ \grG a2 \grg a8. d16 |
+ \wslurd d2 \grg f8 [ e32 d16. ] |
+ \grg f2 \grg e8. f16 | 
+ \dblA A2.~ | 
+ \grg A2 f8. A16 |  \break
 
     % Part 2
+    
+ \grg A2 f8 [ e32 d16. ] |
+ \grg f2 \grg f8. e16 | 
+ \thrwd d2 \grg b4 | 
+ \grG a2 \grg a8. d16 |
+ \wslurd d2 \grg f8 [ e32 d16. ] | 
+ \grg f2 \grg e4 
+ \thrwd d2.~ 
+ \wslurd d2 \bar "|." \break 
+
     % Part 3
     % Part 4
 
     } %end staff
     
   \header {
-    meter = "March"
-    piece = "Bonnie Lass o' Fyvie"
-    composer = "Traditional"
+    meter = ""
+    piece = "Amazing Grace - Gospel Version"
+    composer = ""
     parttagline = "Copied by John S. McWilliam"
   }
 

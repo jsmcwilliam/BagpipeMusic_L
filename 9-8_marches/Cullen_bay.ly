@@ -18,7 +18,7 @@
 \score {
 
     \new Staff  {
-    \time 9/8	   
+    \time 5/4	   
     \tempo 4 = 80  
     \hideKeySignature
     \bar ".|:"
