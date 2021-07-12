@@ -1,4 +1,4 @@
-\version "2.19.80"
+\version "2.22.0"
 %{
   Bagpipe music settings for Lilypond.
   This file builds on work by Andrew McNabb (http://www.mcnabbs.org/andrew/)
@@ -367,11 +367,20 @@ trebling = \markup {
   }
 }
 % Abbreviated notation common in piobaireachd scores.
+txleum = \markup { \center-align "L" }
 txtaor = \markup { \center-align "T" }
 txcrun = \markup { \center-align "C" }
 txtaorcrun = \markup {
   \override #'(baseline-skip . 1.8)
   \column {
+    \center-align "T"
+    \center-align "C"
+  }
+}
+txleumtaorcrun = \markup {
+  \override #'(baseline-skip . 1.8)
+  \column {
+    \center-align "L"
     \center-align "T"
     \center-align "C"
   }
@@ -385,3 +394,9 @@ txtaorcrunam = \markup {
     \center-align \scale #'(-1 . -1) "C"
   }
 }
+
+
+%{
+convert-ly (GNU LilyPond) 2.22.1  convert-ly: Processing `'...
+Applying conversion: 2.20.0, 2.21.0, 2.21.2, 2.22.0
+%}

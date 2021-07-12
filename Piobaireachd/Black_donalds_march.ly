@@ -1,21 +1,26 @@
-\version "2.18.0"
+\version "2.22.0"
 
 % When ready to include in collection: 1. Comment out paper.
 % 				       2. Create include file of score and
 %					  header.
 %Comment out from here
 
-%
+%{
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4") % option 'landscape
 #(set-global-staff-size 16)
 #(allow-volta-hook "|") % enables volta hook outside repeat context
 
-\include "../../Includes/bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-\include "../../Includes/bagpipe_extra.ly"	%(Extras)
-\include "../../Includes/BP_format_piobaireachd.ly" 	
+%\include "../../Includes/bagpipe_new.ly" 	%(Replaces bagpipe.ly)
+%\include "../../Includes/bagpipe_extra.ly"	%(Extras)
+%\include "../../Includes/BP_format_piobaireachd.ly" 	
 				%(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Portrait  ))
+				
+\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
+\include "bagpipe_extra.ly"	%(Extras)
+\include "BP_format_piobaireachd.ly" 
+
 %...to here
 %}
 
@@ -338,4 +343,11 @@ Useful Commands:
       \set Score.repeatCommands = #'((volta #f)) 
       \set Score.measureLength = #(ly:make-moment 3 4)
  
+%}
+
+%{
+convert-ly (GNU LilyPond) 2.22.1  convert-ly: Processing `'...
+Applying conversion: 2.19.2, 2.19.7, 2.19.11, 2.19.16, 2.19.22,
+2.19.24, 2.19.28, 2.19.29, 2.19.32, 2.19.39, 2.19.40, 2.19.46,
+2.19.49, 2.20.0, 2.21.0, 2.21.2, 2.22.0
 %}
