@@ -1,7 +1,11 @@
-\version "2.22.0"
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of score and
-%					  header.
+\version "2.22.1"
+
+%Mackintoshs Lament: Kilberry Book No. 50 (Variable prefix = B)
+
+% When ready to include in collection: 1. Comment out Includes, variables & header.
+% 				       2. Create seperate include file of variables.
+%                                      3. Create seperate include file of score.
+%				       4. Run book module containing the above includes.
 %Comment out from here
 
 %{
@@ -10,119 +14,34 @@
 #(set-global-staff-size 16)
 #(allow-volta-hook "|") % enables volta hook outside repeat context
 
-%\include "bagpipe.ly"
-\include "../../Includes/bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "../../Includes/bagpipe_extra.ly"	%(Extras)
-\include "../../Includes/BP_format_piobaireachd.ly" 	
+\include "../Includes/bagpipe_new.ly" 	%(Replaces bagpipe.ly)
+\include "../Includes/bagpipe_extra.ly"	%(Extras)
+\include "../Includes/BP_format_piobaireachd.ly" 	
 				%(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Portrait  ))
-%...to here
-%}
+				
 
-
-common = {
-% \hideKeySignature
-  \bagpipeKey
-  \time 2/4
-  \override TextScript.staff-padding = #2
-  \override Script #'padding = #1
-  \override TextScript #'padding = #2 % horizontal text alignment
-  \override Score.VoltaBracket.shorten-pair = #'(0.5 . 0)
-  \override Score.VoltaBracket.shorten-pair = #'(0 . 0.5)
-}
-tr = ^\markup {\italic tr}
-
-Secondtime = {
-	  \once \override Staff.TextSpanner.outside-staff-priority = #650
-          \once \override TextSpanner.bound-details.left.text = 
-          \markup\concat {
-              \draw-line #'(0 . -2)
-              \hspace #-.1
-              \column {
-                \draw-line #'(20 . 0)
-                \line { \hspace #1 \raise #.7 "2." }
-              }
-            }
-          %\once \override TextSpanner.font-size = #-2
-          \once \override TextSpanner.style = #'line
-          \once \override TextSpanner.thickness = #1.5
-          \once \override TextSpanner.bound-details.left.padding = #-1
-          \once \override TextSpanner.bound-details.right.padding = #-3.2
-          \once \override TextSpanner.bound-details.right.text = 
-          \markup \draw-line #'(0 . -2)
-}
-
-VarIIIfd = { \set Score.measureLength = #(ly:make-moment 3 4)
-      f4_\txtaorcrun
-      \set Score.repeatCommands = #'((volta "S"))  
-      \grg d4
-      \once \hide Score.BarLine
-      \once \hide Score.SpanBar
-      \set Score.repeatCommands = #'((volta #f)(volta "D.") end-repeat)
-      d4_\txtaorcrun
-      \set Score.repeatCommands = #'((volta #f)) 
-      \set Score.measureLength = #(ly:make-moment 2 4) }
-
-VarIIIeb = { \set Score.measureLength = #(ly:make-moment 3 4)
-      e4_\txtaorcrun
-      \set Score.repeatCommands = #'((volta "S"))  
-      \grg b4
-      \once \hide Score.BarLine
-      \once \hide Score.SpanBar
-      \set Score.repeatCommands = #'((volta #f)(volta "D.") end-repeat)
-      b4_\txtaorcrun
-      \set Score.repeatCommands = #'((volta #f)) 
-      \set Score.measureLength = #(ly:make-moment 2 4) }
-
-VarIIIfb = { 
-      f4_\txtaorcrun\startTextSpan f_\txtaorcrun 
-      \set Score.measureLength = #(ly:make-moment 3 4)
-      f4_\txtaorcrun
-      \set Score.repeatCommands = #'((volta "S"))  
-      \grg b4
-      \once \hide Score.BarLine
-      \once \hide Score.SpanBar
-      \set Score.repeatCommands = #'((volta #f)(volta "D.") end-repeat)
-      b4_\txtaorcrun\stopTextSpan
-      \set Score.repeatCommands = #'((volta #f)) 
-      \set Score.measureLength = #(ly:make-moment 2 4) }
-      
-      
-VarIIIda = { \set Score.measureLength = #(ly:make-moment 3 4)
-      d4_\txtaorcrun
-      \set Score.repeatCommands = #'((volta "S"))  
-      \grg a4
-      \once \hide Score.BarLine
-      \once \hide Score.SpanBar
-      \set Score.repeatCommands = #'((volta #f)(volta "D.") end-repeat)
-      a4_\txtaorcrun
-      \set Score.repeatCommands = #'((volta #f)) 
-      \set Score.measureLength = #(ly:make-moment 2 4) }
-      
-written = {\common \set Staff.instrumentName = #"Written"
-	   d8\tr \bar "|"
-	   b4\tr \bar "|"
-	   f4\mordent s8 \bar "|."
-}
-played =  {\common \set Staff.instrumentName = #"Played"
-	   \pthrwd d8 s8
-	   \grip b4 
-	   \thrwf f4
-}
+%\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
+%\include "BP_format_piobaireachd.ly" 	
+				%(Tagline: Copied by John McWilliam, date)
+				%(Paper format A4, Portrait  ))
+				
+\include "../Includes/B50_Var.ly" %(Mackintosh's Lament variables)
 
   \header {
     title = "Mackintosh's Lament" 
     subtitle = "Cumha Mhic-an-Toisich" 
     composer = "Macintyre ca 1550"
-  }
+          }
+%}%...to here
 
 % ---------------------------------------------------------------------------
 
 % Ground
   \score {
 
-    {
-      \common
+    { %Staff
+      \B_common
       \time 3/4
       \bar ".|:"
       
@@ -137,11 +56,13 @@ played =  {\common \set Staff.instrumentName = #"Played"
 
       \cad b16 [ \grG b8. ] \grGcad b8 \grg b4. 
       \set Score.repeatCommands = #'((volta #f))  
+      
       \grg e8. [ d16 ] \gre a4 \grg b16 [ d8.\tr ] 
       \grg e8. [ d16 ] \gre a4 \grg b16 [ d8.\tr ] 
       \grg b16 [ \grGcad a8. ] b4\tr f4\mordent 
       \grg f8 [ e8\fermata ] \grg d2^\markup {\halign #-2 \italic Fine.} \break
       } %end repeat
+      
 % Part 2. 
       \repeat volta 2 {
       \grg f16 [ \gre f8. ] \grecad f8 A4. 
@@ -171,8 +92,8 @@ played =  {\common \set Staff.instrumentName = #"Played"
 % Var. 1
   \score {
 
-    {
-      \common
+    { %Staff
+      \B_common
       \bar ".|:"
       
 % Part 1.
@@ -220,8 +141,8 @@ played =  {\common \set Staff.instrumentName = #"Played"
 % Var. II
   \score {
 
-    {
-      \common
+    { %Staff
+      \B_common
       \bar ".|:"
       
 % Part 1.
@@ -240,6 +161,7 @@ played =  {\common \set Staff.instrumentName = #"Played"
 	\grg b8. \gre a16 \grg f8. \grg a16
 	\grg e8. \grg a16 \grg a8. \gre a16 \break
 	} %end repeat
+	
 % Part 2.
 	\repeat volta 2 {
 	\grg f8. \grg a16 \grg A8. \grg a16
@@ -256,7 +178,6 @@ played =  {\common \set Staff.instrumentName = #"Played"
 	\grg b8. \gre a16 \grg f8. \grg a16
 	\grg e8. \grg a16 \grg a8. \gre a16 \break
 	} %end repeat
-	
     } %end Staff
 
     \header {
@@ -274,16 +195,16 @@ played =  {\common \set Staff.instrumentName = #"Played"
 % Var. III
   \score {
 
-    {
-      \common
+    { %Staff
+      \B_common
       \bar ".|:"
       
 % Part 1      
       \repeat volta 2 {
-      f4_\txtaorcrun f_\txtaorcrun |\VarIIIfd
-      e4_\txtaorcrun f_\txtaorcrun |\VarIIIeb
-      \Secondtime \VarIIIfb 
-      d4_\txtaorcrun d_\txtaorcrun |\VarIIIda
+      f4_\txtaorcrun f_\txtaorcrun |\B_VarIIIfd
+      e4_\txtaorcrun f_\txtaorcrun |\B_VarIIIeb
+      \B_Secondtime \B_VarIIIfb 
+      d4_\txtaorcrun d_\txtaorcrun |\B_VarIIIda
       b4_\txtaorcrun f_\txtaorcrun |
       \set Score.repeatCommands = #'((volta "S"))  
       \grg f8 e\fermata \grg d4
@@ -291,12 +212,13 @@ played =  {\common \set Staff.instrumentName = #"Played"
       e4_\txtaorcrun a_\txtaorcrun
       \set Score.repeatCommands = #'((volta #f))
       \break } %end repeat
+      
 % Part 2      
       \repeat volta 2 {
-      f4_\txtaorcrun A_\txtaorcrun |\VarIIIfd
-      e4_\txtaorcrun f_\txtaorcrun |\VarIIIeb
-      \Secondtime \VarIIIfb      
-      d4_\txtaorcrun d_\txtaorcrun |\VarIIIda
+      f4_\txtaorcrun A_\txtaorcrun |\B_VarIIIfd
+      e4_\txtaorcrun f_\txtaorcrun |\B_VarIIIeb
+      \B_Secondtime \B_VarIIIfb      
+      d4_\txtaorcrun d_\txtaorcrun |\B_VarIIIda
       b4_\txtaorcrun f_\txtaorcrun |
       \set Score.repeatCommands = #'((volta "S"))  
       \grg f8 e\fermata \grg d4
@@ -319,11 +241,11 @@ played =  {\common \set Staff.instrumentName = #"Played"
   \score { \new StaffGroup {
   	   \cadenzaOn
   	  <<
-  	  \new Staff {	\written }
-  	  \new Staff { 	\played  }
+  	  \new Staff {	\B_written }
+  	  \new Staff { 	\B_played  }
   	  >>
   	   \cadenzaOff
-}
+         } %end StaffGroup
 
     \header {
       piece = "Abreviations used:"
@@ -332,11 +254,11 @@ played =  {\common \set Staff.instrumentName = #"Played"
     \layout {
     	    indent = 2.0\cm 
    	    \context {
-    \Staff
-    \remove "Time_signature_engraver"
-    	    }
+              \Staff
+               \remove "Time_signature_engraver"
+    	    } %end context
 
-    }
+       } %end layout
   } %end score
   
 \markup {S = Singling. D = Doubling}

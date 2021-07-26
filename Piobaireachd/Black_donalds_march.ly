@@ -1,8 +1,11 @@
 \version "2.22.0"
 
-% When ready to include in collection: 1. Comment out paper.
-% 				       2. Create include file of score and
-%					  header.
+%Black Donalds March: Kilberry Book No. 92 (Variable prefix = A) 
+
+% When ready to include in collection: 1. Comment out Includes, variables & header.
+% 				       2. Create seperate include file of variables.
+%                                      3. Create seperate include file of score.
+%				       4. Run book module containing the above includes.
 %Comment out from here
 
 %{
@@ -11,212 +14,88 @@
 #(set-global-staff-size 16)
 #(allow-volta-hook "|") % enables volta hook outside repeat context
 
-%\include "../../Includes/bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "../../Includes/bagpipe_extra.ly"	%(Extras)
-%\include "../../Includes/BP_format_piobaireachd.ly" 	
+\include "../Includes/bagpipe_new.ly" 	%(Replaces bagpipe.ly)
+\include "../Includes/bagpipe_extra.ly"	%(Extras)
+\include "../Includes/BP_format_piobaireachd.ly" 	
 				%(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Portrait  ))
 				
-\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-\include "bagpipe_extra.ly"	%(Extras)
-\include "BP_format_piobaireachd.ly" 
-
-%...to here
-%}
-
-common = {
-  \bagpipeKey
-  \time 2/4
-  \override TextScript.staff-padding = #2
-  \override Script #'padding = #1
-  \override TextScript #'padding = #2 % horizontal text alignment
-}
-tr = ^\markup {\italic tr}
-
-written =   { \common \set Staff.instrumentName = #"Written"
-	     c4\mordent f4\mordent
-	     A4\trill
-	     a4^\txleum s4
-	     a4^\txtaor
-	     a4^\txcrun s4
-	     b4^\txcrunam s4
-	     c4^\txcrunam s4
-}
-
-played =    { \common \set Staff.instrumentName = #"Played"
-	     c16 [\grip c8.] \dare f4 \bar "|"
-	     \dblA A4 \bar "|"
-	     \grg a4 \grip e \bar "|"
-	     \grg a8. [\taor a16] \bar "|"
-	     \grg a4 \crun e \bar "|"
-	     \grg b4 \crunamb e \bar "|"
-	     \grg c4 \crunamc e \bar "|."
-}	     
-%{	     
-written =   { \common \set Staff.instrumentName = #"Written" 
-	      c8\mordent s8 f4\mordent \bar "|" 
-	      A4\trillill \bar "|" 
-	      a4^\txleum s4 \bar "|"
-	      a4^\txtaor s16. \bar "|"
-	      a4^\txcrun s4 \bar "|" 
-	      b4^\txcrunam s4 \bar "|"
-	      c4^\txcrunam s4 \bar "|."	      
-}
-
-played =    { \common \set Staff.instrumentName = #"Played"
-	      c32 [\grip c16.] s4 \thrwf f 
-	      \dblA A4 
-	      \grg a4 \grip e 
-	      \grg a8. [\taor a16]
-	      \grg a4 \crun e
-	      \grg b4 \crunamb e 
-	      \grg c4 \crunamc e 
-}
-%}
-VarII =     { \set Score.repeatCommands = #'((volta "1")) 
-              f\mordent 
-              \set Score.measureLength = #(ly:make-moment 5 8)
-              \grg e4. 
-              \once \hide Score.BarLine
-              \once \hide Score.SpanBar
-              \set Score.repeatCommands = #'((volta #f)(volta "2.") end-repeat)
-              A4\mordent  
-              \set Score.measureLength = #(ly:make-moment 4 4)      
-              e4.
-              \once \hide Score.BarLine
-              \once \hide Score.SpanBar
-      	      \set Score.repeatCommands = #'((volta #f) end-repeat) }
-
-
-VarIIIa =   { \set Score.measureLength = #(ly:make-moment 3 4)
-	      \set Score.repeatCommands = #'((volta "S")) 
-	      \grg c8\fermata [\grG a]\fermata
-	      \once \hide Score.BarLine
-	      \once \hide Score.SpanBar
-	      \set Score.repeatCommands = #'((volta #f)(volta "D") end-repeat)
-	      c4_\txleumtaorcrun
-	      \set Score.repeatCommands = #'((volta #f))
-	      \set Score.measureLength = #(ly:make-moment 2/4) }
-	      
-VarIIIb =   { \set Score.measureLength = #(ly:make-moment 3 4)
-	      \set Score.repeatCommands = #'((volta "S")) 
-	      \grg b8\fermata [\grG a]\fermata
-	      \once \hide Score.BarLine
-	      \once \hide Score.SpanBar
-	      \set Score.repeatCommands = #'((volta #f)(volta "D") end-repeat)
-	      b4_\txleumtaorcrun
-	      \set Score.repeatCommands = #'((volta #f))
-	      \set Score.measureLength = #(ly:make-moment 2/4) }
-
-VarIVa =   { \set Score.measureLength = #(ly:make-moment 3 4)
-	      \set Score.repeatCommands = #'((volta "S")) 
-	      \grg c8\fermata [\grG a]\fermata
-	      \once \hide Score.BarLine
-	      \once \hide Score.SpanBar
-	      \set Score.repeatCommands = #'((volta #f)(volta "D") end-repeat)
-	      c4_\txtaor
-	      \set Score.repeatCommands = #'((volta #f))
-	      \set Score.measureLength = #(ly:make-moment 2/4) }
-	      
-VarIVb =   { \set Score.measureLength = #(ly:make-moment 3 4)
-	      \set Score.repeatCommands = #'((volta "S")) 
-	      \grg b8\fermata [\grG a]\fermata
-	      \once \hide Score.BarLine
-	      \once \hide Score.SpanBar
-	      \set Score.repeatCommands = #'((volta #f)(volta "D") end-repeat)
-	      b4_\txtaor
-	      \set Score.repeatCommands = #'((volta #f))
-	      \set Score.measureLength = #(ly:make-moment 2/4) }
-
-VarVa =   { \set Score.measureLength = #(ly:make-moment 3 4)
-	      \set Score.repeatCommands = #'((volta "S")) 
-	      \grg c8\fermata [\grG a]\fermata
-	      \once \hide Score.BarLine
-	      \once \hide Score.SpanBar
-	      \set Score.repeatCommands = #'((volta #f)(volta "D") end-repeat)
-	      c4_\txcrun
-	      \set Score.repeatCommands = #'((volta #f))
-	      \set Score.measureLength = #(ly:make-moment 2/4) }
-	      
-VarVb =    {  \set Score.measureLength = #(ly:make-moment 3 4)
-	      \set Score.repeatCommands = #'((volta "S")) 
-	      \grg b8\fermata [\grG a]\fermata
-	      \once \hide Score.BarLine
-	      \once \hide Score.SpanBar
-	      \set Score.repeatCommands = #'((volta #f)(volta "D") end-repeat)
-	      b4_\txcrun
-	      \set Score.repeatCommands = #'((volta #f))
-	      \set Score.measureLength = #(ly:make-moment 2/4) }
-	      
-\book {
+%\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
+%\include "bagpipe_extra.ly"	%(Extras)
+%\include "BP_format_piobaireachd.ly" 
+				%(Tagline: Copied by John McWilliam, date)
+				%(Paper format A4, Portrait  ))
+				
+\include "../Includes/A92_Var.ly" %(Black Donalds March: variables)
 
   \header {
     title = "Black Donald's March"
     subtitle = "MacDhomhnuill Duibh"
     composer = "Traditional ca 1431"
-  }
-
+          }
+%}%...to here
 % ---------------------------------------------------------------------------
 
 % Ground (Urlar)
   \score {
 
-    {
-      \common
+    { %Staff
+      \A_common
       \time 4/4
       \bar ".|:"
-      
-      \repeat volta 2 {      
+            
       \grg e4. c8\mordent \grg c4 \grGcad a |\grg e4. c8\mordent \grg b4 \grGcad a
       \grg e4. c8\mordent \grg c4 
-      \VarII
-      c8\mordent \grg c4 \grGcad a 
+      \A_VarIII
+      \grg e4. c8\mordent \grg c4 \grGcad a 
       \grg e4. c8\mordent \grg b4 
-      \VarII
-      c8\mordent \grg b4      %^\markup {\halign #-2 \italic Fine.} 
-      \grGcad a 
+      \A_VarIII
+      \grg e4. c8\mordent \grg b4 \grGcad a 
+      \bar "||"
       \break
-      \markTextEol \markup {\italic "Fine"}
+      \markMarkEol \markup {\italic "Fine"}
       
       \grg e4. c8\mordent \grg c4 
-      \VarII
-      c8\mordent \grg c4 \grGcad a 
-      \grg e4. c8\mordent \grg b4 \grGcad a    |\grg e4. c8\mordent \grg c4 \grGcad a 
-      \grg e4. c8\mordent \grg b4 
-      \VarII
-      c8\mordent \grg b4 \grGcad a |
+      \A_VarIII
+      \grg e4. c8\mordent \grg c4 \grGcad a |\grg e4. c8\mordent \grg b4 \grGcad a
+      \grg e4. c8\mordent \grg c4 \grGcad a |\grg e4. c8\mordent \grg b4 
+      \A_VarIII
+      \grg e4. c8\mordent \grg b4 \grGcad a 
+      \bar "||"
       \break
       
       \grg e4. c8\mordent \grg c4 
-      \VarII
-      c8\mordent \grg c4 \dre e |
+      \A_VarIII
+      \grg e4. c8\mordent \grg c4 \dre e 
       \grg e4. c8\mordent \grg b4 
-      \VarII
-      c8\mordent \grg b4 \grGcad a 
+      \A_VarIII
+      \grg e4. c8\mordent \grg b4 \grGcad a 
+      \bar ":|."
       \break
-      } %end repeat
     } %end staff
 
     \header {
-      piece = "Urlar with repeat into Var. I. - Thumb Var. "
-    } %end header
+      piece = "I. GROUND II. THUMB VAR. substituting high A for F where shown and omitting following G grace note. "
+            } %end header
 
   } %end score
 
 % ---------------------------------------------------------------------------
-% Var. II
+% Var. III
   \score {
 
-    {
-      \common
-      
+    { %Staff
+        \A_common   
+        
 	\grg e8	A\trill c \grG a\fermata |\grg e A\trill b \grG a\fermata
 	\grg e8 A\trill c A\trill |f A\trill c \grG a\fermata
 	\grg e8 A\trill c A\trill |f A\trill b \grG a\fermata
+	\bar "||"
 	\break
 	\grg e8 A\trill c A\trill |f A\trill c \grG a\fermata
 	\grg e8 A\trill b \grG a\fermata |\grg e8	A\trill c \grG a\fermata 
 	\grg e A\trill c A\trill |f A\trill b \grG a\fermata
+	\bar "||"
 	\break
 	\grg e8	A\trill c A\trill |f A\trill c A\trill
 	e8 A\trill c A\trill |f A\trill b \grG a\fermata
@@ -224,49 +103,51 @@ VarVb =    {  \set Score.measureLength = #(ly:make-moment 3 4)
     } %end Staff
 
     \header {
-      piece = "Var. II"
-    } %end Header
+      piece = "Var. III"
+            } %end Header
 
     \layout {
 %      ragged-last = ##t
-    } %end Layout
+            } %end Layout
 
   } %end score
 
   % ---------------------------------------------------------------------------
-% Var. III
+% Var. IV - IX
   \score {
 
-    {
-      \common
+    { %Staff
+      \A_common
       \bar ".|:"
       
-      \repeat Volta 2 {
-	e4_\txleumtaorcrun \VarIIIa
-	e4_\txleumtaorcrun \VarIIIb
+      \repeat volta 2 {
+	e4_\txleumtaorcrun \A_VarIVa
+	e4_\txleumtaorcrun \A_VarIVb
 	e4_\txleumtaorcrun c_\txleumtaorcrun
-	f4_\txleumtaorcrun \VarIIIa
+	f4_\txleumtaorcrun \A_VarIVa
 	e4_\txleumtaorcrun c_\txleumtaorcrun
-	f4_\txleumtaorcrun \VarIIIb
+	f4_\txleumtaorcrun \A_VarIVb
+%	\bar "||"
 	\break
 	e4_\txleumtaorcrun c_\txleumtaorcrun
-	f4_\txleumtaorcrun \VarIIIa
-	e4_\txleumtaorcrun \VarIIIb
-	e4_\txleumtaorcrun \VarIIIa
+	f4_\txleumtaorcrun \A_VarIVa
+	e4_\txleumtaorcrun \A_VarIVb
+	e4_\txleumtaorcrun \A_VarIVa
 	e4_\txleumtaorcrun c_\txleumtaorcrun
-	f4_\txleumtaorcrun \VarIIIb	
+	f4_\txleumtaorcrun \A_VarIVb	
+%	\bar "||"
 	\break
 	e4_\txleumtaorcrun c_\txleumtaorcrun
 	f4_\txleumtaorcrun c_\txleumtaorcrun
 	e4_\txleumtaorcrun c_\txleumtaorcrun
-	f4_\txleumtaorcrun \VarIIIb
+	f4_\txleumtaorcrun \A_VarIVb
       } %end repeat
     } %end staff
 
     \header {
-      piece = "Var. III - Leumluath, IV. Taorluath [S & D] and V. Crunluath [S & D]: "
+      piece = "IV LEUMLUATH, V Doubling VI TAORLUATH VII Doubling VIII CRUNLUATH IX Doubling. "
 %      breakbefore = ##t
-    } %end header
+            } %end header
 
   } %end score
 
@@ -275,8 +156,8 @@ VarVb =    {  \set Score.measureLength = #(ly:make-moment 3 4)
 % Var. VI
   \score {
 
-    {
-      \common
+    { %Staff
+      \A_common
       
       e4_\txcrun c_\txcrunam
       e4_\txcrun b_\txcrunam
@@ -284,6 +165,7 @@ VarVb =    {  \set Score.measureLength = #(ly:make-moment 3 4)
       f4_\txcrun c_\txcrunam
       e4_\txcrun c_\txcrunam
       f4_\txcrun b_\txcrunam
+      \bar "||"
       \break
       e4_\txcrun c_\txcrunam
       f4_\txcrun c_\txcrunam
@@ -291,6 +173,7 @@ VarVb =    {  \set Score.measureLength = #(ly:make-moment 3 4)
       e4_\txcrun c_\txcrunam
       e4_\txcrun c_\txcrunam
       f4_\txcrun b_\txcrunam
+      \bar "||"
       \break
       e4_\txcrun c_\txcrunam
       f4_\txcrun c_\txcrunam
@@ -298,56 +181,44 @@ VarVb =    {  \set Score.measureLength = #(ly:make-moment 3 4)
       e4_\txcrun
       b_\txcrunam    %_\markup {\lower #2 \halign #-2 \italic {"D.C. al Fine"}} 
       \bar "|." \break
-      \markTextEol \markup {\italic "D.C. al Fine"}
+      \markMarkEol \markup {\italic "D.C. al Fine"}
 
     } %end staff
 
     \header {
-      piece = "Var. VI Crunluath-a-Mach"
-    } %end header
+      piece = "Var. X CRUNLUATH-A-MACH"
+            } %end header
 
   } %end score
 
   % ---------------------------------------------------------------------------
 
 % Movements
-  \score { \new StaffGroup {
+  \score { 
+        \new StaffGroup {
   	   \cadenzaOn
-  	  <<
-  	  \new Staff {	\written }
-  	  \new Staff { 	\played  }
-  	  >>
+  	      <<
+  	        \new Staff {	\A_written }
+  	        \new Staff { 	\A_played  }
+  	      >>
   	  \cadenzaOff 
-}
+          } %end StaffGroup
 
     \header {
       piece = "Abreviations used:"
-    } %end header
+            } %end header
+            
     \layout {
     	    indent = 2.0\cm  
   	      \context {
-    \Staff
-    \remove "Time_signature_engraver"
-}
-    }
-  } %end score
+                \Staff
+                \remove "Time_signature_engraver"
+            } %end context
+            } %end layout
+        } %end score
+                
 \markup {S = Singling. D = Doubling}
-% ---------------------------------------------------------------------------
-
-} % end book
 
  % --------------------------------------------------------------------------
-%{
-Useful Commands:
-      \set Score.repeatCommands = #'((volta "2"))  
-      \set Score.repeatCommands = #'((volta #f)) 
-      \set Score.measureLength = #(ly:make-moment 3 4)
- 
-%}
 
-%{
-convert-ly (GNU LilyPond) 2.22.1  convert-ly: Processing `'...
-Applying conversion: 2.19.2, 2.19.7, 2.19.11, 2.19.16, 2.19.22,
-2.19.24, 2.19.28, 2.19.29, 2.19.32, 2.19.39, 2.19.40, 2.19.46,
-2.19.49, 2.20.0, 2.21.0, 2.21.2, 2.22.0
-%}
+

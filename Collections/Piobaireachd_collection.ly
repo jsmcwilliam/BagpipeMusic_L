@@ -1,4 +1,7 @@
-\version "2.18.0"    
+\version "2.22.0"    
+
+%Black Donalds March: Kilberry Book No. 92 (Variable prefix = A)
+%Mackintoshs Lament : Kilberry Book No. 50 (Variable prefix = B)
 
 #(ly:set-option 'relative-includes #t) 
 #(set-default-paper-size "a4" 'portrait)
@@ -6,12 +9,19 @@
 
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-\include "bagpipe.ly"
-%\include "../Includes/bagpipe_new.ly"
-%\include "../Includes/bagpipe_extra.ly"
-\include "../Includes/BP_format_piobaireachd.ly"
-%\include "../Piobaireachd/Mackintoshs_lament_test_definitions.ly"
-%\include "../Piobaireachd/Black_donalds_march_test_definitions.ly"
+\include "../Includes/bagpipe_new.ly"
+\include "../Includes/bagpipe_extra.ly"
+%\include "../Includes/BP_format_piobaireachd.ly
+
+%\include "bagpipe_new.ly"
+%\include "bagpipe_extra.ly"
+%\include "BP_format_piobaireachd.ly"	
+				%(Tagline: Copied by John McWilliam, date)
+				%(Paper format A4, Portrait  ))
+
+\include "../Includes/B50_Var.ly"		%Variables for Makintosh's Lament:  Prefix: B	
+\include "../Includes/A92_Var.ly"	%    "      "  Black Donalds March: Prefix: A
+
 
 \book {
 
@@ -51,38 +61,32 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
     	    } 
     }     
     tocItemMarkup = \tocItemWithDotsMarkup
-%{    
-    tocSectionMarkup = \markup {\large \column { 
-    	    \hspace #1 
-    	    \fill-line { \null \italic \fromproperty #'toc:text \null } 
-    	    \hspace #1 
-    	    }
-%}    	    
-
 }%end paper
 
 	\pageBreak %after title page		
 	\markuplist \table-of-contents
 	\pageBreak
-%{
+
 	\bookpart {	
-		\header {
-			title = "Black Donald's March"
-			subtitle = "MacDhomhnuill Duibh"
-			composer = "Traditional ca 1431" }
-		\tocItem \markup {1. Black Donalds March }
-		\include "../Piobaireachd/Black_donalds_march.ly"
-		\pageBreak 
-	} %end bookpart
-%}
-	\bookpart {	
+		\tocItem \markup {50. Mackintoshs Lament }
 		\header {
 			title = "Mackintosh's Lament" 
 			subtitle = "Cumha Mhic-an-Toisich" 
 			composer = "Macintyre ca 1550" }
-		\tocItem \markup {2. Mackintoshs Lament }
 		\include "../Piobaireachd/Mackintoshs_lament.ly"
-		\pageBreak
+	} %end bookpart	
+
+        \bookpart {	
+		\tocItem \markup {92. Black Donalds March }
+		\header {
+			title = "Black Donald's March"
+			subtitle = "MacDhomhnuill Duibh"
+			composer = "Traditional ca 1431" }
+		
+		\include "../Piobaireachd/Black_donalds_march.ly"
+%		\pageBreak 
 	} %end bookpart
-	
-}%end book
+
+%		\pageBreak
+} %end book
+
