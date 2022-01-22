@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,8 +9,8 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format16.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -25,20 +25,20 @@
     \bar ".|:"
 
     % Part 1
-      \repeat volta 2 {
+    \repeat volta 2 {
       \partial 8 e8
       \grg a8. \grd b16 \gre G8 \grg a4.
       \dble e8. d16 g8 \hdble e8. d16 b8
       \grg a8. \grd b16 \gre a8 \grg G4 \grd b8
       \thrwd d4 e8 \dble e8. d16 b8
 %      \break
-      \set Score.repeatCommands = #(list(list 'volta VoltaTxtTwoFour))	
+      \set Score.repeatCommands = #'((volta "2. --2,4"))       
       \grg a8. \grd b16 \gre G8 \grg a4.
       \dble e8. d16 g8 \hdble e8. d16 b8
       \grg G8. \grd b16 g8 \hdble e8. d16 b8
       \grg a4. \wbirl a4
       \set Score.repeatCommands = #'((volta #f))
-      	\break }
+      \break }
 
     % Part 2
     \repeat volta 2 {

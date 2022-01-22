@@ -1,10 +1,10 @@
-\version "2.18.0"    
+\version "2.22.1"    
 
 tocSection = #(define-music-function (parser location text) (markup?) 
         	(add-toc-item! 'tocSectionMarkup text)) 
 
-\include "bagpipe.ly"
-\include "../Includes/BP_format.ily"
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily"
 
 \book {
 
@@ -139,8 +139,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 %		\pageBreak
 		\tocItem \markup {2. Amazing Grace }
 		\include "../Airs/Amazing_grace_2.ly"
-		\pageBreak
-%
+%		\pageBreak
 		\tocItem \markup {3. Our Ain Fireside }
 		\include "../Airs/Our_ain_fireside.ly"
 %		\pageBreak

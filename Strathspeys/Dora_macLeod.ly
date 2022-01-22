@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,11 +9,14 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format14.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
+
+\defineBarLine ":|.-.|" #'(":|." ".|" ":|.")
+\defineBarLine "|.-.|:" #'("|." ".|:" "|.")
 
 \score {
 
@@ -48,9 +51,9 @@
     
     % Part 3
     \repeat volta 2 {
- \gbirl a4 \grd a8. [ b16 ] \gcatchc c4 \dblc c8. [ e16 ]  
+ \gbirl a4 \grd a8. [ b16 ] \catchc c4 \dblc c8. [ e16 ]  
  \thrwf f4 \dblf f8. [ e16 ] \dblA A8. [ e16 ] \grg f16 [ g16 A8 ]  
- \birl a4 \grd a8. [ b16 ] \gcatchc c4 \dblc c8. [ e16 ]  
+ \birl a4 \grd a8. [ b16 ] \catchc c4 \dblc c8. [ e16 ]  
  \grg f16 [ g16 A8 ] \hdblf f8. [ c16 ] \dble e8. [ a16 ] \dblc c16 [ \gre b8. ] 
  \bar ":|.-.|"
  \break
@@ -65,7 +68,7 @@
 
  \grg f16 [ A8. ] \grg A8. [ f16 ] \dblA A8. [ e16 ] \grg f16 [ g16 A8 ]  
  \hdble e8. [ f16 ] \gbirl a4 \dblc c16 [ \gre b8. ] \grg c16 [ \grip e8. ]  
- \dblA A8. [ f16 ] \dble e8. [ f16 ] \gcatchc c4 \grg e16 [ c16 \grG a8 ]  
+ \dblA A8. [ f16 ] \dble e8. [ f16 ] \catchc c4 \grg e16 [ c16 \grG a8 ]  
  \grg f16 [ e16 c8 ] A16 [ e16 c8 ] \dble e8. [ a16 ] \dblc c16 [ \gre b8. ] 
  \bar "|." \break 
 

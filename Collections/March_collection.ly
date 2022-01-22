@@ -1,10 +1,10 @@
-\version "2.18.0"    
+\version "2.22.1"    
+
+\include "bagpipe.ly"		%(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily"
 
 tocSection = #(define-music-function (parser location text) (markup?) 
         	(add-toc-item! 'tocSectionMarkup text)) 
-
-\include "bagpipe.ly"		%(Origonal
-\include "../Includes/BP_format15.ily"
 
 \book {
 
@@ -115,9 +115,9 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\tocSection \markup { 3/4 Marches } 
 		\tocItem \markup {1. Pipe Major J.K. Cairns}
 		\include "../3-4_marches/Pipe_major_jk_cairns.ly"
-%		\pageBreak
+		\pageBreak
 		}	
-
+%
 			\bookpart {
 		\header {
 			title = "4/4 Marches"
@@ -140,7 +140,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 %		\pageBreak
 		\tocItem \markup {3. Meeting of the Waters}
 		\include "../4-4_marches/Meeting_of_the_waters.ly"
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {4. Lord Lovat's Lament}
 		\include "../4-4_marches/Lord_lovats_lament.ly"
 %		\pageBreak
@@ -163,7 +163,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\tocItem \markup {4. Cock o' the North}
 		\include "../6-8_marches/Cock_o_the_north.ly"
 		\pageBreak 
-		\tocItem \markup {1. John D. Burgess}
+%		\tocItem \markup {1. John D. Burgess}
 		\include "../6-8_marches/John_d_burgess.ly"
 %		\pageBreak
 		\tocItem \markup {2. 10th. Bat. Lt._Infantry crossing the Rhine}
@@ -198,7 +198,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\pageBreak
 		\tocItem \markup {1. Blue Bonnets oer the Border}
 		\include "../6-8_marches/Blue_bonnets.ly" 
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {2. Glendaruel Highlanders}
 		\include "../6-8_marches/Glendaruel_highlanders.ly" 
 %		\pageBreak
@@ -239,19 +239,19 @@ tocSection = #(define-music-function (parser location text) (markup?)
 %		\pageBreak
 		\tocItem \markup {3. Leaving Lismore }
 		\include "../Airs/Leaving_lismore.ly"
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {4. Loch Etive Side }
 		\include "../Airs/Loch_etive_side.ly"
-%		\pageBreak
+		\pageBreak
 		\tocItem \markup {1. Skye Boat Song }
 		\include "../Airs/Skye_boat_song.ly"
 %		\pageBreak
 		\tocItem \markup {2. Waters of Kylesku }
 		\include "../Airs/Waters_of_kylesku.ly"
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {3. Westering Home }
 		\include "../Airs/Westering_home.ly"
-		\pageBreak
+%		\pageBreak
 		}
-%}
+
 } %end book

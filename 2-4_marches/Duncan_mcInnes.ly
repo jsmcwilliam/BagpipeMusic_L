@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,8 +9,8 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -32,7 +32,7 @@
 		\grg e8.[ f16] \dblc c8[ \gre a]
 		\dblc c8[ e] \grg a[ \grd c]
 		\dble e8.[ d16] \dblb b8[ \gre G]
-%		\break
+		\break
 
 		\set Score.repeatCommands = #'((volta "2.--2."))		
 		\grg a8.[ b16] \grip c8[ \thrwd d]
@@ -49,7 +49,7 @@
 		\dblg g8.[ A16] \grf g8[ \grA e]
 		\dblc c8[ \gre a] \dblc c[ \dblg g]
 		\hdble e8.[ d16] \dblb b8[ \gre G]
-%		\break	
+		\break	
 		
 		\set Score.repeatCommands = #'((volta "1."))
 		\gbirl a8.[ A16] \grg A8[ e]
@@ -66,7 +66,7 @@
 		\grg e8.[ f16] \dblc c8[ \gre a]
 		\dble e4 \grg a8[ \thrwd d]
 		\dblc c4 \dblb b8[ \gre G]
-%		\break
+		\break
 		
 		\set Score.repeatCommands = #'((volta "2.--4."))
 		\dbld d16[ c8.] \grg a8[ \grd c]
@@ -83,7 +83,7 @@
 		\hdblf f8[ e] \dblc c[ \gre a]
 		\dble e4 \grg a8[ \thrwd d]
 		\dblc c4 \dblb b8[ \gre G]
-%		\break
+		\break
 		
 		\set Score.repeatCommands = #'((volta "1."))
 		\dble e8[ c] \dblA A8.[ g16]

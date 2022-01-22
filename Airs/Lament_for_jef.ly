@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,11 +9,13 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
+
+\defineBarLine "|.-.|" #'("|." ".|" "|.")
 
 \score {
 
@@ -55,7 +57,8 @@
         \startStaff  % Resume bar count and show staff lines again 
 
     % Part 2
- \time 6/8           
+ \time 6/8   
+ \bar ".|"
  \grg f4^\markup {\center-align\bold\large\fontsize #3 {2nd Part}} 
   A8 \hdblf f4 e16 [ d16 ] 
  \grg e4 f8 \grg b4 c16 [ d16 ] 
@@ -65,7 +68,7 @@
   A8 \hdblf f4 e16 [ d16 ] 
  \grg e4 f8 \grg b4 c16 [ d16 ] 
  \grg e4 f8 \dbld d4 c8 
- \dblc c16 [ \gre b8.~ b8 ] \grd b4. \bar "|." \break 
+ \dblc c16 [ \gre b8.~ b8 ] \grd b4. \bar "|.-.|" \break 
 
   \time 6/8
   \grg b4.^\markup {\center-align\large\fontsize #3 {Harmony - Bar 5, 2nd part}} 

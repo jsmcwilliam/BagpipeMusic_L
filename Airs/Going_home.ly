@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,8 +9,8 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -34,7 +34,7 @@
     \dblc c4 b8 \grG a4.
     \grg b4 \grd c8 \dblb b4 \grG a8
     \grg a4. \wbirl a4.
-    \bar "|.-.|" \break
+    \bar "|." \break
 
     % Part 2
     
@@ -47,7 +47,7 @@
     \grf g4 e8 \dblf f4.
     \grg f4 A8 \grf g4 e8
     \grg f4. \dble e4.
-    \bar "|.-.|" \break
+    \bar "|." \break
     
     % Part 3
     

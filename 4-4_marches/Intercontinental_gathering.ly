@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,8 +9,8 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -27,12 +27,14 @@
 \grg f4 \grg f8. [ g16 ] \dblA A4 \hdblf f8 [ d8 ] 
  \grg b8. [ c16 ] \thrwd d8 [ g8 ] \hdblf f4. d8 
  \grg b4 \thrwd d4 \dblg g8 [ f8 ] \dble e8 [ d8 ] 
- \dblc c4 \thrwd d4 \dble e8 [ A8 ] \grf g8 [ e8 ]  \break
+ \dblc c4 \thrwd d4 \dble e8 [ A8 ] \grf g8 [ e8 ]  
+ \break
 
  \grg f4 \grg f8. [ g16 ] \dblA A4 \hdblf f8 [ d8 ] 
  \grg b8. [ c16 ] \thrwd d8 [ g8 ] \hdblf f4. d8 
  \dble e4 A4 \grg A8 [ g8 ] \grA f8 [ e8 ] 
- \grg f8 [ A8 ] \grf g8 [ e8 ] \thrwd d4 \grg e8. [ d16 ] \bar "|.-.|" 
+ \grg f8 [ A8 ] \grf g8 [ e8 ] \thrwd d4 \grg e8. [ d16 ] 
+ \bar "|." 
  \break 
 
     % Part 2
@@ -44,7 +46,8 @@
  \grg c4 \grg c8. [ d16 ] \dble e4 \dblc c8 [ \grg a8 ] 
  \thrwd d4 \grg d8. [ e16 ] \grg f4 \grg d8 [ b8 ] 
  \dble e4 \dblc c8 [ e8 ] \thrwd d8 [ f8 ] \dble e8 [ d8 ] 
- \dblc c4 \thrwd d4 \dble e8 [ A8 ] \grf g8 [ e8 ] \bar "|.-.|" 
+ \dblc c4 \thrwd d4 \dble e8 [ A8 ] \grf g8 [ e8 ] 
+ \bar "|." 
  \break 
 
     % Part 3

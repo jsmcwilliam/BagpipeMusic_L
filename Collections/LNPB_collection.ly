@@ -7,7 +7,8 @@ tocSection = #(define-music-function (parser location text) (markup?)
 logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 
 \include "bagpipe.ly"
-\include "../Includes/BP_format15.ily"
+\include "../Includes/BP_format_portrait.ily"
+%\include "../Includes/BP_format_landscape.ily"
 
 \book {
 
@@ -294,5 +295,5 @@ logo = \markup {\epsfile #X #70 #"Logo_LNPB.eps" }
 		\include "../Hornpipes/Bumpy_old_road_2.ly" 
 %		\pageBreak
 		}
-%}
+%
 }%end book

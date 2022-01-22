@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -8,9 +8,9 @@
 %	   section title.
                                     
 %Comment out from here
-%
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+%{
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -44,7 +44,7 @@
     \set Score.repeatCommands = #'((volta "1"))  
     \thrwd d2. 
     \slurd d2 \set Score.repeatCommands = #'((volta #f)) 
-    \break
+%    \break
     \set Score.repeatCommands = #'((volta "2") end-repeat)  
     \dble e2.
     \override Staff.BarLine #'break-visibility = #'#(#t #f #t)

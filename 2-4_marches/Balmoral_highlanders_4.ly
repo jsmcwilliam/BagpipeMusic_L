@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,8 +9,8 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -59,7 +59,7 @@
     	\set Score.measureLength = #(ly:make-moment 2/4)
     	\grg c32 [ e16. \dblA A8 ] c32 [ e16. \dblA A8 ]  
     	c32 [ e16. A16. f32 ] \dble e8 [ \dbld d16. c32 ]  
-    	\gcatchb b8 [ \dblg g8 ] \tcatchb b8 [ \dblg g8 ]  
+    	\catchb b8 [ \dblg g8 ] \tcatchb b8 [ \dblg g8 ]  
     	\tcatchb b8 [ \dblg g8 ] A16. [ g32 \grA f16. d32 ]   
     	\break
 
@@ -92,7 +92,7 @@
     	\grg e16. [ d32 ]  
     	\grg c32 [ e16. A16. e32 ] \dblg g16. [ e32 \dblA A8 ]  
     	c32 [ e16. A16. g32 ] \grA f16. [ e32 \grg d16. c32 ]  
-    	\gcatchb b8 [ \dblg g16. b32 ] A16. [ b32 \dblg g8 ]  
+    	\catchb b8 [ \dblg g16. b32 ] A16. [ b32 \dblg g8 ]  
     	\tcatchb b8 [ \dblg g8 ] A16. [ g32 \grA f16. d32 ]   
     	\break
 

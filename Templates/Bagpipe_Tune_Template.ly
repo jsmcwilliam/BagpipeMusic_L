@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 
 % When ready to include in collection:	
@@ -10,8 +10,8 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}

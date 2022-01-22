@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,11 +9,13 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
+
+\defineBarLine ":|.-.|" #'(":|." ".|" ":|.")
 
 \score {
 
@@ -33,12 +35,17 @@
  \thrwd d4 \grg f8 [ e8 ] \grg d8 [ c8 ] 
  \dblb b4 \gre G4 \grd b4 
  \grg a4 \thrwd d4 c4 
+ \set Score.measureLength = #(ly:make-moment 2/4)
  \thrwd d2 
+ \bar ":|.-.|"
  \break
     } %end repeat
 
     % Part 2
+
+ \set Score.measureLength = #(ly:make-moment 1/4)    
  \grg f8 [ g8 ] 
+ \set Score.measureLength = #(ly:make-moment 3/4) 
  \dblA A4 f8 [ g8 ] A4 
  \grg A4 \grf g4 f4 
  \dblg g4 e8 [ f8 ] g4 
@@ -46,9 +53,13 @@
  \dblf f4 d8 [ e8 ] f4 
  \grg f4 e4 d4 
  \dblc c4 A4 g4 
- \dblA A2  \break
+ \set Score.measureLength = #(ly:make-moment 2/4)
+ \dblA A2 
+ \break
 
- a4 
+ \set Score.measureLength = #(ly:make-moment 1/4)
+  a4
+ \set Score.measureLength = #(ly:make-moment 3/4)
  \thrwd d4 \grg f4 A8 [ g8 ] 
  \grA f4 d4 \grG d4 
  \dble e4 g8 [ f8 ] \grg e8 [ d8 ] 

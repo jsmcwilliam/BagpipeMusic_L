@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -8,14 +8,15 @@
 %	   section title.
                                     
 %Comment out from here
-%
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+%{
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
 
 %#(allow-volta-hook "|") % enables volta hook outside repeat context
+%#(set-global-staff-size 12)
 
 \score {
 
@@ -35,10 +36,11 @@
 %   \stemspace      % Add appropriate tweaks needed for piping grace notes 
                     % to look great.
 %   \pgrace         % variant of above (\stemspace)
-    \bar ".|:"
-    		
+%    		
     % Part 1
+    
     \repeat volta 2 {
+ \bar ".|:"
  \set Score.measureLength = #(ly:make-moment 4/4)
  \set Score.repeatCommands = #'((volta "1."))    	    
  \thrwd d8. [ e16 ]
@@ -56,12 +58,15 @@
  \dblA A8. [ f16 ] \thrwd d4 \wslurd d8. [ e16 ] 
  \grg f8 [ a8 ] \dblf f4 \dble e4 
 % \break
+
  \gra e8. [ d16 ] \dblc c4 \grip c8 [ A8 ] 
  \grf g8 [ e8 ] \thrwd d4 \gre a4 
  \grg e8. [ f16 ] \dblg g4 \grf g8 [ b8 ] 
- \dblc c8 [ \gre a8 ] \thrwd d4 \wslurd d4 \bar ":..:" \break
+ \dblc c8 [ \gre a8 ] \thrwd d4 \wslurd d4 
+% \bar ":..:" 
+ \break
     } %end repeat
-
+%
     % Part 2
     \repeat volta 2 {
  \slurd d8. [ f16 ] 
@@ -69,22 +74,28 @@
  \hdblf f8. [ g16 ] \dblA A4 \hdblf f4 
  \thrwd d8 [ \gre a8 ] \grip b4 \dblg g8. [ f16 ] 
  \dble e8 [ d8 ] \dblf f4 \dble e4 
+% \break
+
  \gra e8. [ d16 ] \dblc c4 \grip c8 [ A8 ] 
  \grf g8 [ e8 ] \thrwd d4 \gre a4 
  \grg e8. [ f16 ] \dblg g4 \grf g8 [ b8 ] 
- \dblc c8 [ \gre a8 ] \thrwd d4 \wslurd d4 \break
+ \dblc c8 [ \gre a8 ] \thrwd d4 \wslurd d4 
+ \break
     } %end repeat
 
     % Part 3
     \repeat volta 2 {
- \dblc c4 \dgrip a4 \wbirl a8 [ \grd c8 ] 
+ \dblc c4 \bgrip a4 \wbirl a8 [ \grd c8 ] 
  \dble e8 [ g8 ] \hdblf f4 \thrwd d4 
- \dblc c4 \dgrip a4 \wbirl a8 [ \grd c8 ] 
+ \dblc c4 \bgrip a4 \wbirl a8 [ \grd c8 ] 
  \dblA A8. [ g16 ] \hdblf f4 \dble e8 [ a8 ] 
+% \break
+
  \thrwd d8 [ f8 ] \dblA A4 f8 [ A8 ] 
  g16. [ f32 \grg e16. d32 ] \dblc c4 \dblb b4 
  \grg e8. [ f16 ] \dblg g4 \grf g8 [ b8 ] 
- \dblc c8 [ \gre a8 ] \thrwd d4 \wslurd d4 \break
+ \dblc c8 [ \gre a8 ] \thrwd d4 \wslurd d4 
+ \break
     } %end repeat
 
     % Part 4
@@ -99,7 +110,7 @@
   }
 % added layout options. See bagpipe_new.ly (\layout) for default settings
   \layout {
-  	  #(layout-set-staff-size 18)
+%  	  #(layout-set-staff-size 18)
 %  	  ragged-last = ##t
   	}
 

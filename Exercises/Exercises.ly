@@ -1,14 +1,16 @@
-\version "2.18.0"
+\version "2.22.1"
 
 #(ly:set-option 'point-and-click #t)
-#(set-default-paper-size "a4" 'landscape)
+%#(set-default-paper-size "a4" 'landscape)
 
 \include "bagpipe.ly" 
-\include "../Includes/BP_format.ily" 	
+\include "../Includes/BP_format_portrait.ily" 	
 
 common = {
 %  \bagpipeKey
-  \time 2/4
+  \time 2/4 
+  \hideKeySignature
+  \quarterBeaming
   \override TextScript #'staff-padding = #2
   \override TupletBracket #'bracket-visibility = ##f
 }
@@ -22,11 +24,10 @@ common = {
 
 % Part 1
 \score {
-    \new staff {	
+        { %Staff	
     \common	
-    \bar ".|:"
-    		
     \repeat volta 2 {
+         \bar ".|:"
     	 \times 2/3 {\grg G8 \grd G \gre G} \times 2/3 {\grg a8 \grd a \gre a} 
     	 \times 2/3 {\grg b8 \grd b \gre b} \times 2/3 { \grg c8 \grd c \gre c}
     	 \times 2/3 {\grg b8 \grd b \gre b} \times 2/3 { \grg a8 \grd a \gre a}
@@ -44,7 +45,7 @@ common = {
     \times 2/3 {\grg a8 (\grd a \gre a)} \dblc c \gre a
     \times 2/3 {\grg G8 (\grd G \gre G)} \dblb b \gre G \break
     } % end repeat
-%}    
+%}
     }%end staff    
    
   \header {
@@ -54,7 +55,7 @@ common = {
 
 % Part 2
 \score {
-	\new staff {
+	{ %Staff
 	\common
         \bar ".|:"
 	\repeat volta 2 {
@@ -77,7 +78,7 @@ common = {
 
 % Part 3
 \score {
-	\new staff {
+        { %Staff
 	\common
         \bar ".|:"
 	\repeat volta 2 {
@@ -116,7 +117,7 @@ common = {
 
 % Part 4
 \score {
-	\new staff {
+        { %Staff
 	\common
         \bar ".|:"
 	\repeat volta 2 {
@@ -143,9 +144,11 @@ common = {
 	
 } %end score
 
+\pageBreak
+
 % Part 5
 \score {
-	\new staff {
+        { %Staff
 	\common
 	\time 4/4
         \bar ".|:"
@@ -171,6 +174,7 @@ common = {
 	} %end repeat
 
 	} %end staff
+
   \header {
     piece = "5. Tachums"
   }
@@ -179,7 +183,7 @@ common = {
 
 % Part 6
 \score {
-	\new staff {
+        { %Staff
 	\common
         \bar ".|:"
 	\repeat volta 2 {
@@ -209,7 +213,7 @@ common = {
 
 % Part 7
 \score {
-	\new staff {
+        { %Staff
 	\common
 	\time 6/8
         \bar ".|:"
@@ -231,7 +235,7 @@ common = {
 
 % Part 8
 \score {
-	\new staff {
+        { %Staff
 	\common
 	\time 4/4
         \bar ".|:"
@@ -255,7 +259,7 @@ common = {
 
   % Part 9
 \score {
-	\new staff {
+        { %Staff
 	\common
 	\time 4/4
         \bar ".|:"
@@ -272,9 +276,11 @@ common = {
 	
 } %end score
 
+\pageBreak
+
 % Part 10
 \score {
-	\new staff {
+        { %Staff
 	\common
 	\time 4/4
         \bar ".|:"
@@ -296,7 +302,7 @@ common = {
 
 % Part 11
 \score {
-	\new staff {
+        { %Staff
 	\common
 	\time 4/4
         \bar ".|:"
@@ -311,18 +317,16 @@ common = {
 	
 } %end score
 
-\pageBreak
-
 % Part 12
 \score {
-	\new staff {
+        { %Staff
 	\common
 	\time 4/4
         \bar ".|:"
 	\repeat volta 2 {
-		\grg b16 [\grip  c8.] \grg c8 [\dgrip a] 
+		\grg b16 [\grip  c8.] \grg c8 [\bgrip a] 
 		\grg b16 [\grip  c8.] \grg b8 [\grip a]
-		\grg b16 [\grip  c8.] \grg c8 [\dgrip a]
+		\grg b16 [\grip  c8.] \grg c8 [\bgrip a]
 		\grg b16 [\grip  c8.] \grg b8 [\grip a]
 		\grg b16 [\grip  c8.] \grg c16 [\grd a8.]
 		\grg b16 [\grip  c8.] \grg b16 [\grd G8.] \bar ":..:" \break
@@ -341,14 +345,14 @@ common = {
 
 % Part 13
 \score {
-	\new staff {
+        { %Staff
 	\common
 	\time 4/4
         \bar ".|:"
 	\repeat volta 2 {
 		\grg a8. [\taor a16] \grg b8. [\taor b16]
 		\grg c8. [\taor c16] \grg b8. [\taor a16]
-		\grg d8. [\dtaor a16] \grg e8. [\taor a16]
+		\grg d8. [\btaor a16] \grg e8. [\taor a16]
 		\grg c8. [\taor a16] \grg f8. [\taor a16]
 	} %end repeat
 	} %end staff

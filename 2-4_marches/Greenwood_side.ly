@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -10,7 +10,7 @@
 %Comment out from here
 %{
 \include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -76,6 +76,11 @@
     parttagline = "Copied by John S. McWilliam"
 
   }
+  	
+  \layout {
+      ragged-last = ##t
+  }
+  	
   	
 %Generation of midi files can be removed here.
 %  \midi {}

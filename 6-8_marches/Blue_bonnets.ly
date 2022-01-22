@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,8 +9,8 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -28,7 +28,8 @@
  \grg a4 \taor a8 \dblc c4 e8 
  A4 \grip A8 \grg A4 e8 
  \grg f4 \grip f8 \grg f16 [ A8. f8 ] 
- \dble e8. [ c16 \grG a8 ] \dblb b4 \grd c8 \break  
+ \dble e8. [ c16 \grG a8 ] \dblb b4 \grd c8 
+ %\break  
 
  \grg a4 \taor a8 \dblc c4 e8 
  A4 \grip A8 \grg A4 e8 
@@ -40,7 +41,8 @@
  \grg a8. [ \grd c16 e8 ] \dble e8. [ c16 e8 ] 
  \dblf f8. [ e16 d8 ] \dblc c8. [ b16 \grG a8 ] 
  \grg a8. [ \grd c16 e8 ] \grg f8. [ g16 A8 ] 
- a8. [ b16 \grip c8 ] \dblb b4 \grG a8  \break
+ a8. [ b16 \grip c8 ] \dblb b4 \grG a8  
+ %\break
 
  \grg a8. [ \grd c16 e8 ] \dble e8. [ c16 e8 ] 
  \dblf f8. [ e16 d8 ] \dblc c8. [ b16 \grG a8 ] 
@@ -52,7 +54,8 @@
 \thrwd d4. \slurd d4. 
  \grg d16 [ f8. e8 ] \dbld d8. [ b16 \grG a8 ] 
  \dbld d8. [ b16 \grG b8 ] \dblb b4 \grG a8 
- A8. [ g16 f8 ] \dble e4 d8  \break
+ A8. [ g16 f8 ] \dble e4 d8  
+ %\break
 
  \thrwd d4. \slurd d4. 
  \grg d16 [ f8. e8 ] \dbld d8. [ b16 \grG a8 ] 
@@ -64,7 +67,8 @@
  \slurd d8. [ f16 A8 ] \grg A8. [ f16 d8 ] 
  A8. [ g16 f8 ] \dblf f8. [ e16 f8 ] 
  \thrwd d8. [ f16 A8 ] \grg A8. [ f16 d8 ] 
- \slurd d8. [ e16 f8 ] \dble e4 d8  \break
+ \slurd d8. [ e16 f8 ] \dble e4 d8  
+ %\break
 
  \slurd d8. [ f16 A8 ] \grg A8. [ f16 d8 ] 
  A8. [ g16 f8 ] \dblf f8. [ e16 f8 ] 

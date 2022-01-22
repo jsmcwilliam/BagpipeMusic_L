@@ -1,10 +1,10 @@
-\version "2.18.0"    
+\version "2.22.1"    
 
 tocSection = #(define-music-function (parser location text) (markup?) 
         	(add-toc-item! 'tocSectionMarkup text)) 
 
-\include "bagpipe.ly"
-\include "../Includes/BP_format14.ily"
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily"
 
 \book {
 

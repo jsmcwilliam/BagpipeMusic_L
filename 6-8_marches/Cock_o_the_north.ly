@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,8 +9,8 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -49,6 +49,8 @@
 
       \set Score.repeatCommands = #'((volta "1."))
       \dblg g8 
+%      \break
+
       \dblA A4 e8 \dblf f4 e8
       \dblA A4 e8 \dblf f4 e8
       \grg c16 \grd a8. \grd c8 \dblb b4 \gre G8
@@ -85,7 +87,6 @@
       \grg c4 \taor c8 \dblc c8. \grg b16 \grd a8
       \grg b4. \taor b4 A8
       \revert Score.BarLine.break-visibility
-
 %      \break
       
       c4 \taor c8 \dblc c8. \grg b16 \grd a8
@@ -101,10 +102,10 @@
       \grg f16 A8. e8 \dblf f4 e8
       \grg c16 A8. c8 \dblc c8. \grg b16 \grd a8
       \grg b4. \taor b4 
-%      \break 
-  
       \set Score.repeatCommands = #'((volta "1."))
       \dblg g8 
+%      \break
+
       \dblA A4 e8 \dblf f4 e8
       \grg f16 A8. e8 \dblf f4 e8
       \grg c16 \grd a8. \grd c8 \dblb b4 \gre G8

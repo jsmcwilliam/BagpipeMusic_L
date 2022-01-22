@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -8,12 +8,14 @@
 %	   section title.
                                     
 %Comment out from here
-%
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+%{
+\include "bagpipe.ly" %(default Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
+
+\defineBarLine ":|.-.|" #'(":|." ".|" ":|.")
 
 \score {
 
@@ -35,6 +37,7 @@
  _\markup {\italic\lower #2 {Ritardando 3rd. time through}}
  e8 [ f16 g16 ] \tdblf f8 [ d8 ] \grg a8 [ d8 ] 
  \dble e4~ e8 [ d8 ] \wslurd d2_\markup {\italic\lower #2 Fine} 
+ \bar ":|.-.|"
  \break
     } %end-repeat
 
@@ -43,6 +46,8 @@
  \dblf f4~ f8 [ c8 ] \grip c4 c8 [ b8 ] 
  \grG a4~ a16 [ b16 c8 ] \dblb b2 
  \dblc c4~ c16 [ d16 e8 ] \dblb b2 
+ \break
+ 
  \dblc c4~ c8 [ \gre a8 ] \dble e4 e8 [ \grg c16 e16 ] 
  \dblf f4~ f8 [ c8 ] \grip c4 c8 [ b8 ] 
  \grG a4~ a16 [ b16 c8 ] \dblb b4~ b8 [ \grG a8 ] 

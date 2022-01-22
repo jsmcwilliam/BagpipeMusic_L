@@ -1,10 +1,10 @@
-\version "2.18.0"    
+\version "2.22.1"    
 
 tocSection = #(define-music-function (parser location text) (markup?) 
         	(add-toc-item! 'tocSectionMarkup text)) 
 
 \include "bagpipe.ly"
-\include "../Includes/BP_format.ily"
+\include "../Includes/BP_format_portrait.ily"
 
 \book {
 
@@ -55,7 +55,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 	\pageBreak %after title page		
 	\markuplist \table-of-contents
 	\pageBreak
-
+%
 	\bookpart {
 		\header {
 			title = "Strathspeys"
@@ -66,7 +66,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 %		\pageBreak
 		\tocItem \markup {2. Inverness Rant}
 		\include "../Strathspeys/Inverness_rant_1.ly"
-		\pageBreak
+%		\pageBreak
 		\tocItem \markup {3. The Devil in the Kitchen}
 		\include "../Strathspeys/Devil_in_the_kitchen.ly"
 		\pageBreak
@@ -76,8 +76,9 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\tocItem \markup {5. John Roy Stewart}
 		\include "../Strathspeys/John_roy_stewart.ly"
 		\pageBreak
-		}
 
+		}
+%
 	\bookpart {
 		\header {
 			title = "Reels"
@@ -102,7 +103,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\include "../Reels/Twisted_fingers.ly"
 %		\pageBreak
 		}
-		
+%		
 	\bookpart {
 		\header {
 			title = "Hornpipes"
@@ -118,7 +119,7 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\include "../Hornpipes/Ballachulish_walkabout.ly"
 		\pageBreak
 		}
-	
+%	
 	\bookpart {
 		\header {
 			title = "Jigs"
@@ -153,5 +154,5 @@ tocSection = #(define-music-function (parser location text) (markup?)
 		\tocItem \markup {2. The Rose of Kelvingrove}
 		\include "../Other/Rose_of_Kelvingrove.ly"
 		}
-
+%
 } %end book

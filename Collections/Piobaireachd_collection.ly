@@ -9,8 +9,8 @@
 
 date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 
-\include "../Includes/bagpipe_new.ly"
-\include "../Includes/bagpipe_extra.ly"
+\include "../Includes/bagpipe_new.ily"
+\include "../Includes/bagpipe_extra.ily"
 %\include "../Includes/BP_format_piobaireachd.ly
 
 %\include "bagpipe_new.ly"
@@ -19,8 +19,8 @@ date = #(strftime "%d-%m-%Y" (localtime (current-time)))
 				%(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Portrait  ))
 
-\include "../Includes/B50_Var.ly"		%Variables for Makintosh's Lament:  Prefix: B	
-\include "../Includes/A92_Var.ly"	%    "      "  Black Donalds March: Prefix: A
+\include "../Includes/B50_Var.ily"		%Variables for Makintosh's Lament:  Prefix: B	
+\include "../Includes/A92_Var.ily"	%    "      "  Black Donalds March: Prefix: A
 
 
 \book {

@@ -8,25 +8,19 @@
 %				       4. Run book module containing the above includes.
 %Comment out from here
 
-%{
+%
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4") % option 'landscape
 #(set-global-staff-size 16)
-#(allow-volta-hook "|") % enables volta hook outside repeat context
+#(allow-volta-hook "||") % enables volta hook outside repeat context
 
-\include "../Includes/bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-\include "../Includes/bagpipe_extra.ly"	%(Extras)
-\include "../Includes/BP_format_piobaireachd.ly" 	
+\include "../Includes/bagpipe_new.ily" 	%(Replaces bagpipe.ly)
+\include "../Includes/bagpipe_extra.ily"	%(Extras)
+\include "../Includes/BP_format_piobaireachd.ily" 	
 				%(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Portrait  ))
-				
-%\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "bagpipe_extra.ly"	%(Extras)
-%\include "BP_format_piobaireachd.ly" 
-				%(Tagline: Copied by John McWilliam, date)
-				%(Paper format A4, Portrait  ))
-				
-\include "../Includes/A92_Var.ly" %(Black Donalds March: variables)
+								
+\include "../Includes/A92_Var.ily" %(Black Donalds March: variables)
 
   \header {
     title = "Black Donald's March"
@@ -120,14 +114,13 @@
       \A_common
       \bar ".|:"
       
-      \repeat volta 2 {
 	e4_\txleumtaorcrun \A_VarIVa
 	e4_\txleumtaorcrun \A_VarIVb
 	e4_\txleumtaorcrun c_\txleumtaorcrun
 	f4_\txleumtaorcrun \A_VarIVa
 	e4_\txleumtaorcrun c_\txleumtaorcrun
 	f4_\txleumtaorcrun \A_VarIVb
-%	\bar "||"
+	\bar "||"
 	\break
 	e4_\txleumtaorcrun c_\txleumtaorcrun
 	f4_\txleumtaorcrun \A_VarIVa
@@ -135,13 +128,14 @@
 	e4_\txleumtaorcrun \A_VarIVa
 	e4_\txleumtaorcrun c_\txleumtaorcrun
 	f4_\txleumtaorcrun \A_VarIVb	
-%	\bar "||"
+	\bar "||"
 	\break
 	e4_\txleumtaorcrun c_\txleumtaorcrun
 	f4_\txleumtaorcrun c_\txleumtaorcrun
 	e4_\txleumtaorcrun c_\txleumtaorcrun
 	f4_\txleumtaorcrun \A_VarIVb
-      } %end repeat
+	\bar "||"
+
     } %end staff
 
     \header {

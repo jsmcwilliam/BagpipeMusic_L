@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.22.1"
 
 % When ready to include in collection:	
 %	1. Comment out top section with \Include file(s)
@@ -9,8 +9,8 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
-\include "../Includes/BP_format.ily" 	
+\include "bagpipe.ly" %(Odefault Lilypond formats)
+\include "../Includes/BP_format_portrait.ily" 	
 
 %to here..........................................................
 %}
@@ -24,7 +24,7 @@
     \tempo "Moderato" 4 = 84    
 %    \bagpipeKey
     \hideKeySignature
-    \compressFullBarRests
+    \compressEmptyMeasures
     \marchTime      % 4/4 marches are written with numerical time signature and 
                     % with quarter beaming.
     		

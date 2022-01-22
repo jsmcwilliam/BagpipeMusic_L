@@ -8,25 +8,19 @@
 %				       4. Run book module containing the above includes.
 %Comment out from here
 
-%{
+%
 #(ly:set-option 'point-and-click #t)
 #(set-default-paper-size "a4") % option 'landscape
 #(set-global-staff-size 16)
 #(allow-volta-hook "|") % enables volta hook outside repeat context
 
-\include "../Includes/bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-\include "../Includes/bagpipe_extra.ly"	%(Extras)
-\include "../Includes/BP_format_piobaireachd.ly" 	
+\include "../Includes/bagpipe_new.ily" 	%(Replaces bagpipe.ly)
+\include "../Includes/bagpipe_extra.ily"	%(Extras)
+\include "../Includes/BP_format_piobaireachd.ily" 	
 				%(Tagline: Copied by John McWilliam, date)
 				%(Paper format A4, Portrait  ))
-				
-
-%\include "bagpipe_new.ly" 	%(Replaces bagpipe.ly)
-%\include "BP_format_piobaireachd.ly" 	
-				%(Tagline: Copied by John McWilliam, date)
-				%(Paper format A4, Portrait  ))
-				
-\include "../Includes/B50_Var.ly" %(Mackintosh's Lament variables)
+								
+\include "../Includes/B50_Var.ily" %(Mackintosh's Lament variables)
 
   \header {
     title = "Mackintosh's Lament" 
