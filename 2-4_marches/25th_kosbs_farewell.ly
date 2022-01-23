@@ -9,7 +9,7 @@
                                     
 %Comment out from here
 %{
-\include "bagpipe.ly" %(Original)
+\include "bagpipe.ly" %(default Lilypond formats)
 \include "../../Includes/BP_format_portrait.ly" 	
 
 %to here..........................................................
